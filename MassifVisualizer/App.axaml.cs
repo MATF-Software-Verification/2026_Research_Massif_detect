@@ -15,7 +15,13 @@ public partial class App : Application
     {
         if (ApplicationLifetime is IClassicDesktopStyleApplicationLifetime desktop)
         {
-            desktop.MainWindow = new MainWindow();
+            var win = new MainWindow();
+            desktop.MainWindow = win;
+
+            // Load file passed as command-line argument
+            var args = desktop.Args;
+            if (args is { Length: > 0 } && System.IO.File.Exists(args[0]))
+                win.LoadFileFromArgs(args[0]);
         }
 
         base.OnFrameworkInitializationCompleted();

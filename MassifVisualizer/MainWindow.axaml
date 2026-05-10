@@ -2,8 +2,107 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+        xmlns:models="clr-namespace:MassifVisualizer.Models"
+        mc:Ignorable="d" d:DesignWidth="1200" d:DesignHeight="750"
         x:Class="MassifVisualizer.MainWindow"
-        Title="MassifVisualizer">
-    Welcome to Avalonia!
+        Title="MassifDetect — Heap Profiler Visualizer"
+        Width="1200" Height="750"
+        MinWidth="900" MinHeight="600">
+
+  <DockPanel>
+
+    <!-- Menu bar -->
+    <Menu DockPanel.Dock="Top">
+      <MenuItem Header="_File">
+        <MenuItem Header="_Open massif file..." Name="MenuOpen"/>
+        <Separator/>
+        <MenuItem Header="E_xit" Name="MenuExit"/>
+      </MenuItem>
+    </Menu>
+
+    <!-- Summary strip -->
+    <Border DockPanel.Dock="Top" Background="WhiteSmoke" Padding="8,4"
+            BorderBrush="Silver" BorderThickness="0,0,0,1">
+      <TextBlock Name="SummaryText" Foreground="Black" FontSize="12"
+                 Text="No file loaded. Use File > Open to load a massif output file."/>
+    </Border>
+
+    <!-- Status bar -->
+    <Border DockPanel.Dock="Bottom" Background="WhiteSmoke" Padding="8,3"
+            BorderBrush="Silver" BorderThickness="0,1,0,0">
+      <TextBlock Name="StatusBar" Foreground="DimGray" FontSize="11" Text="Ready"/>
+    </Border>
+
+    <!-- Main layout: snapshot list on left, content on right -->
+    <Grid ColumnDefinitions="230,4,*">
+
+      <!-- Snapshot list -->
+      <Border Grid.Column="0" Background="White" BorderBrush="Silver" BorderThickness="0,0,1,0">
+        <DockPanel>
+          <TextBlock DockPanel.Dock="Top" Text="SNAPSHOTS" Foreground="DimGray"
+                     FontSize="11" FontWeight="Bold" Padding="8,8,8,4"/>
+          <ListBox Name="SnapshotList" Background="Transparent" SelectionMode="Single">
+            <ListBox.ItemTemplate>
+              <DataTemplate x:DataType="models:MassifSnapshot">
+                <Grid ColumnDefinitions="28,*,Auto">
+                  <TextBlock Grid.Column="0" Text="{Binding Index}"
+                             Foreground="DimGray" FontSize="11" VerticalAlignment="Center"/>
+                  <TextBlock Grid.Column="1" Text="{Binding HeapDisplay}"
+                             Foreground="Black" FontSize="11" VerticalAlignment="Center"/>
+                  <TextBlock Grid.Column="2" Text="{Binding TreeLabel}"
+                             Foreground="Crimson" FontSize="10" FontWeight="Bold"
+                             VerticalAlignment="Center" Margin="0,0,4,0"/>
+                </Grid>
+              </DataTemplate>
+            </ListBox.ItemTemplate>
+          </ListBox>
+        </DockPanel>
+      </Border>
+
+      <!-- Splitter -->
+      <GridSplitter Grid.Column="1" Background="Silver"/>
+
+      <!-- Right panel -->
+      <Grid Grid.Column="2" RowDefinitions="*,4,260">
+
+        <!-- Chart rendered via ScottPlot core into an Image -->
+        <Border Grid.Row="0" Background="LightGray" Name="ChartBorder">
+          <Image Name="ChartImage" Stretch="Fill"/>
+        </Border>
+
+        <!-- Splitter -->
+        <GridSplitter Grid.Row="1" Background="Silver"/>
+
+        <!-- Bottom: tabs for call tree and stats -->
+        <TabControl Grid.Row="2" Background="White">
+
+          <TabItem Header="Allocation Tree">
+            <Grid RowDefinitions="Auto,*">
+              <TextBlock Grid.Row="0" Name="TreeHeader"
+                         Text="Select a detailed or peak snapshot to view the allocation call tree."
+                         Foreground="DimGray" FontSize="12" Padding="8,6"/>
+              <ListBox Grid.Row="1" Name="TreeList" Background="Transparent" SelectionMode="Single">
+                <ListBox.ItemTemplate>
+                  <DataTemplate x:DataType="models:HeapNode">
+                    <TextBlock Text="{Binding DisplayText}"
+                               FontFamily="Cascadia Code,Consolas,monospace"
+                               FontSize="11" Foreground="Black" Padding="2,1"/>
+                  </DataTemplate>
+                </ListBox.ItemTemplate>
+              </ListBox>
+            </Grid>
+          </TabItem>
+
+          <TabItem Header="Snapshot Details">
+            <ScrollViewer>
+              <StackPanel Name="DetailsPanel" Spacing="6" Margin="12">
+                <TextBlock Text="Select a snapshot from the list." Foreground="DimGray"/>
+              </StackPanel>
+            </ScrollViewer>
+          </TabItem>
+
+        </TabControl>
+      </Grid>
+    </Grid>
+  </DockPanel>
 </Window>
