@@ -101,6 +101,27 @@
             </ScrollViewer>
           </TabItem>
 
+          <TabItem Header="Hot Functions">
+            <DockPanel>
+              <Border DockPanel.Dock="Top" Padding="8,6" Background="WhiteSmoke"
+                      BorderBrush="Silver" BorderThickness="0,0,0,1">
+                <StackPanel Orientation="Horizontal" Spacing="4">
+                  <TextBlock Text="Show top:" VerticalAlignment="Center"
+                             Foreground="DimGray" FontSize="12" Margin="0,0,6,0"/>
+                  <RadioButton Name="TopN3"  Content=" 3 " GroupName="HotN" FontSize="12"/>
+                  <RadioButton Name="TopN5"  Content=" 5 " GroupName="HotN" FontSize="12" IsChecked="True"/>
+                  <RadioButton Name="TopN10" Content="10"  GroupName="HotN" FontSize="12"/>
+                  <TextBlock Name="HotFunctionsHeader" VerticalAlignment="Center"
+                             Foreground="DimGray" FontSize="12" Margin="16,0,0,0"
+                             Text="Load a massif file to see hot functions."/>
+                </StackPanel>
+              </Border>
+              <ScrollViewer>
+                <StackPanel Name="HotFunctionsPanel" Spacing="8" Margin="8"/>
+              </ScrollViewer>
+            </DockPanel>
+          </TabItem>
+
         </TabControl>
       </Grid>
     </Grid>
