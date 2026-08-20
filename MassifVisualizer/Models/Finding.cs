@@ -8,9 +8,9 @@ public class Finding
 {
     public string RuleId { get; init; } = "";
     public string Title { get; init; } = "";
-    public Severity Severity { get; init; }
-    public double Confidence { get; init; }
-    public string Description { get; init; } = "";
+    public Severity Severity { get; set; }
+    public double Confidence { get; set; }
+    public string Description { get; set; } = "";
     public string Suggestion { get; init; } = "";
     public List<string> Evidence { get; } = new();
     public string? SuspectSite { get; init; }

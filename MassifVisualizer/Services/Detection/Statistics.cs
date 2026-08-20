@@ -82,4 +82,47 @@ public static class Statistics
 
         return times.Select(t => (t - t0) / span).ToArray();
     }
+
+    public static (double Slope, double R2) LinearFit(IReadOnlyList<double> x, IReadOnlyList<double> y)
+    {
+        int n = x.Count;
+        if (n < 3 || y.Count != n) return (0, 0);
+
+        double meanX = x.Average();
+        double meanY = y.Average();
+
+        double sxx = 0, sxy = 0;
+        for (int i = 0; i < n; i++)
+        {
+            double dx = x[i] - meanX;
+            sxx += dx * dx;
+            sxy += dx * (y[i] - meanY);
+        }
+
+        if (sxx <= 0) return (0, 0);
+
+        double slope = sxy / sxx;
+        double intercept = meanY - slope * meanX;
+
+        // R2 tells us whether the slope means anything: a regression through pure noise
+        // still yields some slope, but will not fit.
+        double ssRes = 0, ssTot = 0;
+        for (int i = 0; i < n; i++)
+        {
+            double residual = y[i] - (slope * x[i] + intercept);
+            double spread = y[i] - meanY;
+            ssRes += residual * residual;
+            ssTot += spread * spread;
+        }
+
+        return (slope, ssTot > 0 ? 1 - ssRes / ssTot : 0);
+    }
+
+    public static double Median(IReadOnlyList<double> values)
+    {
+        if (values.Count == 0) return 0;
+        var sorted = values.OrderBy(v => v).ToArray();
+        int mid = sorted.Length / 2;
+        return sorted.Length % 2 == 1 ? sorted[mid] : (sorted[mid - 1] + sorted[mid]) / 2;
+    }
 }

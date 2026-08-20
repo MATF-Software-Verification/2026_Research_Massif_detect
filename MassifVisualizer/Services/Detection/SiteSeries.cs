@@ -24,17 +24,9 @@ public static class SiteSeriesBuilder
 
         foreach (var snap in detailed)
         {
-            var map = new Dictionary<string, long>();
-            var root = snap.HeapTree.FirstOrDefault();
-            if (root != null)
-            {
-                foreach (var child in root.Children.Where(n => !n.Label.StartsWith("in ", StringComparison.Ordinal)))
-                {
-                    var key = SiteKey(child);
-                    map[key] = map.GetValueOrDefault(key) + child.Bytes;
-                    if (!sites.Contains(key)) sites.Add(key);
-                }
-            }
+            var map = SiteMap(snap);
+            foreach (var key in map.Keys)
+                if (!sites.Contains(key)) sites.Add(key);
             perSnapshot.Add(map);
         }
 
@@ -43,6 +35,25 @@ public static class SiteSeriesBuilder
             Site = site,
             Bytes = perSnapshot.Select(m => (double)m.GetValueOrDefault(site)).ToArray()
         }).ToList();
+    }
+
+    /// Allocation sites recorded by one snapshot: the depth-1 children of the tree root,
+    /// which is where Massif records the direct callers of malloc. The "in N places, below
+    /// threshold" aggregates are not sites, so they are skipped -- meaning the values do
+    /// not sum to MemHeapB.
+    public static Dictionary<string, long> SiteMap(MassifSnapshot snap)
+    {
+        var map = new Dictionary<string, long>();
+        var root = snap.HeapTree.FirstOrDefault();
+        if (root == null) return map;
+
+        foreach (var child in root.Children.Where(n => !n.Label.StartsWith("in ", StringComparison.Ordinal)))
+        {
+            var key = SiteKey(child);
+            map[key] = map.GetValueOrDefault(key) + child.Bytes;
+        }
+
+        return map;
     }
 
     public static string SiteKey(HeapNode node)
