@@ -19,6 +19,11 @@ public class DetectionThresholds
     public double SpikeAbsoluteJump { get; init; } = 0.10;
     public double SpikeRecoveryWindow { get; init; } = 0.20;
     public double SpikeRecoveryBand { get; init; } = 0.10;
+    public double SpikeRecoveryFraction { get; init; } = 0.25;
+    public double SpikeMinAttributionShare { get; init; } = 0.50;
+    public double SpikeMinAttributionCoverage { get; init; } = 0.50;
+    public double SpikeMaxAttributionCoverage { get; init; } = 1.50;
+    public int SpikeContributorsListed { get; init; } = 3;
 
     public static DetectionThresholds Default { get; } = new();
 }
