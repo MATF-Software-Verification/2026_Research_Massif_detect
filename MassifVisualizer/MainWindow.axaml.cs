@@ -13,6 +13,7 @@ using FW = Avalonia.Media.FontWeight;
 using Avalonia.Platform.Storage;
 using MassifVisualizer.Models;
 using MassifVisualizer.Services;
+using MassifVisualizer.Services.Detection;
 using ScottPlot;
 
 namespace MassifVisualizer;
@@ -21,6 +22,7 @@ public partial class MainWindow : Window
 {
     private MassifProfile? _profile;
     private List<HotFunction> _allHotFunctions = [];
+    private List<Finding> _findings = [];
 
     private const double FontTiny   = 10;
     private const double FontSmall  = 11;
@@ -47,6 +49,10 @@ public partial class MainWindow : Window
     private const float PeakMarkerSize  = 12;
     private const float DetailMarkerSize = 8;
 
+    private const double SeverityBarWidth   = 4;
+    private const double FindingCardSpacing = 6;
+    private const double FindingBadgeWidth  = 70;
+
     public MainWindow()
     {
         InitializeComponent();
@@ -60,6 +66,9 @@ public partial class MainWindow : Window
         TopN3.IsCheckedChanged  += (_, _) => { if (TopN3.IsChecked  == true) RenderHotFunctions(); };
         TopN5.IsCheckedChanged  += (_, _) => { if (TopN5.IsChecked  == true) RenderHotFunctions(); };
         TopN10.IsCheckedChanged += (_, _) => { if (TopN10.IsChecked == true) RenderHotFunctions(); };
+        FilterCritical.IsCheckedChanged += (_, _) => RenderFindings();
+        FilterWarning.IsCheckedChanged  += (_, _) => RenderFindings();
+        FilterInfo.IsCheckedChanged     += (_, _) => RenderFindings();
     }
 
     public void LoadFileFromArgs(string path) => LoadFile(path);
@@ -98,8 +107,8 @@ public partial class MainWindow : Window
                 SnapshotList.Items.Add(s);
 
             SummaryText.Text = BuildSummary(_profile);
-            RefreshChart();
             RefreshHotFunctions();
+            RefreshFindings();
 
             var peak = _profile.PeakSnapshot ?? _profile.Snapshots.LastOrDefault();
             if (peak != null)
@@ -120,14 +129,21 @@ public partial class MainWindow : Window
         int w = Math.Max(ChartMinWidth,  (int)ChartBorder.Bounds.Width);
         int h = Math.Max(ChartMinHeight, (int)ChartBorder.Bounds.Height);
 
-        var pngBytes = BuildPlot(_profile, w, h);
+        var pngBytes = BuildPlot(_profile, w, h, _findings);
         using var ms = new MemoryStream(pngBytes);
         ChartImage.Source = new Bitmap(ms);
     }
 
     private static ScottPlot.Color SP(Avalonia.Media.Color c) => new(c.R, c.G, c.B, c.A);
 
-    private static byte[] BuildPlot(MassifProfile profile, int width, int height)
+    private static ScottPlot.Color SeverityColor(Severity s) => s switch
+    {
+        Severity.Critical => SP(MediaColors.Crimson),
+        Severity.Warning  => SP(MediaColors.DarkOrange),
+        _                 => SP(MediaColors.SteelBlue)
+    };
+
+    private static byte[] BuildPlot(MassifProfile profile, int width, int height, List<Finding>? findings = null)
     {
         var plot = new Plot();
 
@@ -143,6 +159,21 @@ public partial class MainWindow : Window
         double[] times = snaps.Select(s => (double)s.Time).ToArray();
         double[] heap  = snaps.Select(s => (double)s.MemHeapB).ToArray();
         double[] extra = snaps.Select(s => (double)(s.MemHeapB + s.MemHeapExtraB)).ToArray();
+
+        long TimeAt(double t)
+        {
+            if (snaps.Count == 0) return 0;
+            if (snaps.Count == 1) return snaps[0].Time;
+            long t0 = snaps[0].Time, tn = snaps[^1].Time;
+            return t0 + (long)(t * (tn - t0));
+        }
+
+        foreach (var f in findings ?? [])
+        {
+            var span = plot.Add.HorizontalSpan(TimeAt(f.RangeStartT), TimeAt(f.RangeEndT));
+            span.FillStyle.Color = SeverityColor(f.Severity).WithAlpha(40);
+            span.LineStyle.Width = 0;
+        }
 
         var extraLine = plot.Add.SignalXY(times, extra);
         extraLine.Color      = SP(MediaColors.Coral);
@@ -311,6 +342,193 @@ public partial class MainWindow : Window
         });
         foreach (var caller in site.Callers)
             AddCallSiteRow(panel, caller, depth + 1);
+    }
+
+    private void RefreshFindings()
+    {
+        if (_profile == null) return;
+        _findings = DetectionEngine.Run(_profile);
+        RenderFindings();
+        RefreshChart();
+    }
+
+    private void RenderFindings()
+    {
+        FindingsPanel.Children.Clear();
+
+        if (_findings.Count == 0)
+        {
+            FindingsHeader.Text = "No problems detected.";
+            return;
+        }
+
+        int critical = _findings.Count(f => f.Severity == Severity.Critical);
+        int warning  = _findings.Count(f => f.Severity == Severity.Warning);
+        int info     = _findings.Count(f => f.Severity == Severity.Info);
+        var breakdown = new List<string>();
+        if (critical > 0) breakdown.Add($"{critical} critical");
+        if (warning  > 0) breakdown.Add($"{warning} warning");
+        if (info     > 0) breakdown.Add($"{info} info");
+        FindingsHeader.Text = $"{_findings.Count} finding{(_findings.Count == 1 ? "" : "s")} — {string.Join(", ", breakdown)}";
+
+        var visible = _findings.Where(f => f.Severity switch
+        {
+            Severity.Critical => FilterCritical.IsChecked == true,
+            Severity.Warning  => FilterWarning.IsChecked == true,
+            _                 => FilterInfo.IsChecked == true
+        });
+
+        foreach (var f in visible)
+            FindingsPanel.Children.Add(BuildFindingCard(f));
+    }
+
+    private static IBrush SeverityBrush(Severity s) => s switch
+    {
+        Severity.Critical => new SolidColorBrush(MediaColors.Crimson),
+        Severity.Warning  => new SolidColorBrush(MediaColors.DarkOrange),
+        _                 => new SolidColorBrush(MediaColors.SteelBlue)
+    };
+
+    private Control BuildFindingCard(Finding f)
+    {
+        var color = SeverityBrush(f.Severity);
+
+        var card = new Border
+        {
+            Background = Brushes.White,
+            BorderBrush = new SolidColorBrush(MediaColors.Silver),
+            BorderThickness = new Thickness(1),
+            CornerRadius = CardCorner,
+            Padding = CardPadding
+        };
+
+        var outer = new Grid { ColumnDefinitions = new ColumnDefinitions("Auto,*") };
+
+        var severityBar = new Border
+        {
+            Background = color,
+            Width = SeverityBarWidth,
+            CornerRadius = new CornerRadius(2),
+            Margin = new Thickness(0, 0, Gap8, 0)
+        };
+        Grid.SetColumn(severityBar, 0);
+        outer.Children.Add(severityBar);
+
+        var panel = new StackPanel { Spacing = 0 };
+
+        var headerRow = new Grid { ColumnDefinitions = new ColumnDefinitions("Auto,*,Auto") };
+
+        var badge = new Border
+        {
+            Background = color,
+            CornerRadius = BadgeCorner,
+            Width = FindingBadgeWidth,
+            Height = BadgeHeight,
+            VerticalAlignment = VA.Center,
+            Margin = new Thickness(0, 0, Gap8, 0),
+            Child = new TextBlock
+            {
+                Text = f.Severity.ToString().ToUpperInvariant(),
+                Foreground = Brushes.White,
+                FontSize = FontTiny,
+                FontWeight = FW.Bold,
+                HorizontalAlignment = HA.Center,
+                VerticalAlignment = VA.Center
+            }
+        };
+        Grid.SetColumn(badge, 0);
+        headerRow.Children.Add(badge);
+
+        var titleLabel = new TextBlock
+        {
+            Text = f.Title,
+            FontSize = FontNormal,
+            FontWeight = FW.SemiBold,
+            Foreground = Brushes.Black,
+            VerticalAlignment = VA.Center,
+            TextWrapping = TextWrapping.Wrap
+        };
+        Grid.SetColumn(titleLabel, 1);
+        headerRow.Children.Add(titleLabel);
+
+        var confidenceLabel = new TextBlock
+        {
+            Text = $"Confidence: {f.ConfidenceDisplay}",
+            FontSize = FontNormal,
+            Foreground = new SolidColorBrush(MediaColors.DimGray),
+            VerticalAlignment = VA.Center,
+            Margin = new Thickness(Gap16, 0, 0, 0)
+        };
+        Grid.SetColumn(confidenceLabel, 2);
+        headerRow.Children.Add(confidenceLabel);
+
+        panel.Children.Add(headerRow);
+
+        panel.Children.Add(new TextBlock
+        {
+            Text = f.Description,
+            FontSize = FontSmall,
+            Foreground = Brushes.Black,
+            TextWrapping = TextWrapping.Wrap,
+            Margin = new Thickness(0, Gap4, 0, 0)
+        });
+
+        if (f.Evidence.Count > 0)
+        {
+            var evidencePanel = new StackPanel { Spacing = 1, Margin = new Thickness(0, Gap8, 0, 0) };
+            foreach (var line in f.Evidence)
+                evidencePanel.Children.Add(new TextBlock
+                {
+                    Text = line,
+                    FontFamily = new FontFamily("Cascadia Code,Consolas,monospace"),
+                    FontSize = FontSmall,
+                    Foreground = new SolidColorBrush(MediaColors.DimGray)
+                });
+            panel.Children.Add(evidencePanel);
+        }
+
+        if (!string.IsNullOrEmpty(f.SuspectSite))
+            panel.Children.Add(new TextBlock
+            {
+                Text = $"Suspect site: {f.SuspectSite}",
+                FontSize = FontSmall,
+                FontWeight = FW.SemiBold,
+                Foreground = Brushes.Black,
+                TextWrapping = TextWrapping.Wrap,
+                Margin = new Thickness(0, Gap8, 0, 0)
+            });
+
+        if (!string.IsNullOrEmpty(f.Suggestion))
+        {
+            panel.Children.Add(new TextBlock
+            {
+                Text = "Suggested fix:",
+                FontSize = FontSmall,
+                Foreground = new SolidColorBrush(MediaColors.DimGray),
+                Margin = new Thickness(0, Gap8, 0, Gap4)
+            });
+            panel.Children.Add(new TextBlock
+            {
+                Text = f.Suggestion,
+                FontSize = FontSmall,
+                Foreground = Brushes.Black,
+                TextWrapping = TextWrapping.Wrap
+            });
+        }
+
+        Grid.SetColumn(panel, 1);
+        outer.Children.Add(panel);
+
+        card.Child = outer;
+
+        if (f.EvidenceSnapshotIndex is int idx)
+            card.PointerPressed += (_, _) =>
+            {
+                var snap = _profile?.Snapshots.FirstOrDefault(s => s.Index == idx);
+                if (snap != null) SnapshotList.SelectedItem = snap;
+            };
+
+        return card;
     }
 
     private void ShowSnapshot(MassifSnapshot snap)

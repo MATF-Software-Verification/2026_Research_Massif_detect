@@ -75,6 +75,14 @@
 
         <!-- Bottom: tabs for call tree and stats -->
         <TabControl Grid.Row="2" Background="White">
+          <TabControl.Styles>
+            <Style Selector="TabItem">
+              <Setter Property="FontSize" Value="14"/>
+              <Setter Property="MinHeight" Value="36"/>
+              <Setter Property="Padding" Value="10,0"/>
+            </Style>
+          </TabControl.Styles>
+
 
           <TabItem Header="Allocation Tree">
             <Grid RowDefinitions="Auto,*">
@@ -118,6 +126,27 @@
               </Border>
               <ScrollViewer>
                 <StackPanel Name="HotFunctionsPanel" Spacing="8" Margin="8"/>
+              </ScrollViewer>
+            </DockPanel>
+          </TabItem>
+
+          <TabItem Header="Findings">
+            <DockPanel>
+              <Border DockPanel.Dock="Top" Padding="8,6" Background="WhiteSmoke"
+                      BorderBrush="Silver" BorderThickness="0,0,0,1">
+                <StackPanel Orientation="Horizontal" Spacing="4">
+                  <TextBlock Text="Show:" VerticalAlignment="Center"
+                             Foreground="DimGray" FontSize="12" Margin="0,0,6,0"/>
+                  <CheckBox Name="FilterCritical" Content="Critical" FontSize="12" IsChecked="True"/>
+                  <CheckBox Name="FilterWarning"  Content="Warning"  FontSize="12" IsChecked="True"/>
+                  <CheckBox Name="FilterInfo"     Content="Info"     FontSize="12" IsChecked="True"/>
+                  <TextBlock Name="FindingsHeader" VerticalAlignment="Center"
+                             Foreground="DimGray" FontSize="12" Margin="16,0,0,0"
+                             Text="Load a massif file to see findings."/>
+                </StackPanel>
+              </Border>
+              <ScrollViewer>
+                <StackPanel Name="FindingsPanel" Spacing="8" Margin="8"/>
               </ScrollViewer>
             </DockPanel>
           </TabItem>
