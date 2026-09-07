@@ -23,6 +23,7 @@ public partial class MainWindow : Window
     private MassifProfile? _profile;
     private List<HotFunction> _allHotFunctions = [];
     private List<Finding> _findings = [];
+    private int _topN = 5;   // matches IsChecked="True" on TopN5 in the XAML
 
     private const double FontTiny   = 10;
     private const double FontSmall  = 11;
@@ -63,9 +64,11 @@ public partial class MainWindow : Window
                 ShowSnapshot(snap);
         };
         ChartBorder.SizeChanged += (_, _) => RefreshChart();
-        TopN3.IsCheckedChanged  += (_, _) => { if (TopN3.IsChecked  == true) RenderHotFunctions(); };
-        TopN5.IsCheckedChanged  += (_, _) => { if (TopN5.IsChecked  == true) RenderHotFunctions(); };
-        TopN10.IsCheckedChanged += (_, _) => { if (TopN10.IsChecked == true) RenderHotFunctions(); };
+        // Avalonia checks the new button before unchecking the old one, so for a moment two of
+        // them report IsChecked. That is why the count comes from the handler, not the buttons.
+        TopN3.IsCheckedChanged  += (_, _) => { if (TopN3.IsChecked  == true) ShowTopN(3); };
+        TopN5.IsCheckedChanged  += (_, _) => { if (TopN5.IsChecked  == true) ShowTopN(5); };
+        TopN10.IsCheckedChanged += (_, _) => { if (TopN10.IsChecked == true) ShowTopN(10); };
         FilterCritical.IsCheckedChanged += (_, _) => RenderFindings();
         FilterWarning.IsCheckedChanged  += (_, _) => RenderFindings();
         FilterInfo.IsCheckedChanged     += (_, _) => RenderFindings();
@@ -218,18 +221,17 @@ public partial class MainWindow : Window
         RenderHotFunctions();
     }
 
-    private int GetSelectedTopN()
+    private void ShowTopN(int n)
     {
-        if (TopN3.IsChecked  == true) return 3;
-        if (TopN10.IsChecked == true) return 10;
-        return 5;
+        _topN = n;
+        RenderHotFunctions();
     }
 
     private void RenderHotFunctions()
     {
         HotFunctionsPanel.Children.Clear();
 
-        var functions = _allHotFunctions.Take(GetSelectedTopN()).ToList();
+        var functions = _allHotFunctions.Take(_topN).ToList();
 
         if (functions.Count == 0)
         {
@@ -237,8 +239,7 @@ public partial class MainWindow : Window
             return;
         }
 
-        var peak = _profile?.PeakSnapshot;
-        HotFunctionsHeader.Text = $"Peak snapshot #{peak?.Index}  ·  {_allHotFunctions.Count} allocating functions found";
+        HotFunctionsHeader.Text = $"{_allHotFunctions.Count} allocating function{(_allHotFunctions.Count == 1 ? "" : "s")}";
 
         foreach (var hf in functions)
             HotFunctionsPanel.Children.Add(BuildHotFunctionCard(hf));
@@ -293,7 +294,7 @@ public partial class MainWindow : Window
 
         var bytesLabel = new TextBlock
         {
-            Text = $"{hf.TotalDisplay}  ·  {hf.PeakPercentDisplay}",
+            Text = $"{hf.PeakDisplay}  ·  {hf.SharePercentDisplay}",
             FontSize = FontNormal,
             Foreground = new SolidColorBrush(MediaColors.DimGray),
             VerticalAlignment = VA.Center,
@@ -306,11 +307,39 @@ public partial class MainWindow : Window
 
         panel.Children.Add(new ProgressBar
         {
-            Value = hf.PeakPercent,
+            Value = hf.SharePercent,
             Maximum = 100,
             Height = Gap4,
             Margin = new Thickness(0, Gap4, 0, 0)
         });
+
+        var fate = hf.FinalBytes > 0
+            ? $"{hf.FinalDisplay} still held in the last detailed snapshot"
+            : "fully released by the last detailed snapshot";
+
+        panel.Children.Add(new TextBlock
+        {
+            Text = $"Largest at snapshot #{hf.PeakSnapshotIndex}  ·  {fate}",
+            FontSize = FontSmall,
+            Foreground = new SolidColorBrush(MediaColors.DimGray),
+            TextWrapping = TextWrapping.Wrap,
+            Margin = new Thickness(0, Gap4, 0, 0)
+        });
+
+        panel.Children.Add(new TextBlock
+        {
+            Text = hf.Sites.Count == 1
+                ? $"Allocates at {hf.Sites[0].Location}"
+                : $"Allocates at {hf.Sites.Count} lines in this function:",
+            FontSize = FontSmall,
+            Foreground = new SolidColorBrush(MediaColors.DimGray),
+            TextWrapping = TextWrapping.Wrap,
+            Margin = new Thickness(0, Gap4, 0, 0)
+        });
+
+        if (hf.Sites.Count > 1)
+            foreach (var site in hf.Sites)
+                AddSiteRow(panel, site);
 
         if (hf.CallChain.Count > 0)
         {
@@ -327,6 +356,18 @@ public partial class MainWindow : Window
 
         card.Child = panel;
         return card;
+    }
+
+    private static void AddSiteRow(StackPanel panel, AllocationSite site)
+    {
+        panel.Children.Add(new TextBlock
+        {
+            Text = $"• {site.Location}  —  {site.BytesDisplay}",
+            FontFamily = new FontFamily("Cascadia Code,Consolas,monospace"),
+            FontSize = FontSmall,
+            TextWrapping = TextWrapping.Wrap,
+            Margin = new Thickness(Gap8, 1, 0, 1)
+        });
     }
 
     private static void AddCallSiteRow(StackPanel panel, CallSite site, int depth)
