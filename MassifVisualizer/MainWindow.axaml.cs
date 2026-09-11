@@ -2,6 +2,8 @@ using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using System.Threading;
+using System.Threading.Tasks;
 using Avalonia;
 using Avalonia.Controls;
 using Avalonia.Media;
@@ -14,6 +16,7 @@ using Avalonia.Platform.Storage;
 using MassifVisualizer.Models;
 using MassifVisualizer.Services;
 using MassifVisualizer.Services.Detection;
+using MassifVisualizer.Services.Profiling;
 using ScottPlot;
 
 namespace MassifVisualizer;
@@ -24,6 +27,7 @@ public partial class MainWindow : Window
     private List<HotFunction> _allHotFunctions = [];
     private List<Finding> _findings = [];
     private int _topN = 5;   // matches IsChecked="True" on TopN5 in the XAML
+    private CancellationTokenSource? _profiling;
 
     private const double FontTiny   = 10;
     private const double FontSmall  = 11;
@@ -95,7 +99,32 @@ public partial class MainWindow : Window
                 LoadFile(files[0].Path.LocalPath);
         };
 
+        MenuOpenSource.Click += async (_, _) =>
+        {
+            var files = await StorageProvider.OpenFilePickerAsync(new FilePickerOpenOptions
+            {
+                Title = "Open C Source File",
+                AllowMultiple = false,
+                FileTypeFilter = new[]
+                {
+                    new FilePickerFileType("C source") { Patterns = new[] { "*.c" } },
+                    FilePickerFileTypes.All
+                }
+            });
+
+            if (files is { Count: > 0 })
+                await ProfileSource(files[0].Path.LocalPath);
+        };
+
         MenuExit.Click += (_, _) => Close();
+
+        CancelButton.Click += (_, _) =>
+        {
+            _profiling?.Cancel();
+            StatusBar.Text = "Cancelling...";
+        };
+
+        ToolOutputClose.Click += (_, _) => ToolOutputPanel.IsVisible = false;
     }
 
     private void LoadFile(string path)
@@ -103,26 +132,104 @@ public partial class MainWindow : Window
         try
         {
             StatusBar.Text = $"Loading {path}...";
-            _profile = MassifParser.Parse(path);
-
-            SnapshotList.Items.Clear();
-            foreach (var s in _profile.Snapshots)
-                SnapshotList.Items.Add(s);
-
-            SummaryText.Text = BuildSummary(_profile);
-            RefreshHotFunctions();
-            RefreshFindings();
-
-            var peak = _profile.PeakSnapshot ?? _profile.Snapshots.LastOrDefault();
-            if (peak != null)
-                SnapshotList.SelectedItem = peak;
-
-            StatusBar.Text = $"Loaded {_profile.Snapshots.Count} snapshots from {Path.GetFileName(path)}";
+            ShowProfile(MassifParser.Parse(path), Path.GetFileName(path));
         }
         catch (Exception ex)
         {
             StatusBar.Text = $"Error: {ex.Message}";
         }
+    }
+
+    private async Task ProfileSource(string path)
+    {
+        var name = Path.GetFileName(path);
+
+        _profiling = new CancellationTokenSource();
+        CancelButton.IsVisible = true;
+        MenuOpen.IsEnabled = MenuOpenSource.IsEnabled = false;
+        ToolOutputPanel.IsVisible = false;
+        StatusBar.Text = $"Compiling and profiling {name}, this takes a while...";
+
+        try
+        {
+            var result = await SourceProfiler.RunAsync(path, _profiling.Token);
+
+            if (result.Profile == null)
+            {
+                StatusBar.Text = $"Could not profile {name}";
+                ShowToolOutput($"Could not profile {name}", result.Output);
+            }
+            else
+            {
+                ShowProfile(result.Profile, name);
+
+                // Warnings and a non-zero exit are worth seeing even though the run produced a profile
+                if (result.ExitCode is int code && code != 0)
+                    ShowToolOutput($"{name} exited with code {code}", result.Output);
+                else if (result.Output.Length > 0)
+                    ShowToolOutput($"Compiler warnings for {name}", result.Output);
+            }
+        }
+        catch (OperationCanceledException)
+        {
+            StatusBar.Text = $"Cancelled profiling {name}";
+        }
+        catch (Exception ex)
+        {
+            StatusBar.Text = $"Error: {ex.Message}";
+            ShowToolOutput($"Could not profile {name}", ex.Message);
+        }
+        finally
+        {
+            CancelButton.IsVisible = false;
+            MenuOpen.IsEnabled = MenuOpenSource.IsEnabled = true;
+            _profiling.Dispose();
+            _profiling = null;
+        }
+    }
+
+    private void ShowToolOutput(string header, string output)
+    {
+        ToolOutputHeader.Text = header;
+        ToolOutputText.Text = output.Length > 0 ? output : "(no output)";
+        ToolOutputPanel.IsVisible = true;
+    }
+
+    private void ShowProfile(MassifProfile profile, string name)
+    {
+        _profile = profile;
+
+        SnapshotList.Items.Clear();
+        foreach (var s in profile.Snapshots)
+            SnapshotList.Items.Add(s);
+
+        SummaryText.Text = BuildSummary(profile);
+        RefreshHotFunctions();
+        RefreshFindings();
+
+        var peak = profile.PeakSnapshot ?? profile.Snapshots.LastOrDefault();
+        if (peak != null)
+            SnapshotList.SelectedItem = peak;
+        else
+            ShowNoSnapshot($"{name} has no snapshots to show.");
+
+        StatusBar.Text = $"Loaded {profile.Snapshots.Count} snapshots from {name}";
+    }
+
+    // The tree and details tabs are driven by the selected snapshot, so they need something to say
+    // when there is no selection. Before anything is loaded that text comes from the XAML
+    private void ShowNoSnapshot(string reason)
+    {
+        TreeList.Items.Clear();
+        TreeHeader.Text = reason;
+
+        DetailsPanel.Children.Clear();
+        DetailsPanel.Children.Add(new TextBlock
+        {
+            Text = reason,
+            Foreground = Avalonia.Media.Brushes.DimGray,
+            FontSize = FontNormal
+        });
     }
 
     private void RefreshChart()
