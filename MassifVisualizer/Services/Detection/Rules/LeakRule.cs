@@ -1,4 +1,3 @@
-using System;
 using System.Collections.Generic;
 using System.Linq;
 using MassifVisualizer.Models;
@@ -16,20 +15,17 @@ public class LeakRule : IDetectionRule
             yield break;
 
         double rho = Statistics.Spearman(ctx.T, ctx.H);
-        double dd = Statistics.MaxDrawdown(ctx.H, ctx.Peak);
+        double growth = ctx.H[^1] - ctx.H[0];
+        double growthShare = growth / ctx.Peak;
         double retention = ctx.H[^1] / ctx.Peak;
 
-        if (rho <= th.LeakMonotonicity || dd >= th.LeakMaxDrawdown || retention <= th.LeakFinalRetention)
+        if (rho <= th.LeakMonotonicity ||
+            growthShare <= th.LeakMinGrowthShare ||
+            retention <= th.LeakFinalRetention)
             yield break;
 
         int n = ctx.Snapshots.Count;
-        double mono = Clamp01((rho - th.LeakMonotonicity) / 0.10);
-        double drop = Clamp01((th.LeakMaxDrawdown - dd) / 0.10);
-        double reten = Clamp01((retention - th.LeakFinalRetention) / 0.20);
-        double sample = Clamp01(n / 30.0);
-        double confidence = (0.55 + 0.45 * new[] { mono, drop, reten }.Average()) * (0.7 + 0.3 * sample);
-
-        string? suspectSite = FindSuspectSite(ctx);
+        string? suspectSite = FindSuspectSite(ctx, growth);
         string caveat = "a program designed to accumulate until exit (e.g. loading a full dataset before " +
                         "processing it) looks identical to a leak from a single Massif run — this is a " +
                         "suspicion, not a verdict.";
@@ -54,7 +50,6 @@ public class LeakRule : IDetectionRule
             RuleId = Id,
             Title = "Suspected memory leak",
             Severity = Severity.Warning,
-            Confidence = confidence,
             Description = description,
             Suggestion = suggestion,
             SuspectSite = suspectSite,
@@ -64,25 +59,25 @@ public class LeakRule : IDetectionRule
         };
 
         finding.Evidence.Add($"Monotonicity (Spearman ρ): {rho:F2} — threshold {th.LeakMonotonicity:F2}");
-        finding.Evidence.Add($"Largest release: {dd * 100:F1} % of peak — threshold {th.LeakMaxDrawdown * 100:F0} %");
+        finding.Evidence.Add($"Net growth: {ByteFormatter.Format((long)growth)} ({growthShare * 100:F1} % of peak) — threshold {th.LeakMinGrowthShare * 100:F0} %");
         finding.Evidence.Add($"Final heap: {retention * 100:F1} % of peak — threshold {th.LeakFinalRetention * 100:F0} %");
         finding.Evidence.Add($"Snapshots analyzed: {n}");
 
         yield return finding;
     }
 
-    private static string? FindSuspectSite(AnalysisContext ctx)
+    private static string? FindSuspectSite(AnalysisContext ctx, double totalGrowth)
     {
-        if (ctx.Detailed.Count < 3) return null;
+        if (ctx.Detailed.Count < 2 || totalGrowth <= 0) return null;
 
-        var siteT = ctx.SiteT();
         var suspect = ctx.Sites
-            .Where(s => Statistics.Spearman(siteT, s.Bytes) > ctx.Thresholds.LeakSiteMonotonicity)
-            .OrderByDescending(s => s.Last - s.First)
+            .Select(s => (s.Site, Growth: s.Last - s.First))
+            .Where(s => s.Growth > 0)
+            .OrderByDescending(s => s.Growth)
             .FirstOrDefault();
 
-        return suspect?.Site;
+        return suspect.Growth >= ctx.Thresholds.LeakMinSiteGrowthShare * totalGrowth
+            ? suspect.Site
+            : null;
     }
-
-    private static double Clamp01(double v) => Math.Clamp(v, 0, 1);
 }

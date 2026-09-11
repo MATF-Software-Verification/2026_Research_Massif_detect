@@ -457,7 +457,7 @@ public partial class MainWindow : Window
 
         var panel = new StackPanel { Spacing = 0 };
 
-        var headerRow = new Grid { ColumnDefinitions = new ColumnDefinitions("Auto,*,Auto") };
+        var headerRow = new Grid { ColumnDefinitions = new ColumnDefinitions("Auto,*") };
 
         var badge = new Border
         {
@@ -491,17 +491,6 @@ public partial class MainWindow : Window
         };
         Grid.SetColumn(titleLabel, 1);
         headerRow.Children.Add(titleLabel);
-
-        var confidenceLabel = new TextBlock
-        {
-            Text = $"Confidence: {f.ConfidenceDisplay}",
-            FontSize = FontNormal,
-            Foreground = new SolidColorBrush(MediaColors.DimGray),
-            VerticalAlignment = VA.Center,
-            Margin = new Thickness(Gap16, 0, 0, 0)
-        };
-        Grid.SetColumn(confidenceLabel, 2);
-        headerRow.Children.Add(confidenceLabel);
 
         panel.Children.Add(headerRow);
 
