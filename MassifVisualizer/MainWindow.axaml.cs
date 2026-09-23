@@ -28,6 +28,7 @@ public partial class MainWindow : Window
     private List<Finding> _findings = [];
     private int _topN = 5;   // matches IsChecked="True" on TopN5 in the XAML
     private CancellationTokenSource? _profiling;
+    private string? _sourcePath;
 
     private const double FontTiny   = 10;
     private const double FontSmall  = 11;
@@ -132,6 +133,7 @@ public partial class MainWindow : Window
         try
         {
             StatusBar.Text = $"Loading {path}...";
+            _sourcePath = null;
             ShowProfile(MassifParser.Parse(path), Path.GetFileName(path));
         }
         catch (Exception ex)
@@ -161,6 +163,7 @@ public partial class MainWindow : Window
             }
             else
             {
+                _sourcePath = result.SourcePath;
                 ShowProfile(result.Profile, name);
 
                 // Warnings and a non-zero exit are worth seeing even though the run produced a profile
@@ -234,7 +237,12 @@ public partial class MainWindow : Window
 
     private void RefreshChart()
     {
-        if (_profile == null || _profile.Snapshots.Count == 0) return;
+        if (_profile == null || _profile.Snapshots.Count == 0)
+        {
+            // remove the chart from the previously loaded profile
+            ChartImage.Source = null;
+            return;
+        }
 
         int w = Math.Max(ChartMinWidth,  (int)ChartBorder.Bounds.Width);
         int h = Math.Max(ChartMinHeight, (int)ChartBorder.Bounds.Height);
@@ -365,7 +373,7 @@ public partial class MainWindow : Window
 
         var panel = new StackPanel { Spacing = 0 };
 
-        var headerRow = new Grid { ColumnDefinitions = new ColumnDefinitions("Auto,*,Auto") };
+        var headerRow = new Grid { ColumnDefinitions = new ColumnDefinitions("Auto,*,Auto,Auto") };
 
         var badge = new Border
         {
@@ -409,6 +417,17 @@ public partial class MainWindow : Window
         };
         Grid.SetColumn(bytesLabel, 2);
         headerRow.Children.Add(bytesLabel);
+
+        var allocationLines = LinesInSource(hf.Sites.Select(site => site.Location));
+        var callerLines = LinesInSource(hf.CallChain.Select(call => call.Label));
+
+        var caption = $"{hf.Label}  —  {hf.PeakDisplay} · {hf.SharePercentDisplay}";
+        if (allocationLines.Count == 0 && hf.Sites.Count > 0)
+            caption += $"  —  allocates in {hf.Sites[0].Location}";
+
+        var show = BuildShowInSourceButton(allocationLines, callerLines, caption);
+        Grid.SetColumn(show, 3);
+        headerRow.Children.Add(show);
 
         panel.Children.Add(headerRow);
 
@@ -463,6 +482,47 @@ public partial class MainWindow : Window
 
         card.Child = panel;
         return card;
+    }
+
+    private List<int> LinesInSource(IEnumerable<string> sites)
+    {
+        var lines = new List<int>();
+        if (_sourcePath == null) return lines;
+
+        foreach (var site in sites)
+        {
+            var location = SourceLocation.Parse(site);
+            if (location != null && location.Value.IsIn(_sourcePath) && !lines.Contains(location.Value.Line))
+                lines.Add(location.Value.Line);
+        }
+
+        lines.Sort();
+        return lines;
+    }
+
+    private Control BuildShowInSourceButton(List<int> allocationLines, List<int> callerLines, string caption)
+    {
+        var button = new Button
+        {
+            Content = "Show in source",
+            FontSize = FontSmall,
+            Padding = new Thickness(Gap8, 2),
+            VerticalAlignment = VA.Center,
+            IsEnabled = allocationLines.Count > 0 || callerLines.Count > 0
+        };
+
+        if (button.IsEnabled)
+            button.Click += (_, _) =>
+                new SourceWindow(_sourcePath!, caption, allocationLines, callerLines).Show(this);
+
+        var holder = new Border { Child = button, Margin = new Thickness(Gap12, 0, 0, 0) };
+
+        if (!button.IsEnabled)
+            ToolTip.SetTip(holder, _sourcePath == null
+                ? "Only profiles run from a .c file know where the source is."
+                : $"Nothing in {Path.GetFileName(_sourcePath)} to point at.");
+
+        return holder;
     }
 
     private static void AddSiteRow(StackPanel panel, AllocationSite site)
