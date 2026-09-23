@@ -15,6 +15,7 @@
     <Menu DockPanel.Dock="Top">
       <MenuItem Header="_File">
         <MenuItem Header="_Open massif file..." Name="MenuOpen"/>
+        <MenuItem Header="Open _source file..." Name="MenuOpenSource"/>
         <Separator/>
         <MenuItem Header="E_xit" Name="MenuExit"/>
       </MenuItem>
@@ -24,13 +25,35 @@
     <Border DockPanel.Dock="Top" Background="WhiteSmoke" Padding="8,4"
             BorderBrush="Silver" BorderThickness="0,0,0,1">
       <TextBlock Name="SummaryText" Foreground="Black" FontSize="12"
-                 Text="No file loaded. Use File > Open to load a massif output file."/>
+                 Text="No file loaded. Open a massif output file, or a C source file to profile."/>
     </Border>
 
     <!-- Status bar -->
     <Border DockPanel.Dock="Bottom" Background="WhiteSmoke" Padding="8,3"
             BorderBrush="Silver" BorderThickness="0,1,0,0">
-      <TextBlock Name="StatusBar" Foreground="DimGray" FontSize="11" Text="Ready"/>
+      <DockPanel>
+        <Button Name="CancelButton" DockPanel.Dock="Right" Content="Cancel"
+                FontSize="11" Padding="10,0" IsVisible="False"/>
+        <TextBlock Name="StatusBar" Foreground="DimGray" FontSize="11" Text="Ready"
+                   VerticalAlignment="Center"/>
+      </DockPanel>
+    </Border>
+
+    <!-- Compiler and valgrind output, shown only when there is something to report -->
+    <Border Name="ToolOutputPanel" DockPanel.Dock="Bottom" Background="OldLace" Padding="8,6"
+            BorderBrush="Silver" BorderThickness="0,1,0,0" IsVisible="False">
+      <DockPanel>
+        <DockPanel DockPanel.Dock="Top" Margin="0,0,0,4">
+          <Button Name="ToolOutputClose" DockPanel.Dock="Right" Content="Hide"
+                  FontSize="11" Padding="10,0"/>
+          <TextBlock Name="ToolOutputHeader" Foreground="Black" FontSize="12" FontWeight="Bold"
+                     VerticalAlignment="Center"/>
+        </DockPanel>
+        <ScrollViewer MaxHeight="120" HorizontalScrollBarVisibility="Auto">
+          <SelectableTextBlock Name="ToolOutputText" Foreground="Black"
+                               FontFamily="Consolas,Menlo,monospace" FontSize="11"/>
+        </ScrollViewer>
+      </DockPanel>
     </Border>
 
     <!-- Main layout: snapshot list on left, content on right -->
@@ -87,7 +110,7 @@
           <TabItem Header="Allocation Tree">
             <Grid RowDefinitions="Auto,*">
               <TextBlock Grid.Row="0" Name="TreeHeader"
-                         Text="Select a detailed or peak snapshot to view the allocation call tree."
+                         Text="Load a profile to see the allocation tree."
                          Foreground="DimGray" FontSize="12" Padding="8,6"/>
               <ListBox Grid.Row="1" Name="TreeList" Background="Transparent" SelectionMode="Single">
                 <ListBox.ItemTemplate>
@@ -104,7 +127,7 @@
           <TabItem Header="Snapshot Details">
             <ScrollViewer>
               <StackPanel Name="DetailsPanel" Spacing="6" Margin="12">
-                <TextBlock Text="Select a snapshot from the list." Foreground="DimGray"/>
+                <TextBlock Text="Load a profile to see snapshot details." Foreground="DimGray"/>
               </StackPanel>
             </ScrollViewer>
           </TabItem>
@@ -121,7 +144,7 @@
                   <RadioButton Name="TopN10" Content="10"  GroupName="HotN" FontSize="12"/>
                   <TextBlock Name="HotFunctionsHeader" VerticalAlignment="Center"
                              Foreground="DimGray" FontSize="12" Margin="16,0,0,0"
-                             Text="Load a massif file to see hot functions."/>
+                             Text="Load a profile to see hot functions."/>
                 </StackPanel>
               </Border>
               <ScrollViewer>
@@ -142,7 +165,7 @@
                   <CheckBox Name="FilterInfo"     Content="Info"     FontSize="12" IsChecked="True"/>
                   <TextBlock Name="FindingsHeader" VerticalAlignment="Center"
                              Foreground="DimGray" FontSize="12" Margin="16,0,0,0"
-                             Text="Load a massif file to see findings."/>
+                             Text="Load a profile to see findings."/>
                 </StackPanel>
               </Border>
               <ScrollViewer>
