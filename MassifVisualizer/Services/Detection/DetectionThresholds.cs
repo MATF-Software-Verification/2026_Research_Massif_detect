@@ -7,6 +7,7 @@ public class DetectionThresholds
     public double LeakMinGrowthShare { get; init; } = 0.20;
     public double LeakFinalRetention { get; init; } = 0.80;
     public double LeakMinSiteGrowthShare { get; init; } = 0.10;
+    public double LeakAttributionEdgeWindow { get; init; } = 0.25;
 
     public double AtExitMinFinalShare { get; init; } = 0.10;
     public double AtExitMinSiteShare { get; init; } = 0.10;
