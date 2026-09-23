@@ -624,7 +624,7 @@ public partial class MainWindow : Window
 
         var panel = new StackPanel { Spacing = 0 };
 
-        var headerRow = new Grid { ColumnDefinitions = new ColumnDefinitions("Auto,*") };
+        var headerRow = new Grid { ColumnDefinitions = new ColumnDefinitions("Auto,*,Auto") };
 
         var badge = new Border
         {
@@ -658,6 +658,15 @@ public partial class MainWindow : Window
         };
         Grid.SetColumn(titleLabel, 1);
         headerRow.Children.Add(titleLabel);
+
+        if (!string.IsNullOrEmpty(f.SuspectSite))
+        {
+            var allocationLines = LinesInSource([f.SuspectSite]);
+            var caption = $"{f.RuleId}: {f.Title} — {f.SuspectSite}";
+            var show = BuildShowInSourceButton(allocationLines, [], caption);
+            Grid.SetColumn(show, 2);
+            headerRow.Children.Add(show);
+        }
 
         panel.Children.Add(headerRow);
 
