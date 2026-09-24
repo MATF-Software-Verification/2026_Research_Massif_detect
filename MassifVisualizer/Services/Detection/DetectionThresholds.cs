@@ -1,6 +1,6 @@
 namespace MassifVisualizer.Services.Detection;
 
-public class DetectionThresholds
+public sealed record DetectionThresholds
 {
     public int MinSnapshots { get; init; } = 10;
     public double LeakMonotonicity { get; init; } = 0.90;

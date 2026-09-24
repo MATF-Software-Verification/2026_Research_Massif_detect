@@ -1,0 +1,90 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d" d:DesignWidth="560" d:DesignHeight="590"
+        x:Class="MassifVisualizer.SettingsWindow"
+        Title="Settings"
+        Width="560" Height="590"
+        MinWidth="480" MinHeight="500"
+        CanResize="True"
+        WindowStartupLocation="CenterOwner">
+
+  <DockPanel Margin="16">
+    <StackPanel DockPanel.Dock="Bottom" Orientation="Horizontal" HorizontalAlignment="Right"
+                Spacing="8" Margin="0,16,0,0">
+      <Button Name="ResetButton" Content="Reset defaults" Padding="14,6"/>
+      <Button Name="CancelButton" Content="Cancel" Padding="14,6"/>
+      <Button Name="ApplyButton" Content="Apply" Padding="14,6"/>
+    </StackPanel>
+
+    <TabControl>
+      <TabItem Header="Massif">
+        <ScrollViewer>
+          <Grid ColumnDefinitions="*,180" RowDefinitions="Auto,Auto,Auto,Auto,Auto"
+                ColumnSpacing="16" RowSpacing="12" Margin="16">
+            <TextBlock Grid.Row="0" Grid.ColumnSpan="2"
+                       Text="These options are passed to Valgrind on the next C source profiling run."
+                       Foreground="DimGray" TextWrapping="Wrap" Margin="0,0,0,8"/>
+
+            <TextBlock Grid.Row="1" Text="Time unit" VerticalAlignment="Center"/>
+            <ComboBox Grid.Row="1" Grid.Column="1" Name="TimeUnit"/>
+
+            <TextBlock Grid.Row="2" Text="Detailed frequency" VerticalAlignment="Center"/>
+            <NumericUpDown Grid.Row="2" Grid.Column="1" Name="DetailedFrequency"
+                           Minimum="1" Increment="1" FormatString="0"/>
+
+            <TextBlock Grid.Row="3" Text="Maximum snapshots" VerticalAlignment="Center"/>
+            <NumericUpDown Grid.Row="3" Grid.Column="1" Name="MaximumSnapshots"
+                           Minimum="1" Increment="1" FormatString="0"/>
+
+            <TextBlock Grid.Row="4" Text="Significance threshold (%)" VerticalAlignment="Center"/>
+            <NumericUpDown Grid.Row="4" Grid.Column="1" Name="SignificanceThreshold"
+                           Minimum="0" Maximum="100" Increment="0.1" FormatString="0.0###"/>
+          </Grid>
+        </ScrollViewer>
+      </TabItem>
+
+      <TabItem Header="Detection Rules">
+        <ScrollViewer>
+          <Grid ColumnDefinitions="*,180" RowDefinitions="Auto,Auto,Auto,Auto,Auto,Auto,Auto,Auto,Auto,Auto,Auto,Auto,Auto,Auto,Auto,Auto"
+                ColumnSpacing="16" RowSpacing="8" Margin="16">
+            <TextBlock Grid.Row="0" Grid.ColumnSpan="2"
+                       Text="Ratios use the same 0–1 scale as the detection rules. Changes apply when a profile is next loaded or generated."
+                       Foreground="DimGray" TextWrapping="Wrap" Margin="0,0,0,6"/>
+
+            <TextBlock Grid.Row="1" Grid.ColumnSpan="2" Text="GLOBAL" FontWeight="Bold" Foreground="DimGray" Margin="0,4,0,0"/>
+            <TextBlock Grid.Row="2" Text="Minimum snapshots" VerticalAlignment="Center"/>
+            <NumericUpDown Grid.Row="2" Grid.Column="1" Name="MinSnapshots" Minimum="1" Increment="1" FormatString="0"/>
+
+            <TextBlock Grid.Row="3" Grid.ColumnSpan="2" Text="LEAK" FontWeight="Bold" Foreground="DimGray" Margin="0,4,0,0"/>
+            <TextBlock Grid.Row="4" Text="Monotonicity" VerticalAlignment="Center"/>
+            <NumericUpDown Grid.Row="4" Grid.Column="1" Name="LeakMonotonicity" Minimum="0" Maximum="1" Increment="0.01" FormatString="0.00"/>
+            <TextBlock Grid.Row="5" Text="Minimum growth share" VerticalAlignment="Center"/>
+            <NumericUpDown Grid.Row="5" Grid.Column="1" Name="LeakMinGrowthShare" Minimum="0" Maximum="1" Increment="0.01" FormatString="0.00"/>
+            <TextBlock Grid.Row="6" Text="Final retention" VerticalAlignment="Center"/>
+            <NumericUpDown Grid.Row="6" Grid.Column="1" Name="LeakFinalRetention" Minimum="0" Maximum="1" Increment="0.01" FormatString="0.00"/>
+
+            <TextBlock Grid.Row="7" Grid.ColumnSpan="2" Text="ATEXIT" FontWeight="Bold" Foreground="DimGray" Margin="0,4,0,0"/>
+            <TextBlock Grid.Row="8" Text="Minimum final share" VerticalAlignment="Center"/>
+            <NumericUpDown Grid.Row="8" Grid.Column="1" Name="AtExitMinFinalShare" Minimum="0" Maximum="1" Increment="0.01" FormatString="0.00"/>
+
+            <TextBlock Grid.Row="9" Grid.ColumnSpan="2" Text="FRAG" FontWeight="Bold" Foreground="DimGray" Margin="0,4,0,0"/>
+            <TextBlock Grid.Row="10" Text="Median overhead ratio" VerticalAlignment="Center"/>
+            <NumericUpDown Grid.Row="10" Grid.Column="1" Name="FragMedianRatio" Minimum="0" Maximum="1" Increment="0.01" FormatString="0.00"/>
+
+            <TextBlock Grid.Row="11" Grid.ColumnSpan="2" Text="SPIKE" FontWeight="Bold" Foreground="DimGray" Margin="0,4,0,0"/>
+            <TextBlock Grid.Row="12" Text="Relative jump" VerticalAlignment="Center"/>
+            <NumericUpDown Grid.Row="12" Grid.Column="1" Name="SpikeRelativeJump" Minimum="0" Maximum="1" Increment="0.01" FormatString="0.00"/>
+            <TextBlock Grid.Row="13" Text="Absolute jump" VerticalAlignment="Center"/>
+            <NumericUpDown Grid.Row="13" Grid.Column="1" Name="SpikeAbsoluteJump" Minimum="0" Maximum="1" Increment="0.01" FormatString="0.00"/>
+            <TextBlock Grid.Row="14" Text="Recovery window" VerticalAlignment="Center"/>
+            <NumericUpDown Grid.Row="14" Grid.Column="1" Name="SpikeRecoveryWindow" Minimum="0" Maximum="1" Increment="0.01" FormatString="0.00"/>
+            <TextBlock Grid.Row="15" Text="Recovery fraction" VerticalAlignment="Center"/>
+            <NumericUpDown Grid.Row="15" Grid.Column="1" Name="SpikeRecoveryFraction" Minimum="0" Maximum="1" Increment="0.01" FormatString="0.00"/>
+          </Grid>
+        </ScrollViewer>
+      </TabItem>
+    </TabControl>
+  </DockPanel>
+</Window>

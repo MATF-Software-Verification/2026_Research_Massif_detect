@@ -29,6 +29,8 @@ public partial class MainWindow : Window
     private int _topN = 5;   // matches IsChecked="True" on TopN5 in the XAML
     private CancellationTokenSource? _profiling;
     private string? _sourcePath;
+    private MassifOptions _massifOptions = MassifOptions.Default;
+    private DetectionThresholds _detectionThresholds = DetectionThresholds.Default;
 
     private const double FontTiny   = 10;
     private const double FontSmall  = 11;
@@ -119,6 +121,18 @@ public partial class MainWindow : Window
 
         MenuExit.Click += (_, _) => Close();
 
+        MenuSettings.Click += async (_, _) =>
+        {
+            var dialog = new SettingsWindow(_massifOptions, _detectionThresholds);
+            var settings = await dialog.ShowDialog<SettingsResult?>(this);
+            if (settings == null)
+                return;
+
+            _massifOptions = settings.Massif;
+            _detectionThresholds = settings.Detection;
+            StatusBar.Text = "Settings applied; they will be used for the next profile load or run.";
+        };
+
         CancelButton.Click += (_, _) =>
         {
             _profiling?.Cancel();
@@ -154,7 +168,7 @@ public partial class MainWindow : Window
 
         try
         {
-            var result = await SourceProfiler.RunAsync(path, _profiling.Token);
+            var result = await SourceProfiler.RunAsync(path, _massifOptions, _profiling.Token);
 
             if (result.Profile == null)
             {
@@ -555,7 +569,7 @@ public partial class MainWindow : Window
     private void RefreshFindings()
     {
         if (_profile == null) return;
-        _findings = DetectionEngine.Run(_profile);
+        _findings = DetectionEngine.Run(_profile, _detectionThresholds);
         RenderFindings();
         RefreshChart();
     }
