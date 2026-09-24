@@ -17,6 +17,9 @@
       <Button Name="CancelButton" Content="Cancel" Padding="14,6"/>
       <Button Name="ApplyButton" Content="Apply" Padding="14,6"/>
     </StackPanel>
+    <TextBlock Name="ValidationMessage" DockPanel.Dock="Bottom"
+               Foreground="Crimson" TextWrapping="Wrap" IsVisible="False"
+               Margin="0,12,0,0"/>
 
     <TabControl>
       <TabItem Header="Massif">
@@ -31,16 +34,13 @@
             <ComboBox Grid.Row="1" Grid.Column="1" Name="TimeUnit"/>
 
             <TextBlock Grid.Row="2" Text="Detailed frequency" VerticalAlignment="Center"/>
-            <NumericUpDown Grid.Row="2" Grid.Column="1" Name="DetailedFrequency"
-                           Minimum="1" Increment="1" FormatString="0"/>
+            <TextBox Grid.Row="2" Grid.Column="1" Name="DetailedFrequency"/>
 
             <TextBlock Grid.Row="3" Text="Maximum snapshots" VerticalAlignment="Center"/>
-            <NumericUpDown Grid.Row="3" Grid.Column="1" Name="MaximumSnapshots"
-                           Minimum="1" Increment="1" FormatString="0"/>
+            <TextBox Grid.Row="3" Grid.Column="1" Name="MaximumSnapshots"/>
 
             <TextBlock Grid.Row="4" Text="Significance threshold (%)" VerticalAlignment="Center"/>
-            <NumericUpDown Grid.Row="4" Grid.Column="1" Name="SignificanceThreshold"
-                           Minimum="0" Maximum="100" Increment="0.1" FormatString="0.0###"/>
+            <TextBox Grid.Row="4" Grid.Column="1" Name="SignificanceThreshold"/>
           </Grid>
         </ScrollViewer>
       </TabItem>
@@ -55,33 +55,33 @@
 
             <TextBlock Grid.Row="1" Grid.ColumnSpan="2" Text="GLOBAL" FontWeight="Bold" Foreground="DimGray" Margin="0,4,0,0"/>
             <TextBlock Grid.Row="2" Text="Minimum snapshots" VerticalAlignment="Center"/>
-            <NumericUpDown Grid.Row="2" Grid.Column="1" Name="MinSnapshots" Minimum="1" Increment="1" FormatString="0"/>
+            <TextBox Grid.Row="2" Grid.Column="1" Name="MinSnapshots"/>
 
             <TextBlock Grid.Row="3" Grid.ColumnSpan="2" Text="LEAK" FontWeight="Bold" Foreground="DimGray" Margin="0,4,0,0"/>
             <TextBlock Grid.Row="4" Text="Monotonicity" VerticalAlignment="Center"/>
-            <NumericUpDown Grid.Row="4" Grid.Column="1" Name="LeakMonotonicity" Minimum="0" Maximum="1" Increment="0.01" FormatString="0.00"/>
+            <TextBox Grid.Row="4" Grid.Column="1" Name="LeakMonotonicity"/>
             <TextBlock Grid.Row="5" Text="Minimum growth share" VerticalAlignment="Center"/>
-            <NumericUpDown Grid.Row="5" Grid.Column="1" Name="LeakMinGrowthShare" Minimum="0" Maximum="1" Increment="0.01" FormatString="0.00"/>
+            <TextBox Grid.Row="5" Grid.Column="1" Name="LeakMinGrowthShare"/>
             <TextBlock Grid.Row="6" Text="Final retention" VerticalAlignment="Center"/>
-            <NumericUpDown Grid.Row="6" Grid.Column="1" Name="LeakFinalRetention" Minimum="0" Maximum="1" Increment="0.01" FormatString="0.00"/>
+            <TextBox Grid.Row="6" Grid.Column="1" Name="LeakFinalRetention"/>
 
             <TextBlock Grid.Row="7" Grid.ColumnSpan="2" Text="ATEXIT" FontWeight="Bold" Foreground="DimGray" Margin="0,4,0,0"/>
             <TextBlock Grid.Row="8" Text="Minimum final share" VerticalAlignment="Center"/>
-            <NumericUpDown Grid.Row="8" Grid.Column="1" Name="AtExitMinFinalShare" Minimum="0" Maximum="1" Increment="0.01" FormatString="0.00"/>
+            <TextBox Grid.Row="8" Grid.Column="1" Name="AtExitMinFinalShare"/>
 
             <TextBlock Grid.Row="9" Grid.ColumnSpan="2" Text="FRAG" FontWeight="Bold" Foreground="DimGray" Margin="0,4,0,0"/>
             <TextBlock Grid.Row="10" Text="Median overhead ratio" VerticalAlignment="Center"/>
-            <NumericUpDown Grid.Row="10" Grid.Column="1" Name="FragMedianRatio" Minimum="0" Maximum="1" Increment="0.01" FormatString="0.00"/>
+            <TextBox Grid.Row="10" Grid.Column="1" Name="FragMedianRatio"/>
 
             <TextBlock Grid.Row="11" Grid.ColumnSpan="2" Text="SPIKE" FontWeight="Bold" Foreground="DimGray" Margin="0,4,0,0"/>
             <TextBlock Grid.Row="12" Text="Relative jump" VerticalAlignment="Center"/>
-            <NumericUpDown Grid.Row="12" Grid.Column="1" Name="SpikeRelativeJump" Minimum="0" Maximum="1" Increment="0.01" FormatString="0.00"/>
+            <TextBox Grid.Row="12" Grid.Column="1" Name="SpikeRelativeJump"/>
             <TextBlock Grid.Row="13" Text="Absolute jump" VerticalAlignment="Center"/>
-            <NumericUpDown Grid.Row="13" Grid.Column="1" Name="SpikeAbsoluteJump" Minimum="0" Maximum="1" Increment="0.01" FormatString="0.00"/>
+            <TextBox Grid.Row="13" Grid.Column="1" Name="SpikeAbsoluteJump"/>
             <TextBlock Grid.Row="14" Text="Recovery window" VerticalAlignment="Center"/>
-            <NumericUpDown Grid.Row="14" Grid.Column="1" Name="SpikeRecoveryWindow" Minimum="0" Maximum="1" Increment="0.01" FormatString="0.00"/>
+            <TextBox Grid.Row="14" Grid.Column="1" Name="SpikeRecoveryWindow"/>
             <TextBlock Grid.Row="15" Text="Recovery fraction" VerticalAlignment="Center"/>
-            <NumericUpDown Grid.Row="15" Grid.Column="1" Name="SpikeRecoveryFraction" Minimum="0" Maximum="1" Increment="0.01" FormatString="0.00"/>
+            <TextBox Grid.Row="15" Grid.Column="1" Name="SpikeRecoveryFraction"/>
           </Grid>
         </ScrollViewer>
       </TabItem>
