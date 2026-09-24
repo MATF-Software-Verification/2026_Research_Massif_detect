@@ -55,15 +55,15 @@ public class SpikeRule : IDetectionRule
 
         string shape = recovery switch
         {
-            Recovery.Released => "The heap later gave back at least 75% of this increase, so it looks like a temporary buffer.",
-            Recovery.Retained => "Later snapshots were available, but the heap did not give back at least 75% of this increase.",
-            _ => "There are no later snapshots inside the recovery window, so the outcome cannot be classified."
+            Recovery.Released => $"Heap usage later dropped by at least {(1 - th.SpikeRecoveryFraction) * 100:0.##} % of this increase within the recovery window.",
+            Recovery.Retained => $"Heap usage did not drop by the required {(1 - th.SpikeRecoveryFraction) * 100:0.##} % of this increase within the recovery window.",
+            _ => "There are no later snapshots in the recovery window to check whether heap usage dropped."
         };
 
         string attribution = suspect != null
-            ? $"The immediately adjacent allocation trees show that {suspect} accounts for " +
+            ? $"Allocation trees just before and after the increase show that {suspect} accounts for " +
               $"{suspectGrowth * 100.0 / rise:F0} % of the rise (+{ByteFormatter.Format(suspectGrowth)})."
-            : "The immediately adjacent snapshots do not provide enough tree evidence to name one allocation site.";
+            : "The snapshots just before and after the increase do not provide enough tree data to identify an allocation site.";
 
         string relativeRise = before > 0
             ? $"{rise / before * 100:F0} % over the previous snapshot"
@@ -79,13 +79,16 @@ public class SpikeRule : IDetectionRule
                 _ => "Allocation spike with unknown outcome"
             },
             Severity = recovery == Recovery.Retained ? Severity.Warning : Severity.Info,
-            Description = $"Heap rose by {ByteFormatter.Format((long)rise)} ({relativeRise}, " +
+            Description = $"Heap usage increased by {ByteFormatter.Format((long)rise)} ({relativeRise}, " +
                           $"{rise / ctx.Peak * 100:F0} % of peak) " +
                           $"{(start == end ? $"at snapshot #{ctx.Snapshots[start].Index}" : $"across snapshots #{ctx.Snapshots[start].Index}-#{ctx.Snapshots[end].Index}")}. " +
                           $"{shape} {attribution}",
-            Suggestion = recovery == Recovery.Retained
-                ? "Consider processing the data in chunks or placing an explicit bound on how much remains resident."
-                : "If this temporary allocation sets an excessive peak, consider processing the data in smaller chunks.",
+            Suggestion = recovery switch
+            {
+                Recovery.Released => "If this spike causes excessive peak memory usage, consider processing the data in smaller chunks.",
+                Recovery.Retained => "Check whether the added memory is still needed. Consider processing the data in smaller chunks or limiting how much stays in memory.",
+                _ => "Collect more snapshots after the increase to check whether memory usage drops."
+            },
             SuspectSite = suspect,
             EvidenceSnapshotIndex = ctx.Snapshots[end].Index,
             RangeStartT = ctx.T[start - 1],

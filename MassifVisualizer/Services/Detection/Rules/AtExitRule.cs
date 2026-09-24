@@ -32,20 +32,16 @@ public class AtExitRule : IDetectionRule
 
         string? suspect = candidates.Count > 0 ? candidates[0].Site : null;
 
-        const string caveat = "Massif does not track pointers, so it cannot tell memory the program " +
-                              "could still free (it holds the pointer, it just never got round to it) " +
-                              "from memory whose pointer was lost. That is Memcheck's \"still reachable\" " +
-                              "vs \"definitely lost\" distinction, so this is a candidate, not a verdict.";
+        const string caveat = "Massif cannot tell whether this memory is still reachable or has been leaked.";
 
         var description = suspect != null
-            ? $"The final snapshot still holds {finalShare * 100:F1} % of the peak heap. " +
-              $"{candidates.Count} allocation site(s) each hold a meaningful share, " +
-              $"the largest being {suspect}. {caveat}"
+            ? $"The last snapshot still contains {finalShare * 100:F1} % of the peak heap. " +
+              $"The largest identified allocation site is {suspect}. {caveat}"
             : hasFinalTree
-                ? $"The final snapshot still holds {finalShare * 100:F1} % of the peak heap, but no single " +
-                  $"allocation site holds enough of it to be named. {caveat}"
-                : $"The final snapshot still holds {finalShare * 100:F1} % of the peak heap, but it has no " +
-                  $"allocation tree, so no site can be named. {caveat}";
+                ? $"The last snapshot still contains {finalShare * 100:F1} % of the peak heap. " +
+                  $"No single allocation site holds enough of it to be identified. {caveat}"
+                : $"The last snapshot still contains {finalShare * 100:F1} % of the peak heap. " +
+                  $"It has no allocation tree, so no allocation site can be identified. {caveat}";
 
         var finding = new Finding
         {
@@ -54,11 +50,10 @@ public class AtExitRule : IDetectionRule
             Severity = Severity.Info,
             Description = description,
             Suggestion = suspect != null
-                ? $"Review whether the allocation at {suspect} is intentionally held for the process lifetime. " +
-                  "Run `valgrind --leak-check=full` to see whether it is " +
-                  "definitely lost or merely still reachable."
-                : "Run `valgrind --leak-check=full` to see whether the surviving memory is definitely lost " +
-                  "or merely still reachable at exit.",
+                ? $"Check whether memory allocated at {suspect} needs to remain allocated until the program ends. " +
+                  "Run `valgrind --leak-check=full` to check for leaks."
+                : "Check whether this memory needs to remain allocated until the program ends. " +
+                  "Run `valgrind --leak-check=full` to check for leaks.",
             SuspectSite = suspect,
             EvidenceSnapshotIndex = finalSnapshot.Index,
             RangeStartT = ctx.T[^1],

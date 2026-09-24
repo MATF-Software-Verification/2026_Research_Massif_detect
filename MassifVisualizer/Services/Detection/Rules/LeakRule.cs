@@ -27,27 +27,25 @@ public class LeakRule : IDetectionRule
         int n = ctx.Snapshots.Count;
         var attribution = AnalyzeAttribution(ctx, growth);
         string? suspectSite = attribution.Site;
-        string caveat = "a program designed to accumulate until exit (e.g. loading a full dataset before " +
-                        "processing it) looks identical to a leak from a single Massif run — this is a " +
-                        "suspicion, not a verdict.";
+        string caveat = "This may indicate a memory leak, but the program may also be keeping the memory intentionally. " +
+                        "Massif cannot tell whether this memory is still reachable or has been leaked.";
 
         string attributionDescription;
         if (suspectSite != null)
-            attributionDescription = $"The most likely suspect is {suspectSite}, which has the largest recorded growth.";
+            attributionDescription = $"The largest recorded increase was at {suspectSite}.";
         else if (!attribution.TreesCoverRun)
-            attributionDescription = "The available allocation trees do not cover enough of the run to name a suspect.";
+            attributionDescription = "The allocation trees do not cover enough of the run to identify an allocation site.";
         else
-            attributionDescription = "No single allocation site accounts for the growth clearly enough to name a suspect.";
+            attributionDescription = "No single allocation site explains enough of the increase to be identified.";
 
-        string description = "Heap grew monotonically across the whole run, never released a significant amount, " +
-                             $"and ended near its peak. {attributionDescription} Caveat: {caveat}";
+        string description = "Heap usage increased over the run and ended close to its peak. " +
+                             $"{attributionDescription} {caveat}";
 
         var suggestion = suspectSite != null
-            ? $"Add the matching free() before control leaves the scope of the allocation at {suspectSite}; " +
-              "confirm with `valgrind --leak-check=full` (Memcheck distinguishes definitely lost from still " +
-              "reachable, which Massif cannot)."
-            : "Audit allocation sites for a missing free(); confirm with `valgrind --leak-check=full` " +
-              "(Memcheck distinguishes definitely lost from still reachable, which Massif cannot).";
+            ? $"Check whether memory allocated at {suspectSite} is freed when no longer needed. " +
+              "Run `valgrind --leak-check=full` to check for leaks."
+            : "Check whether allocations are freed when no longer needed. " +
+              "Run `valgrind --leak-check=full` to check for leaks.";
 
         var finding = new Finding
         {

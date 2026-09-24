@@ -32,15 +32,10 @@ public class FragRule : IDetectionRule
             RuleId = Id,
             Title = "High allocator overhead",
             Severity = Severity.Warning,
-            Description = $"Across most of the run, bookkeeping accounted for {median * 100:F0} % as much memory " +
-                          "as the useful data itself. " +
-                          "That ratio is only reachable when the program allocates a very large number of very " +
-                          "small blocks, so a substantial share of its memory is allocator tax rather than data. " +
-                          "Note that mem_heap_extra_B is Massif's own estimate, derived from --heap-admin " +
-                          "(8 bytes per block by default) plus alignment rounding — it is indicative, not measured.",
-            Suggestion = "Allocate in bigger units: an arena or bump allocator for many short-lived objects, " +
-                         "reserve() up front where the size is known, or batch small records into blocks " +
-                         "instead of one allocation each.",
+            Description = $"The median allocator overhead was {median * 100:F0} % of the useful heap. " +
+                          "Many small allocations may contribute to this overhead. " +
+                          "Massif estimates this value from per-block overhead and alignment; it is not a direct measurement.",
+            Suggestion = "Check for many small allocations. If possible, group them into larger blocks.",
             EvidenceSnapshotIndex = ctx.Snapshots[ctx.PeakIndex].Index,
             RangeStartT = 0,
             RangeEndT = 1
