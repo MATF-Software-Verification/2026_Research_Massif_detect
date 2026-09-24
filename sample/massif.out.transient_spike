@@ -1,6 +1,6 @@
-desc: --time-unit=B --detailed-freq=1 --max-snapshots=200 --threshold=0.1 --massif-out-file=/home/korisnik/Desktop/projects/software_verification/2026_Research_Massif_detect/sample/massif.out.transient_spike
-cmd: /tmp/tmp.8cjs8wCovW/transient_spike
-time_unit: B
+desc: --time-unit=i --detailed-freq=1 --max-snapshots=200 --threshold=0.1 --massif-out-file=/home/korisnik/Desktop/projects/software_verification/2026_Research_Massif_detect/sample/massif.out.transient_spike
+cmd: /tmp/tmp.MyNbQBY1or/transient_spike
+time_unit: i
 #-----------
 snapshot=0
 #-----------
@@ -13,1369 +13,1921 @@ n0: 0 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
 #-----------
 snapshot=1
 #-----------
-time=65544
+time=204795
 mem_heap_B=65536
 mem_heap_extra_B=8
 mem_stacks_B=0
 heap_tree=detailed
 n1: 65536 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
- n0: 65536 0x1091DD: main (transient_spike.c:19)
+ n0: 65536 0x1091DD: main (transient_spike.c:20)
 #-----------
 snapshot=2
 #-----------
-time=131088
+time=270403
 mem_heap_B=131072
 mem_heap_extra_B=16
 mem_stacks_B=0
 heap_tree=detailed
 n1: 131072 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
- n0: 131072 0x1091DD: main (transient_spike.c:19)
+ n0: 131072 0x1091DD: main (transient_spike.c:20)
 #-----------
 snapshot=3
 #-----------
-time=196632
+time=336011
 mem_heap_B=196608
 mem_heap_extra_B=24
 mem_stacks_B=0
 heap_tree=detailed
 n1: 196608 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
- n0: 196608 0x1091DD: main (transient_spike.c:19)
+ n0: 196608 0x1091DD: main (transient_spike.c:20)
 #-----------
 snapshot=4
 #-----------
-time=262176
+time=401619
 mem_heap_B=262144
 mem_heap_extra_B=32
 mem_stacks_B=0
 heap_tree=detailed
 n1: 262144 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
- n0: 262144 0x1091DD: main (transient_spike.c:19)
+ n0: 262144 0x1091DD: main (transient_spike.c:20)
 #-----------
 snapshot=5
 #-----------
-time=327720
+time=467227
 mem_heap_B=327680
 mem_heap_extra_B=40
 mem_stacks_B=0
 heap_tree=detailed
 n1: 327680 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
- n0: 327680 0x1091DD: main (transient_spike.c:19)
+ n0: 327680 0x1091DD: main (transient_spike.c:20)
 #-----------
 snapshot=6
 #-----------
-time=393264
+time=532835
 mem_heap_B=393216
 mem_heap_extra_B=48
 mem_stacks_B=0
 heap_tree=detailed
 n1: 393216 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
- n0: 393216 0x1091DD: main (transient_spike.c:19)
+ n0: 393216 0x1091DD: main (transient_spike.c:20)
 #-----------
 snapshot=7
 #-----------
-time=458808
+time=598443
 mem_heap_B=458752
 mem_heap_extra_B=56
 mem_stacks_B=0
 heap_tree=detailed
 n1: 458752 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
- n0: 458752 0x1091DD: main (transient_spike.c:19)
+ n0: 458752 0x1091DD: main (transient_spike.c:20)
 #-----------
 snapshot=8
 #-----------
-time=524352
+time=664051
 mem_heap_B=524288
 mem_heap_extra_B=64
 mem_stacks_B=0
 heap_tree=detailed
 n1: 524288 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
- n0: 524288 0x1091DD: main (transient_spike.c:19)
+ n0: 524288 0x1091DD: main (transient_spike.c:20)
 #-----------
 snapshot=9
 #-----------
-time=589896
+time=729659
 mem_heap_B=589824
 mem_heap_extra_B=72
 mem_stacks_B=0
 heap_tree=detailed
 n1: 589824 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
- n0: 589824 0x1091DD: main (transient_spike.c:19)
+ n0: 589824 0x1091DD: main (transient_spike.c:20)
 #-----------
 snapshot=10
 #-----------
-time=655440
+time=795267
 mem_heap_B=655360
 mem_heap_extra_B=80
 mem_stacks_B=0
 heap_tree=detailed
 n1: 655360 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
- n0: 655360 0x1091DD: main (transient_spike.c:19)
+ n0: 655360 0x1091DD: main (transient_spike.c:20)
 #-----------
 snapshot=11
 #-----------
-time=720984
+time=860875
 mem_heap_B=720896
 mem_heap_extra_B=88
 mem_stacks_B=0
 heap_tree=detailed
 n1: 720896 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
- n0: 720896 0x1091DD: main (transient_spike.c:19)
+ n0: 720896 0x1091DD: main (transient_spike.c:20)
 #-----------
 snapshot=12
 #-----------
-time=786528
+time=926483
 mem_heap_B=786432
 mem_heap_extra_B=96
 mem_stacks_B=0
 heap_tree=detailed
 n1: 786432 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
- n0: 786432 0x1091DD: main (transient_spike.c:19)
+ n0: 786432 0x1091DD: main (transient_spike.c:20)
 #-----------
 snapshot=13
 #-----------
-time=852072
+time=992091
 mem_heap_B=851968
 mem_heap_extra_B=104
 mem_stacks_B=0
 heap_tree=detailed
 n1: 851968 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
- n0: 851968 0x1091DD: main (transient_spike.c:19)
+ n0: 851968 0x1091DD: main (transient_spike.c:20)
 #-----------
 snapshot=14
 #-----------
-time=917616
+time=1057699
 mem_heap_B=917504
 mem_heap_extra_B=112
 mem_stacks_B=0
 heap_tree=detailed
 n1: 917504 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
- n0: 917504 0x1091DD: main (transient_spike.c:19)
+ n0: 917504 0x1091DD: main (transient_spike.c:20)
 #-----------
 snapshot=15
 #-----------
-time=983160
+time=1123307
 mem_heap_B=983040
 mem_heap_extra_B=120
 mem_stacks_B=0
 heap_tree=detailed
 n1: 983040 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
- n0: 983040 0x1091DD: main (transient_spike.c:19)
+ n0: 983040 0x1091DD: main (transient_spike.c:20)
 #-----------
 snapshot=16
 #-----------
-time=1048704
+time=1188915
 mem_heap_B=1048576
 mem_heap_extra_B=128
 mem_stacks_B=0
 heap_tree=detailed
 n1: 1048576 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
- n0: 1048576 0x1091DD: main (transient_spike.c:19)
+ n0: 1048576 0x1091DD: main (transient_spike.c:20)
 #-----------
 snapshot=17
 #-----------
-time=1114248
+time=1254523
 mem_heap_B=1114112
 mem_heap_extra_B=136
 mem_stacks_B=0
 heap_tree=detailed
 n1: 1114112 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
- n0: 1114112 0x1091DD: main (transient_spike.c:19)
+ n0: 1114112 0x1091DD: main (transient_spike.c:20)
 #-----------
 snapshot=18
 #-----------
-time=1179792
+time=1320131
 mem_heap_B=1179648
 mem_heap_extra_B=144
 mem_stacks_B=0
 heap_tree=detailed
 n1: 1179648 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
- n0: 1179648 0x1091DD: main (transient_spike.c:19)
+ n0: 1179648 0x1091DD: main (transient_spike.c:20)
 #-----------
 snapshot=19
 #-----------
-time=1245336
+time=1385739
 mem_heap_B=1245184
 mem_heap_extra_B=152
 mem_stacks_B=0
 heap_tree=detailed
 n1: 1245184 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
- n0: 1245184 0x1091DD: main (transient_spike.c:19)
+ n0: 1245184 0x1091DD: main (transient_spike.c:20)
 #-----------
 snapshot=20
 #-----------
-time=1310880
+time=1451347
 mem_heap_B=1310720
 mem_heap_extra_B=160
 mem_stacks_B=0
 heap_tree=detailed
 n1: 1310720 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
- n0: 1310720 0x1091DD: main (transient_spike.c:19)
+ n0: 1310720 0x1091DD: main (transient_spike.c:20)
 #-----------
 snapshot=21
 #-----------
-time=5509224
+time=1516955
 mem_heap_B=5505024
 mem_heap_extra_B=4200
 mem_stacks_B=0
 heap_tree=detailed
 n2: 5505024 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
- n0: 4194304 0x10924A: main (transient_spike.c:25)
- n0: 1310720 0x1091DD: main (transient_spike.c:19)
+ n0: 4194304 0x10924A: main (transient_spike.c:26)
+ n0: 1310720 0x1091DD: main (transient_spike.c:20)
 #-----------
 snapshot=22
 #-----------
-time=5509224
+time=5711330
 mem_heap_B=5505024
 mem_heap_extra_B=4200
 mem_stacks_B=0
 heap_tree=peak
 n2: 5505024 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
- n0: 4194304 0x10924A: main (transient_spike.c:25)
- n0: 1310720 0x1091DD: main (transient_spike.c:19)
+ n0: 4194304 0x10924A: main (transient_spike.c:26)
+ n0: 1310720 0x1091DD: main (transient_spike.c:20)
 #-----------
 snapshot=23
 #-----------
-time=9707568
+time=5711330
 mem_heap_B=1310720
 mem_heap_extra_B=160
 mem_stacks_B=0
 heap_tree=detailed
 n2: 1310720 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
- n0: 1310720 0x1091DD: main (transient_spike.c:19)
+ n0: 1310720 0x1091DD: main (transient_spike.c:20)
  n0: 0 in 1 place, below massif's threshold (0.10%)
 #-----------
 snapshot=24
 #-----------
-time=9969720
+time=5711365
 mem_heap_B=1572864
 mem_heap_extra_B=168
 mem_stacks_B=0
 heap_tree=detailed
 n3: 1572864 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
- n0: 1310720 0x1091DD: main (transient_spike.c:19)
- n0: 262144 0x1092C8: main (transient_spike.c:33)
+ n0: 1310720 0x1091DD: main (transient_spike.c:20)
+ n0: 262144 0x1092C8: main (transient_spike.c:34)
  n0: 0 in 1 place, below massif's threshold (0.10%)
 #-----------
 snapshot=25
 #-----------
-time=10231872
+time=5973582
 mem_heap_B=1310720
 mem_heap_extra_B=160
 mem_stacks_B=0
 heap_tree=detailed
 n2: 1310720 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
- n0: 1310720 0x1091DD: main (transient_spike.c:19)
+ n0: 1310720 0x1091DD: main (transient_spike.c:20)
  n0: 0 in 2 places, all below massif's threshold (0.10%)
 #-----------
 snapshot=26
 #-----------
-time=10494024
+time=5973616
 mem_heap_B=1572864
 mem_heap_extra_B=168
 mem_stacks_B=0
 heap_tree=detailed
 n3: 1572864 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
- n0: 1310720 0x1091DD: main (transient_spike.c:19)
- n0: 262144 0x1092C8: main (transient_spike.c:33)
+ n0: 1310720 0x1091DD: main (transient_spike.c:20)
+ n0: 262144 0x1092C8: main (transient_spike.c:34)
  n0: 0 in 1 place, below massif's threshold (0.10%)
 #-----------
 snapshot=27
 #-----------
-time=10756176
+time=6235833
 mem_heap_B=1310720
 mem_heap_extra_B=160
 mem_stacks_B=0
 heap_tree=detailed
 n2: 1310720 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
- n0: 1310720 0x1091DD: main (transient_spike.c:19)
+ n0: 1310720 0x1091DD: main (transient_spike.c:20)
  n0: 0 in 2 places, all below massif's threshold (0.10%)
 #-----------
 snapshot=28
 #-----------
-time=11018328
+time=6235867
 mem_heap_B=1572864
 mem_heap_extra_B=168
 mem_stacks_B=0
 heap_tree=detailed
 n3: 1572864 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
- n0: 1310720 0x1091DD: main (transient_spike.c:19)
- n0: 262144 0x1092C8: main (transient_spike.c:33)
+ n0: 1310720 0x1091DD: main (transient_spike.c:20)
+ n0: 262144 0x1092C8: main (transient_spike.c:34)
  n0: 0 in 1 place, below massif's threshold (0.10%)
 #-----------
 snapshot=29
 #-----------
-time=11280480
+time=6498084
 mem_heap_B=1310720
 mem_heap_extra_B=160
 mem_stacks_B=0
 heap_tree=detailed
 n2: 1310720 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
- n0: 1310720 0x1091DD: main (transient_spike.c:19)
+ n0: 1310720 0x1091DD: main (transient_spike.c:20)
  n0: 0 in 2 places, all below massif's threshold (0.10%)
 #-----------
 snapshot=30
 #-----------
-time=11542632
+time=6498118
 mem_heap_B=1572864
 mem_heap_extra_B=168
 mem_stacks_B=0
 heap_tree=detailed
 n3: 1572864 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
- n0: 1310720 0x1091DD: main (transient_spike.c:19)
- n0: 262144 0x1092C8: main (transient_spike.c:33)
+ n0: 1310720 0x1091DD: main (transient_spike.c:20)
+ n0: 262144 0x1092C8: main (transient_spike.c:34)
  n0: 0 in 1 place, below massif's threshold (0.10%)
 #-----------
 snapshot=31
 #-----------
-time=11804784
+time=6760335
 mem_heap_B=1310720
 mem_heap_extra_B=160
 mem_stacks_B=0
 heap_tree=detailed
 n2: 1310720 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
- n0: 1310720 0x1091DD: main (transient_spike.c:19)
+ n0: 1310720 0x1091DD: main (transient_spike.c:20)
  n0: 0 in 2 places, all below massif's threshold (0.10%)
 #-----------
 snapshot=32
 #-----------
-time=12066936
+time=6760369
 mem_heap_B=1572864
 mem_heap_extra_B=168
 mem_stacks_B=0
 heap_tree=detailed
 n3: 1572864 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
- n0: 1310720 0x1091DD: main (transient_spike.c:19)
- n0: 262144 0x1092C8: main (transient_spike.c:33)
+ n0: 1310720 0x1091DD: main (transient_spike.c:20)
+ n0: 262144 0x1092C8: main (transient_spike.c:34)
  n0: 0 in 1 place, below massif's threshold (0.10%)
 #-----------
 snapshot=33
 #-----------
-time=12329088
+time=7022586
 mem_heap_B=1310720
 mem_heap_extra_B=160
 mem_stacks_B=0
 heap_tree=detailed
 n2: 1310720 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
- n0: 1310720 0x1091DD: main (transient_spike.c:19)
+ n0: 1310720 0x1091DD: main (transient_spike.c:20)
  n0: 0 in 2 places, all below massif's threshold (0.10%)
 #-----------
 snapshot=34
 #-----------
-time=12591240
+time=7022620
 mem_heap_B=1572864
 mem_heap_extra_B=168
 mem_stacks_B=0
 heap_tree=detailed
 n3: 1572864 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
- n0: 1310720 0x1091DD: main (transient_spike.c:19)
- n0: 262144 0x1092C8: main (transient_spike.c:33)
+ n0: 1310720 0x1091DD: main (transient_spike.c:20)
+ n0: 262144 0x1092C8: main (transient_spike.c:34)
  n0: 0 in 1 place, below massif's threshold (0.10%)
 #-----------
 snapshot=35
 #-----------
-time=12853392
+time=7284837
 mem_heap_B=1310720
 mem_heap_extra_B=160
 mem_stacks_B=0
 heap_tree=detailed
 n2: 1310720 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
- n0: 1310720 0x1091DD: main (transient_spike.c:19)
+ n0: 1310720 0x1091DD: main (transient_spike.c:20)
  n0: 0 in 2 places, all below massif's threshold (0.10%)
 #-----------
 snapshot=36
 #-----------
-time=13115544
+time=7284871
 mem_heap_B=1572864
 mem_heap_extra_B=168
 mem_stacks_B=0
 heap_tree=detailed
 n3: 1572864 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
- n0: 1310720 0x1091DD: main (transient_spike.c:19)
- n0: 262144 0x1092C8: main (transient_spike.c:33)
+ n0: 1310720 0x1091DD: main (transient_spike.c:20)
+ n0: 262144 0x1092C8: main (transient_spike.c:34)
  n0: 0 in 1 place, below massif's threshold (0.10%)
 #-----------
 snapshot=37
 #-----------
-time=13377696
+time=7547088
 mem_heap_B=1310720
 mem_heap_extra_B=160
 mem_stacks_B=0
 heap_tree=detailed
 n2: 1310720 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
- n0: 1310720 0x1091DD: main (transient_spike.c:19)
+ n0: 1310720 0x1091DD: main (transient_spike.c:20)
  n0: 0 in 2 places, all below massif's threshold (0.10%)
 #-----------
 snapshot=38
 #-----------
-time=13639848
+time=7547122
 mem_heap_B=1572864
 mem_heap_extra_B=168
 mem_stacks_B=0
 heap_tree=detailed
 n3: 1572864 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
- n0: 1310720 0x1091DD: main (transient_spike.c:19)
- n0: 262144 0x1092C8: main (transient_spike.c:33)
+ n0: 1310720 0x1091DD: main (transient_spike.c:20)
+ n0: 262144 0x1092C8: main (transient_spike.c:34)
  n0: 0 in 1 place, below massif's threshold (0.10%)
 #-----------
 snapshot=39
 #-----------
-time=13902000
+time=7809339
 mem_heap_B=1310720
 mem_heap_extra_B=160
 mem_stacks_B=0
 heap_tree=detailed
 n2: 1310720 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
- n0: 1310720 0x1091DD: main (transient_spike.c:19)
+ n0: 1310720 0x1091DD: main (transient_spike.c:20)
  n0: 0 in 2 places, all below massif's threshold (0.10%)
 #-----------
 snapshot=40
 #-----------
-time=14164152
+time=7809373
 mem_heap_B=1572864
 mem_heap_extra_B=168
 mem_stacks_B=0
 heap_tree=detailed
 n3: 1572864 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
- n0: 1310720 0x1091DD: main (transient_spike.c:19)
- n0: 262144 0x1092C8: main (transient_spike.c:33)
+ n0: 1310720 0x1091DD: main (transient_spike.c:20)
+ n0: 262144 0x1092C8: main (transient_spike.c:34)
  n0: 0 in 1 place, below massif's threshold (0.10%)
 #-----------
 snapshot=41
 #-----------
-time=14426304
+time=8071590
 mem_heap_B=1310720
 mem_heap_extra_B=160
 mem_stacks_B=0
 heap_tree=detailed
 n2: 1310720 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
- n0: 1310720 0x1091DD: main (transient_spike.c:19)
+ n0: 1310720 0x1091DD: main (transient_spike.c:20)
  n0: 0 in 2 places, all below massif's threshold (0.10%)
 #-----------
 snapshot=42
 #-----------
-time=14688456
+time=8071624
 mem_heap_B=1572864
 mem_heap_extra_B=168
 mem_stacks_B=0
 heap_tree=detailed
 n3: 1572864 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
- n0: 1310720 0x1091DD: main (transient_spike.c:19)
- n0: 262144 0x1092C8: main (transient_spike.c:33)
+ n0: 1310720 0x1091DD: main (transient_spike.c:20)
+ n0: 262144 0x1092C8: main (transient_spike.c:34)
  n0: 0 in 1 place, below massif's threshold (0.10%)
 #-----------
 snapshot=43
 #-----------
-time=14950608
+time=8333841
 mem_heap_B=1310720
 mem_heap_extra_B=160
 mem_stacks_B=0
 heap_tree=detailed
 n2: 1310720 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
- n0: 1310720 0x1091DD: main (transient_spike.c:19)
+ n0: 1310720 0x1091DD: main (transient_spike.c:20)
  n0: 0 in 2 places, all below massif's threshold (0.10%)
 #-----------
 snapshot=44
 #-----------
-time=15212760
+time=8333875
 mem_heap_B=1572864
 mem_heap_extra_B=168
 mem_stacks_B=0
 heap_tree=detailed
 n3: 1572864 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
- n0: 1310720 0x1091DD: main (transient_spike.c:19)
- n0: 262144 0x1092C8: main (transient_spike.c:33)
+ n0: 1310720 0x1091DD: main (transient_spike.c:20)
+ n0: 262144 0x1092C8: main (transient_spike.c:34)
  n0: 0 in 1 place, below massif's threshold (0.10%)
 #-----------
 snapshot=45
 #-----------
-time=15474912
+time=8596092
 mem_heap_B=1310720
 mem_heap_extra_B=160
 mem_stacks_B=0
 heap_tree=detailed
 n2: 1310720 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
- n0: 1310720 0x1091DD: main (transient_spike.c:19)
+ n0: 1310720 0x1091DD: main (transient_spike.c:20)
  n0: 0 in 2 places, all below massif's threshold (0.10%)
 #-----------
 snapshot=46
 #-----------
-time=15737064
+time=8596126
 mem_heap_B=1572864
 mem_heap_extra_B=168
 mem_stacks_B=0
 heap_tree=detailed
 n3: 1572864 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
- n0: 1310720 0x1091DD: main (transient_spike.c:19)
- n0: 262144 0x1092C8: main (transient_spike.c:33)
+ n0: 1310720 0x1091DD: main (transient_spike.c:20)
+ n0: 262144 0x1092C8: main (transient_spike.c:34)
  n0: 0 in 1 place, below massif's threshold (0.10%)
 #-----------
 snapshot=47
 #-----------
-time=15999216
+time=8858343
 mem_heap_B=1310720
 mem_heap_extra_B=160
 mem_stacks_B=0
 heap_tree=detailed
 n2: 1310720 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
- n0: 1310720 0x1091DD: main (transient_spike.c:19)
+ n0: 1310720 0x1091DD: main (transient_spike.c:20)
  n0: 0 in 2 places, all below massif's threshold (0.10%)
 #-----------
 snapshot=48
 #-----------
-time=16261368
+time=8858377
 mem_heap_B=1572864
 mem_heap_extra_B=168
 mem_stacks_B=0
 heap_tree=detailed
 n3: 1572864 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
- n0: 1310720 0x1091DD: main (transient_spike.c:19)
- n0: 262144 0x1092C8: main (transient_spike.c:33)
+ n0: 1310720 0x1091DD: main (transient_spike.c:20)
+ n0: 262144 0x1092C8: main (transient_spike.c:34)
  n0: 0 in 1 place, below massif's threshold (0.10%)
 #-----------
 snapshot=49
 #-----------
-time=16523520
+time=9120594
 mem_heap_B=1310720
 mem_heap_extra_B=160
 mem_stacks_B=0
 heap_tree=detailed
 n2: 1310720 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
- n0: 1310720 0x1091DD: main (transient_spike.c:19)
+ n0: 1310720 0x1091DD: main (transient_spike.c:20)
  n0: 0 in 2 places, all below massif's threshold (0.10%)
 #-----------
 snapshot=50
 #-----------
-time=16785672
+time=9120628
 mem_heap_B=1572864
 mem_heap_extra_B=168
 mem_stacks_B=0
 heap_tree=detailed
 n3: 1572864 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
- n0: 1310720 0x1091DD: main (transient_spike.c:19)
- n0: 262144 0x1092C8: main (transient_spike.c:33)
+ n0: 1310720 0x1091DD: main (transient_spike.c:20)
+ n0: 262144 0x1092C8: main (transient_spike.c:34)
  n0: 0 in 1 place, below massif's threshold (0.10%)
 #-----------
 snapshot=51
 #-----------
-time=17047824
+time=9382845
 mem_heap_B=1310720
 mem_heap_extra_B=160
 mem_stacks_B=0
 heap_tree=detailed
 n2: 1310720 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
- n0: 1310720 0x1091DD: main (transient_spike.c:19)
+ n0: 1310720 0x1091DD: main (transient_spike.c:20)
  n0: 0 in 2 places, all below massif's threshold (0.10%)
 #-----------
 snapshot=52
 #-----------
-time=17309976
+time=9382879
 mem_heap_B=1572864
 mem_heap_extra_B=168
 mem_stacks_B=0
 heap_tree=detailed
 n3: 1572864 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
- n0: 1310720 0x1091DD: main (transient_spike.c:19)
- n0: 262144 0x1092C8: main (transient_spike.c:33)
+ n0: 1310720 0x1091DD: main (transient_spike.c:20)
+ n0: 262144 0x1092C8: main (transient_spike.c:34)
  n0: 0 in 1 place, below massif's threshold (0.10%)
 #-----------
 snapshot=53
 #-----------
-time=17572128
+time=9645096
 mem_heap_B=1310720
 mem_heap_extra_B=160
 mem_stacks_B=0
 heap_tree=detailed
 n2: 1310720 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
- n0: 1310720 0x1091DD: main (transient_spike.c:19)
+ n0: 1310720 0x1091DD: main (transient_spike.c:20)
  n0: 0 in 2 places, all below massif's threshold (0.10%)
 #-----------
 snapshot=54
 #-----------
-time=17834280
+time=9645130
 mem_heap_B=1572864
 mem_heap_extra_B=168
 mem_stacks_B=0
 heap_tree=detailed
 n3: 1572864 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
- n0: 1310720 0x1091DD: main (transient_spike.c:19)
- n0: 262144 0x1092C8: main (transient_spike.c:33)
+ n0: 1310720 0x1091DD: main (transient_spike.c:20)
+ n0: 262144 0x1092C8: main (transient_spike.c:34)
  n0: 0 in 1 place, below massif's threshold (0.10%)
 #-----------
 snapshot=55
 #-----------
-time=18096432
+time=9907347
 mem_heap_B=1310720
 mem_heap_extra_B=160
 mem_stacks_B=0
 heap_tree=detailed
 n2: 1310720 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
- n0: 1310720 0x1091DD: main (transient_spike.c:19)
+ n0: 1310720 0x1091DD: main (transient_spike.c:20)
  n0: 0 in 2 places, all below massif's threshold (0.10%)
 #-----------
 snapshot=56
 #-----------
-time=18358584
+time=9907381
 mem_heap_B=1572864
 mem_heap_extra_B=168
 mem_stacks_B=0
 heap_tree=detailed
 n3: 1572864 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
- n0: 1310720 0x1091DD: main (transient_spike.c:19)
- n0: 262144 0x1092C8: main (transient_spike.c:33)
+ n0: 1310720 0x1091DD: main (transient_spike.c:20)
+ n0: 262144 0x1092C8: main (transient_spike.c:34)
  n0: 0 in 1 place, below massif's threshold (0.10%)
 #-----------
 snapshot=57
 #-----------
-time=18620736
+time=10169598
 mem_heap_B=1310720
 mem_heap_extra_B=160
 mem_stacks_B=0
 heap_tree=detailed
 n2: 1310720 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
- n0: 1310720 0x1091DD: main (transient_spike.c:19)
+ n0: 1310720 0x1091DD: main (transient_spike.c:20)
  n0: 0 in 2 places, all below massif's threshold (0.10%)
 #-----------
 snapshot=58
 #-----------
-time=18882888
+time=10169632
 mem_heap_B=1572864
 mem_heap_extra_B=168
 mem_stacks_B=0
 heap_tree=detailed
 n3: 1572864 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
- n0: 1310720 0x1091DD: main (transient_spike.c:19)
- n0: 262144 0x1092C8: main (transient_spike.c:33)
+ n0: 1310720 0x1091DD: main (transient_spike.c:20)
+ n0: 262144 0x1092C8: main (transient_spike.c:34)
  n0: 0 in 1 place, below massif's threshold (0.10%)
 #-----------
 snapshot=59
 #-----------
-time=19145040
+time=10431849
 mem_heap_B=1310720
 mem_heap_extra_B=160
 mem_stacks_B=0
 heap_tree=detailed
 n2: 1310720 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
- n0: 1310720 0x1091DD: main (transient_spike.c:19)
+ n0: 1310720 0x1091DD: main (transient_spike.c:20)
  n0: 0 in 2 places, all below massif's threshold (0.10%)
 #-----------
 snapshot=60
 #-----------
-time=19407192
+time=10431883
 mem_heap_B=1572864
 mem_heap_extra_B=168
 mem_stacks_B=0
 heap_tree=detailed
 n3: 1572864 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
- n0: 1310720 0x1091DD: main (transient_spike.c:19)
- n0: 262144 0x1092C8: main (transient_spike.c:33)
+ n0: 1310720 0x1091DD: main (transient_spike.c:20)
+ n0: 262144 0x1092C8: main (transient_spike.c:34)
  n0: 0 in 1 place, below massif's threshold (0.10%)
 #-----------
 snapshot=61
 #-----------
-time=19669344
+time=10694100
 mem_heap_B=1310720
 mem_heap_extra_B=160
 mem_stacks_B=0
 heap_tree=detailed
 n2: 1310720 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
- n0: 1310720 0x1091DD: main (transient_spike.c:19)
+ n0: 1310720 0x1091DD: main (transient_spike.c:20)
  n0: 0 in 2 places, all below massif's threshold (0.10%)
 #-----------
 snapshot=62
 #-----------
-time=19931496
+time=10694134
 mem_heap_B=1572864
 mem_heap_extra_B=168
 mem_stacks_B=0
 heap_tree=detailed
 n3: 1572864 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
- n0: 1310720 0x1091DD: main (transient_spike.c:19)
- n0: 262144 0x1092C8: main (transient_spike.c:33)
+ n0: 1310720 0x1091DD: main (transient_spike.c:20)
+ n0: 262144 0x1092C8: main (transient_spike.c:34)
  n0: 0 in 1 place, below massif's threshold (0.10%)
 #-----------
 snapshot=63
 #-----------
-time=20193648
+time=10956351
 mem_heap_B=1310720
 mem_heap_extra_B=160
 mem_stacks_B=0
 heap_tree=detailed
 n2: 1310720 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
- n0: 1310720 0x1091DD: main (transient_spike.c:19)
+ n0: 1310720 0x1091DD: main (transient_spike.c:20)
  n0: 0 in 2 places, all below massif's threshold (0.10%)
 #-----------
 snapshot=64
 #-----------
-time=20455800
+time=10956385
 mem_heap_B=1572864
 mem_heap_extra_B=168
 mem_stacks_B=0
 heap_tree=detailed
 n3: 1572864 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
- n0: 1310720 0x1091DD: main (transient_spike.c:19)
- n0: 262144 0x1092C8: main (transient_spike.c:33)
+ n0: 1310720 0x1091DD: main (transient_spike.c:20)
+ n0: 262144 0x1092C8: main (transient_spike.c:34)
  n0: 0 in 1 place, below massif's threshold (0.10%)
 #-----------
 snapshot=65
 #-----------
-time=20717952
+time=11218602
 mem_heap_B=1310720
 mem_heap_extra_B=160
 mem_stacks_B=0
 heap_tree=detailed
 n2: 1310720 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
- n0: 1310720 0x1091DD: main (transient_spike.c:19)
+ n0: 1310720 0x1091DD: main (transient_spike.c:20)
  n0: 0 in 2 places, all below massif's threshold (0.10%)
 #-----------
 snapshot=66
 #-----------
-time=20980104
+time=11218636
 mem_heap_B=1572864
 mem_heap_extra_B=168
 mem_stacks_B=0
 heap_tree=detailed
 n3: 1572864 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
- n0: 1310720 0x1091DD: main (transient_spike.c:19)
- n0: 262144 0x1092C8: main (transient_spike.c:33)
+ n0: 1310720 0x1091DD: main (transient_spike.c:20)
+ n0: 262144 0x1092C8: main (transient_spike.c:34)
  n0: 0 in 1 place, below massif's threshold (0.10%)
 #-----------
 snapshot=67
 #-----------
-time=21242256
+time=11480853
 mem_heap_B=1310720
 mem_heap_extra_B=160
 mem_stacks_B=0
 heap_tree=detailed
 n2: 1310720 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
- n0: 1310720 0x1091DD: main (transient_spike.c:19)
+ n0: 1310720 0x1091DD: main (transient_spike.c:20)
  n0: 0 in 2 places, all below massif's threshold (0.10%)
 #-----------
 snapshot=68
 #-----------
-time=21504408
+time=11480887
 mem_heap_B=1572864
 mem_heap_extra_B=168
 mem_stacks_B=0
 heap_tree=detailed
 n3: 1572864 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
- n0: 1310720 0x1091DD: main (transient_spike.c:19)
- n0: 262144 0x1092C8: main (transient_spike.c:33)
+ n0: 1310720 0x1091DD: main (transient_spike.c:20)
+ n0: 262144 0x1092C8: main (transient_spike.c:34)
  n0: 0 in 1 place, below massif's threshold (0.10%)
 #-----------
 snapshot=69
 #-----------
-time=21766560
+time=11743104
 mem_heap_B=1310720
 mem_heap_extra_B=160
 mem_stacks_B=0
 heap_tree=detailed
 n2: 1310720 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
- n0: 1310720 0x1091DD: main (transient_spike.c:19)
+ n0: 1310720 0x1091DD: main (transient_spike.c:20)
  n0: 0 in 2 places, all below massif's threshold (0.10%)
 #-----------
 snapshot=70
 #-----------
-time=22028712
+time=11743138
 mem_heap_B=1572864
 mem_heap_extra_B=168
 mem_stacks_B=0
 heap_tree=detailed
 n3: 1572864 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
- n0: 1310720 0x1091DD: main (transient_spike.c:19)
- n0: 262144 0x1092C8: main (transient_spike.c:33)
+ n0: 1310720 0x1091DD: main (transient_spike.c:20)
+ n0: 262144 0x1092C8: main (transient_spike.c:34)
  n0: 0 in 1 place, below massif's threshold (0.10%)
 #-----------
 snapshot=71
 #-----------
-time=22290864
+time=12005355
 mem_heap_B=1310720
 mem_heap_extra_B=160
 mem_stacks_B=0
 heap_tree=detailed
 n2: 1310720 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
- n0: 1310720 0x1091DD: main (transient_spike.c:19)
+ n0: 1310720 0x1091DD: main (transient_spike.c:20)
  n0: 0 in 2 places, all below massif's threshold (0.10%)
 #-----------
 snapshot=72
 #-----------
-time=22553016
+time=12005389
 mem_heap_B=1572864
 mem_heap_extra_B=168
 mem_stacks_B=0
 heap_tree=detailed
 n3: 1572864 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
- n0: 1310720 0x1091DD: main (transient_spike.c:19)
- n0: 262144 0x1092C8: main (transient_spike.c:33)
+ n0: 1310720 0x1091DD: main (transient_spike.c:20)
+ n0: 262144 0x1092C8: main (transient_spike.c:34)
  n0: 0 in 1 place, below massif's threshold (0.10%)
 #-----------
 snapshot=73
 #-----------
-time=22815168
+time=12267606
 mem_heap_B=1310720
 mem_heap_extra_B=160
 mem_stacks_B=0
 heap_tree=detailed
 n2: 1310720 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
- n0: 1310720 0x1091DD: main (transient_spike.c:19)
+ n0: 1310720 0x1091DD: main (transient_spike.c:20)
  n0: 0 in 2 places, all below massif's threshold (0.10%)
 #-----------
 snapshot=74
 #-----------
-time=23077320
+time=12267640
 mem_heap_B=1572864
 mem_heap_extra_B=168
 mem_stacks_B=0
 heap_tree=detailed
 n3: 1572864 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
- n0: 1310720 0x1091DD: main (transient_spike.c:19)
- n0: 262144 0x1092C8: main (transient_spike.c:33)
+ n0: 1310720 0x1091DD: main (transient_spike.c:20)
+ n0: 262144 0x1092C8: main (transient_spike.c:34)
  n0: 0 in 1 place, below massif's threshold (0.10%)
 #-----------
 snapshot=75
 #-----------
-time=23339472
+time=12529857
 mem_heap_B=1310720
 mem_heap_extra_B=160
 mem_stacks_B=0
 heap_tree=detailed
 n2: 1310720 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
- n0: 1310720 0x1091DD: main (transient_spike.c:19)
+ n0: 1310720 0x1091DD: main (transient_spike.c:20)
  n0: 0 in 2 places, all below massif's threshold (0.10%)
 #-----------
 snapshot=76
 #-----------
-time=23601624
+time=12529891
 mem_heap_B=1572864
 mem_heap_extra_B=168
 mem_stacks_B=0
 heap_tree=detailed
 n3: 1572864 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
- n0: 1310720 0x1091DD: main (transient_spike.c:19)
- n0: 262144 0x1092C8: main (transient_spike.c:33)
+ n0: 1310720 0x1091DD: main (transient_spike.c:20)
+ n0: 262144 0x1092C8: main (transient_spike.c:34)
  n0: 0 in 1 place, below massif's threshold (0.10%)
 #-----------
 snapshot=77
 #-----------
-time=23863776
+time=12792108
 mem_heap_B=1310720
 mem_heap_extra_B=160
 mem_stacks_B=0
 heap_tree=detailed
 n2: 1310720 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
- n0: 1310720 0x1091DD: main (transient_spike.c:19)
+ n0: 1310720 0x1091DD: main (transient_spike.c:20)
  n0: 0 in 2 places, all below massif's threshold (0.10%)
 #-----------
 snapshot=78
 #-----------
-time=24125928
+time=12792142
 mem_heap_B=1572864
 mem_heap_extra_B=168
 mem_stacks_B=0
 heap_tree=detailed
 n3: 1572864 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
- n0: 1310720 0x1091DD: main (transient_spike.c:19)
- n0: 262144 0x1092C8: main (transient_spike.c:33)
+ n0: 1310720 0x1091DD: main (transient_spike.c:20)
+ n0: 262144 0x1092C8: main (transient_spike.c:34)
  n0: 0 in 1 place, below massif's threshold (0.10%)
 #-----------
 snapshot=79
 #-----------
-time=24388080
+time=13054359
 mem_heap_B=1310720
 mem_heap_extra_B=160
 mem_stacks_B=0
 heap_tree=detailed
 n2: 1310720 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
- n0: 1310720 0x1091DD: main (transient_spike.c:19)
+ n0: 1310720 0x1091DD: main (transient_spike.c:20)
  n0: 0 in 2 places, all below massif's threshold (0.10%)
 #-----------
 snapshot=80
 #-----------
-time=24650232
+time=13054393
 mem_heap_B=1572864
 mem_heap_extra_B=168
 mem_stacks_B=0
 heap_tree=detailed
 n3: 1572864 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
- n0: 1310720 0x1091DD: main (transient_spike.c:19)
- n0: 262144 0x1092C8: main (transient_spike.c:33)
+ n0: 1310720 0x1091DD: main (transient_spike.c:20)
+ n0: 262144 0x1092C8: main (transient_spike.c:34)
  n0: 0 in 1 place, below massif's threshold (0.10%)
 #-----------
 snapshot=81
 #-----------
-time=24912384
+time=13316610
 mem_heap_B=1310720
 mem_heap_extra_B=160
 mem_stacks_B=0
 heap_tree=detailed
 n2: 1310720 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
- n0: 1310720 0x1091DD: main (transient_spike.c:19)
+ n0: 1310720 0x1091DD: main (transient_spike.c:20)
  n0: 0 in 2 places, all below massif's threshold (0.10%)
 #-----------
 snapshot=82
 #-----------
-time=25174536
+time=13316644
 mem_heap_B=1572864
 mem_heap_extra_B=168
 mem_stacks_B=0
 heap_tree=detailed
 n3: 1572864 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
- n0: 1310720 0x1091DD: main (transient_spike.c:19)
- n0: 262144 0x1092C8: main (transient_spike.c:33)
+ n0: 1310720 0x1091DD: main (transient_spike.c:20)
+ n0: 262144 0x1092C8: main (transient_spike.c:34)
  n0: 0 in 1 place, below massif's threshold (0.10%)
 #-----------
 snapshot=83
 #-----------
-time=25436688
+time=13578861
 mem_heap_B=1310720
 mem_heap_extra_B=160
 mem_stacks_B=0
 heap_tree=detailed
 n2: 1310720 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
- n0: 1310720 0x1091DD: main (transient_spike.c:19)
+ n0: 1310720 0x1091DD: main (transient_spike.c:20)
  n0: 0 in 2 places, all below massif's threshold (0.10%)
 #-----------
 snapshot=84
 #-----------
-time=25698840
+time=13578895
 mem_heap_B=1572864
 mem_heap_extra_B=168
 mem_stacks_B=0
 heap_tree=detailed
 n3: 1572864 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
- n0: 1310720 0x1091DD: main (transient_spike.c:19)
- n0: 262144 0x1092C8: main (transient_spike.c:33)
+ n0: 1310720 0x1091DD: main (transient_spike.c:20)
+ n0: 262144 0x1092C8: main (transient_spike.c:34)
  n0: 0 in 1 place, below massif's threshold (0.10%)
 #-----------
 snapshot=85
 #-----------
-time=25960992
+time=13841112
 mem_heap_B=1310720
 mem_heap_extra_B=160
 mem_stacks_B=0
 heap_tree=detailed
 n2: 1310720 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
- n0: 1310720 0x1091DD: main (transient_spike.c:19)
+ n0: 1310720 0x1091DD: main (transient_spike.c:20)
  n0: 0 in 2 places, all below massif's threshold (0.10%)
 #-----------
 snapshot=86
 #-----------
-time=26223144
+time=13841146
 mem_heap_B=1572864
 mem_heap_extra_B=168
 mem_stacks_B=0
 heap_tree=detailed
 n3: 1572864 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
- n0: 1310720 0x1091DD: main (transient_spike.c:19)
- n0: 262144 0x1092C8: main (transient_spike.c:33)
+ n0: 1310720 0x1091DD: main (transient_spike.c:20)
+ n0: 262144 0x1092C8: main (transient_spike.c:34)
  n0: 0 in 1 place, below massif's threshold (0.10%)
 #-----------
 snapshot=87
 #-----------
-time=26485296
+time=14103363
 mem_heap_B=1310720
 mem_heap_extra_B=160
 mem_stacks_B=0
 heap_tree=detailed
 n2: 1310720 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
- n0: 1310720 0x1091DD: main (transient_spike.c:19)
+ n0: 1310720 0x1091DD: main (transient_spike.c:20)
  n0: 0 in 2 places, all below massif's threshold (0.10%)
 #-----------
 snapshot=88
 #-----------
-time=26747448
+time=14103397
 mem_heap_B=1572864
 mem_heap_extra_B=168
 mem_stacks_B=0
 heap_tree=detailed
 n3: 1572864 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
- n0: 1310720 0x1091DD: main (transient_spike.c:19)
- n0: 262144 0x1092C8: main (transient_spike.c:33)
+ n0: 1310720 0x1091DD: main (transient_spike.c:20)
+ n0: 262144 0x1092C8: main (transient_spike.c:34)
  n0: 0 in 1 place, below massif's threshold (0.10%)
 #-----------
 snapshot=89
 #-----------
-time=27009600
+time=14365614
 mem_heap_B=1310720
 mem_heap_extra_B=160
 mem_stacks_B=0
 heap_tree=detailed
 n2: 1310720 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
- n0: 1310720 0x1091DD: main (transient_spike.c:19)
+ n0: 1310720 0x1091DD: main (transient_spike.c:20)
  n0: 0 in 2 places, all below massif's threshold (0.10%)
 #-----------
 snapshot=90
 #-----------
-time=27271752
+time=14365648
 mem_heap_B=1572864
 mem_heap_extra_B=168
 mem_stacks_B=0
 heap_tree=detailed
 n3: 1572864 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
- n0: 1310720 0x1091DD: main (transient_spike.c:19)
- n0: 262144 0x1092C8: main (transient_spike.c:33)
+ n0: 1310720 0x1091DD: main (transient_spike.c:20)
+ n0: 262144 0x1092C8: main (transient_spike.c:34)
  n0: 0 in 1 place, below massif's threshold (0.10%)
 #-----------
 snapshot=91
 #-----------
-time=27533904
+time=14627865
 mem_heap_B=1310720
 mem_heap_extra_B=160
 mem_stacks_B=0
 heap_tree=detailed
 n2: 1310720 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
- n0: 1310720 0x1091DD: main (transient_spike.c:19)
+ n0: 1310720 0x1091DD: main (transient_spike.c:20)
  n0: 0 in 2 places, all below massif's threshold (0.10%)
 #-----------
 snapshot=92
 #-----------
-time=27796056
+time=14627899
 mem_heap_B=1572864
 mem_heap_extra_B=168
 mem_stacks_B=0
 heap_tree=detailed
 n3: 1572864 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
- n0: 1310720 0x1091DD: main (transient_spike.c:19)
- n0: 262144 0x1092C8: main (transient_spike.c:33)
+ n0: 1310720 0x1091DD: main (transient_spike.c:20)
+ n0: 262144 0x1092C8: main (transient_spike.c:34)
  n0: 0 in 1 place, below massif's threshold (0.10%)
 #-----------
 snapshot=93
 #-----------
-time=28058208
+time=14890116
 mem_heap_B=1310720
 mem_heap_extra_B=160
 mem_stacks_B=0
 heap_tree=detailed
 n2: 1310720 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
- n0: 1310720 0x1091DD: main (transient_spike.c:19)
+ n0: 1310720 0x1091DD: main (transient_spike.c:20)
  n0: 0 in 2 places, all below massif's threshold (0.10%)
 #-----------
 snapshot=94
 #-----------
-time=28320360
+time=14890150
 mem_heap_B=1572864
 mem_heap_extra_B=168
 mem_stacks_B=0
 heap_tree=detailed
 n3: 1572864 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
- n0: 1310720 0x1091DD: main (transient_spike.c:19)
- n0: 262144 0x1092C8: main (transient_spike.c:33)
+ n0: 1310720 0x1091DD: main (transient_spike.c:20)
+ n0: 262144 0x1092C8: main (transient_spike.c:34)
  n0: 0 in 1 place, below massif's threshold (0.10%)
 #-----------
 snapshot=95
 #-----------
-time=28582512
+time=15152367
 mem_heap_B=1310720
 mem_heap_extra_B=160
 mem_stacks_B=0
 heap_tree=detailed
 n2: 1310720 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
- n0: 1310720 0x1091DD: main (transient_spike.c:19)
+ n0: 1310720 0x1091DD: main (transient_spike.c:20)
  n0: 0 in 2 places, all below massif's threshold (0.10%)
 #-----------
 snapshot=96
 #-----------
-time=28844664
+time=15152401
 mem_heap_B=1572864
 mem_heap_extra_B=168
 mem_stacks_B=0
 heap_tree=detailed
 n3: 1572864 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
- n0: 1310720 0x1091DD: main (transient_spike.c:19)
- n0: 262144 0x1092C8: main (transient_spike.c:33)
+ n0: 1310720 0x1091DD: main (transient_spike.c:20)
+ n0: 262144 0x1092C8: main (transient_spike.c:34)
  n0: 0 in 1 place, below massif's threshold (0.10%)
 #-----------
 snapshot=97
 #-----------
-time=29106816
+time=15414618
 mem_heap_B=1310720
 mem_heap_extra_B=160
 mem_stacks_B=0
 heap_tree=detailed
 n2: 1310720 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
- n0: 1310720 0x1091DD: main (transient_spike.c:19)
+ n0: 1310720 0x1091DD: main (transient_spike.c:20)
  n0: 0 in 2 places, all below massif's threshold (0.10%)
 #-----------
 snapshot=98
 #-----------
-time=29368968
+time=15414652
 mem_heap_B=1572864
 mem_heap_extra_B=168
 mem_stacks_B=0
 heap_tree=detailed
 n3: 1572864 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
- n0: 1310720 0x1091DD: main (transient_spike.c:19)
- n0: 262144 0x1092C8: main (transient_spike.c:33)
+ n0: 1310720 0x1091DD: main (transient_spike.c:20)
+ n0: 262144 0x1092C8: main (transient_spike.c:34)
  n0: 0 in 1 place, below massif's threshold (0.10%)
 #-----------
 snapshot=99
 #-----------
-time=29631120
+time=15676869
 mem_heap_B=1310720
 mem_heap_extra_B=160
 mem_stacks_B=0
 heap_tree=detailed
 n2: 1310720 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
- n0: 1310720 0x1091DD: main (transient_spike.c:19)
+ n0: 1310720 0x1091DD: main (transient_spike.c:20)
  n0: 0 in 2 places, all below massif's threshold (0.10%)
 #-----------
 snapshot=100
 #-----------
-time=29893272
+time=15676903
 mem_heap_B=1572864
 mem_heap_extra_B=168
 mem_stacks_B=0
 heap_tree=detailed
 n3: 1572864 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
- n0: 1310720 0x1091DD: main (transient_spike.c:19)
- n0: 262144 0x1092C8: main (transient_spike.c:33)
+ n0: 1310720 0x1091DD: main (transient_spike.c:20)
+ n0: 262144 0x1092C8: main (transient_spike.c:34)
  n0: 0 in 1 place, below massif's threshold (0.10%)
 #-----------
 snapshot=101
 #-----------
-time=30155424
+time=15939120
 mem_heap_B=1310720
 mem_heap_extra_B=160
 mem_stacks_B=0
 heap_tree=detailed
 n2: 1310720 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
- n0: 1310720 0x1091DD: main (transient_spike.c:19)
+ n0: 1310720 0x1091DD: main (transient_spike.c:20)
  n0: 0 in 2 places, all below massif's threshold (0.10%)
 #-----------
 snapshot=102
 #-----------
-time=30417576
+time=15939154
 mem_heap_B=1572864
 mem_heap_extra_B=168
 mem_stacks_B=0
 heap_tree=detailed
 n3: 1572864 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
- n0: 1310720 0x1091DD: main (transient_spike.c:19)
- n0: 262144 0x1092C8: main (transient_spike.c:33)
+ n0: 1310720 0x1091DD: main (transient_spike.c:20)
+ n0: 262144 0x1092C8: main (transient_spike.c:34)
  n0: 0 in 1 place, below massif's threshold (0.10%)
 #-----------
 snapshot=103
 #-----------
-time=30679728
+time=16201371
 mem_heap_B=1310720
 mem_heap_extra_B=160
 mem_stacks_B=0
 heap_tree=detailed
 n2: 1310720 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
- n0: 1310720 0x1091DD: main (transient_spike.c:19)
+ n0: 1310720 0x1091DD: main (transient_spike.c:20)
  n0: 0 in 2 places, all below massif's threshold (0.10%)
 #-----------
 snapshot=104
 #-----------
-time=30745272
+time=16201405
+mem_heap_B=1572864
+mem_heap_extra_B=168
+mem_stacks_B=0
+heap_tree=detailed
+n3: 1572864 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n0: 1310720 0x1091DD: main (transient_spike.c:20)
+ n0: 262144 0x1092C8: main (transient_spike.c:34)
+ n0: 0 in 1 place, below massif's threshold (0.10%)
+#-----------
+snapshot=105
+#-----------
+time=16463622
+mem_heap_B=1310720
+mem_heap_extra_B=160
+mem_stacks_B=0
+heap_tree=detailed
+n2: 1310720 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n0: 1310720 0x1091DD: main (transient_spike.c:20)
+ n0: 0 in 2 places, all below massif's threshold (0.10%)
+#-----------
+snapshot=106
+#-----------
+time=16463656
+mem_heap_B=1572864
+mem_heap_extra_B=168
+mem_stacks_B=0
+heap_tree=detailed
+n3: 1572864 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n0: 1310720 0x1091DD: main (transient_spike.c:20)
+ n0: 262144 0x1092C8: main (transient_spike.c:34)
+ n0: 0 in 1 place, below massif's threshold (0.10%)
+#-----------
+snapshot=107
+#-----------
+time=16725873
+mem_heap_B=1310720
+mem_heap_extra_B=160
+mem_stacks_B=0
+heap_tree=detailed
+n2: 1310720 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n0: 1310720 0x1091DD: main (transient_spike.c:20)
+ n0: 0 in 2 places, all below massif's threshold (0.10%)
+#-----------
+snapshot=108
+#-----------
+time=16725907
+mem_heap_B=1572864
+mem_heap_extra_B=168
+mem_stacks_B=0
+heap_tree=detailed
+n3: 1572864 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n0: 1310720 0x1091DD: main (transient_spike.c:20)
+ n0: 262144 0x1092C8: main (transient_spike.c:34)
+ n0: 0 in 1 place, below massif's threshold (0.10%)
+#-----------
+snapshot=109
+#-----------
+time=16988124
+mem_heap_B=1310720
+mem_heap_extra_B=160
+mem_stacks_B=0
+heap_tree=detailed
+n2: 1310720 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n0: 1310720 0x1091DD: main (transient_spike.c:20)
+ n0: 0 in 2 places, all below massif's threshold (0.10%)
+#-----------
+snapshot=110
+#-----------
+time=16988158
+mem_heap_B=1572864
+mem_heap_extra_B=168
+mem_stacks_B=0
+heap_tree=detailed
+n3: 1572864 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n0: 1310720 0x1091DD: main (transient_spike.c:20)
+ n0: 262144 0x1092C8: main (transient_spike.c:34)
+ n0: 0 in 1 place, below massif's threshold (0.10%)
+#-----------
+snapshot=111
+#-----------
+time=17250375
+mem_heap_B=1310720
+mem_heap_extra_B=160
+mem_stacks_B=0
+heap_tree=detailed
+n2: 1310720 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n0: 1310720 0x1091DD: main (transient_spike.c:20)
+ n0: 0 in 2 places, all below massif's threshold (0.10%)
+#-----------
+snapshot=112
+#-----------
+time=17250409
+mem_heap_B=1572864
+mem_heap_extra_B=168
+mem_stacks_B=0
+heap_tree=detailed
+n3: 1572864 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n0: 1310720 0x1091DD: main (transient_spike.c:20)
+ n0: 262144 0x1092C8: main (transient_spike.c:34)
+ n0: 0 in 1 place, below massif's threshold (0.10%)
+#-----------
+snapshot=113
+#-----------
+time=17512626
+mem_heap_B=1310720
+mem_heap_extra_B=160
+mem_stacks_B=0
+heap_tree=detailed
+n2: 1310720 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n0: 1310720 0x1091DD: main (transient_spike.c:20)
+ n0: 0 in 2 places, all below massif's threshold (0.10%)
+#-----------
+snapshot=114
+#-----------
+time=17512660
+mem_heap_B=1572864
+mem_heap_extra_B=168
+mem_stacks_B=0
+heap_tree=detailed
+n3: 1572864 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n0: 1310720 0x1091DD: main (transient_spike.c:20)
+ n0: 262144 0x1092C8: main (transient_spike.c:34)
+ n0: 0 in 1 place, below massif's threshold (0.10%)
+#-----------
+snapshot=115
+#-----------
+time=17774877
+mem_heap_B=1310720
+mem_heap_extra_B=160
+mem_stacks_B=0
+heap_tree=detailed
+n2: 1310720 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n0: 1310720 0x1091DD: main (transient_spike.c:20)
+ n0: 0 in 2 places, all below massif's threshold (0.10%)
+#-----------
+snapshot=116
+#-----------
+time=17774911
+mem_heap_B=1572864
+mem_heap_extra_B=168
+mem_stacks_B=0
+heap_tree=detailed
+n3: 1572864 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n0: 1310720 0x1091DD: main (transient_spike.c:20)
+ n0: 262144 0x1092C8: main (transient_spike.c:34)
+ n0: 0 in 1 place, below massif's threshold (0.10%)
+#-----------
+snapshot=117
+#-----------
+time=18037128
+mem_heap_B=1310720
+mem_heap_extra_B=160
+mem_stacks_B=0
+heap_tree=detailed
+n2: 1310720 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n0: 1310720 0x1091DD: main (transient_spike.c:20)
+ n0: 0 in 2 places, all below massif's threshold (0.10%)
+#-----------
+snapshot=118
+#-----------
+time=18037162
+mem_heap_B=1572864
+mem_heap_extra_B=168
+mem_stacks_B=0
+heap_tree=detailed
+n3: 1572864 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n0: 1310720 0x1091DD: main (transient_spike.c:20)
+ n0: 262144 0x1092C8: main (transient_spike.c:34)
+ n0: 0 in 1 place, below massif's threshold (0.10%)
+#-----------
+snapshot=119
+#-----------
+time=18299379
+mem_heap_B=1310720
+mem_heap_extra_B=160
+mem_stacks_B=0
+heap_tree=detailed
+n2: 1310720 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n0: 1310720 0x1091DD: main (transient_spike.c:20)
+ n0: 0 in 2 places, all below massif's threshold (0.10%)
+#-----------
+snapshot=120
+#-----------
+time=18299413
+mem_heap_B=1572864
+mem_heap_extra_B=168
+mem_stacks_B=0
+heap_tree=detailed
+n3: 1572864 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n0: 1310720 0x1091DD: main (transient_spike.c:20)
+ n0: 262144 0x1092C8: main (transient_spike.c:34)
+ n0: 0 in 1 place, below massif's threshold (0.10%)
+#-----------
+snapshot=121
+#-----------
+time=18561630
+mem_heap_B=1310720
+mem_heap_extra_B=160
+mem_stacks_B=0
+heap_tree=detailed
+n2: 1310720 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n0: 1310720 0x1091DD: main (transient_spike.c:20)
+ n0: 0 in 2 places, all below massif's threshold (0.10%)
+#-----------
+snapshot=122
+#-----------
+time=18561664
+mem_heap_B=1572864
+mem_heap_extra_B=168
+mem_stacks_B=0
+heap_tree=detailed
+n3: 1572864 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n0: 1310720 0x1091DD: main (transient_spike.c:20)
+ n0: 262144 0x1092C8: main (transient_spike.c:34)
+ n0: 0 in 1 place, below massif's threshold (0.10%)
+#-----------
+snapshot=123
+#-----------
+time=18823881
+mem_heap_B=1310720
+mem_heap_extra_B=160
+mem_stacks_B=0
+heap_tree=detailed
+n2: 1310720 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n0: 1310720 0x1091DD: main (transient_spike.c:20)
+ n0: 0 in 2 places, all below massif's threshold (0.10%)
+#-----------
+snapshot=124
+#-----------
+time=18823915
+mem_heap_B=1572864
+mem_heap_extra_B=168
+mem_stacks_B=0
+heap_tree=detailed
+n3: 1572864 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n0: 1310720 0x1091DD: main (transient_spike.c:20)
+ n0: 262144 0x1092C8: main (transient_spike.c:34)
+ n0: 0 in 1 place, below massif's threshold (0.10%)
+#-----------
+snapshot=125
+#-----------
+time=19086132
+mem_heap_B=1310720
+mem_heap_extra_B=160
+mem_stacks_B=0
+heap_tree=detailed
+n2: 1310720 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n0: 1310720 0x1091DD: main (transient_spike.c:20)
+ n0: 0 in 2 places, all below massif's threshold (0.10%)
+#-----------
+snapshot=126
+#-----------
+time=19086166
+mem_heap_B=1572864
+mem_heap_extra_B=168
+mem_stacks_B=0
+heap_tree=detailed
+n3: 1572864 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n0: 1310720 0x1091DD: main (transient_spike.c:20)
+ n0: 262144 0x1092C8: main (transient_spike.c:34)
+ n0: 0 in 1 place, below massif's threshold (0.10%)
+#-----------
+snapshot=127
+#-----------
+time=19348383
+mem_heap_B=1310720
+mem_heap_extra_B=160
+mem_stacks_B=0
+heap_tree=detailed
+n2: 1310720 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n0: 1310720 0x1091DD: main (transient_spike.c:20)
+ n0: 0 in 2 places, all below massif's threshold (0.10%)
+#-----------
+snapshot=128
+#-----------
+time=19348417
+mem_heap_B=1572864
+mem_heap_extra_B=168
+mem_stacks_B=0
+heap_tree=detailed
+n3: 1572864 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n0: 1310720 0x1091DD: main (transient_spike.c:20)
+ n0: 262144 0x1092C8: main (transient_spike.c:34)
+ n0: 0 in 1 place, below massif's threshold (0.10%)
+#-----------
+snapshot=129
+#-----------
+time=19610634
+mem_heap_B=1310720
+mem_heap_extra_B=160
+mem_stacks_B=0
+heap_tree=detailed
+n2: 1310720 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n0: 1310720 0x1091DD: main (transient_spike.c:20)
+ n0: 0 in 2 places, all below massif's threshold (0.10%)
+#-----------
+snapshot=130
+#-----------
+time=19610668
+mem_heap_B=1572864
+mem_heap_extra_B=168
+mem_stacks_B=0
+heap_tree=detailed
+n3: 1572864 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n0: 1310720 0x1091DD: main (transient_spike.c:20)
+ n0: 262144 0x1092C8: main (transient_spike.c:34)
+ n0: 0 in 1 place, below massif's threshold (0.10%)
+#-----------
+snapshot=131
+#-----------
+time=19872885
+mem_heap_B=1310720
+mem_heap_extra_B=160
+mem_stacks_B=0
+heap_tree=detailed
+n2: 1310720 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n0: 1310720 0x1091DD: main (transient_spike.c:20)
+ n0: 0 in 2 places, all below massif's threshold (0.10%)
+#-----------
+snapshot=132
+#-----------
+time=19872919
+mem_heap_B=1572864
+mem_heap_extra_B=168
+mem_stacks_B=0
+heap_tree=detailed
+n3: 1572864 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n0: 1310720 0x1091DD: main (transient_spike.c:20)
+ n0: 262144 0x1092C8: main (transient_spike.c:34)
+ n0: 0 in 1 place, below massif's threshold (0.10%)
+#-----------
+snapshot=133
+#-----------
+time=20135136
+mem_heap_B=1310720
+mem_heap_extra_B=160
+mem_stacks_B=0
+heap_tree=detailed
+n2: 1310720 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n0: 1310720 0x1091DD: main (transient_spike.c:20)
+ n0: 0 in 2 places, all below massif's threshold (0.10%)
+#-----------
+snapshot=134
+#-----------
+time=20135170
+mem_heap_B=1572864
+mem_heap_extra_B=168
+mem_stacks_B=0
+heap_tree=detailed
+n3: 1572864 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n0: 1310720 0x1091DD: main (transient_spike.c:20)
+ n0: 262144 0x1092C8: main (transient_spike.c:34)
+ n0: 0 in 1 place, below massif's threshold (0.10%)
+#-----------
+snapshot=135
+#-----------
+time=20397387
+mem_heap_B=1310720
+mem_heap_extra_B=160
+mem_stacks_B=0
+heap_tree=detailed
+n2: 1310720 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n0: 1310720 0x1091DD: main (transient_spike.c:20)
+ n0: 0 in 2 places, all below massif's threshold (0.10%)
+#-----------
+snapshot=136
+#-----------
+time=20397421
+mem_heap_B=1572864
+mem_heap_extra_B=168
+mem_stacks_B=0
+heap_tree=detailed
+n3: 1572864 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n0: 1310720 0x1091DD: main (transient_spike.c:20)
+ n0: 262144 0x1092C8: main (transient_spike.c:34)
+ n0: 0 in 1 place, below massif's threshold (0.10%)
+#-----------
+snapshot=137
+#-----------
+time=20659638
+mem_heap_B=1310720
+mem_heap_extra_B=160
+mem_stacks_B=0
+heap_tree=detailed
+n2: 1310720 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n0: 1310720 0x1091DD: main (transient_spike.c:20)
+ n0: 0 in 2 places, all below massif's threshold (0.10%)
+#-----------
+snapshot=138
+#-----------
+time=20659672
+mem_heap_B=1572864
+mem_heap_extra_B=168
+mem_stacks_B=0
+heap_tree=detailed
+n3: 1572864 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n0: 1310720 0x1091DD: main (transient_spike.c:20)
+ n0: 262144 0x1092C8: main (transient_spike.c:34)
+ n0: 0 in 1 place, below massif's threshold (0.10%)
+#-----------
+snapshot=139
+#-----------
+time=20921889
+mem_heap_B=1310720
+mem_heap_extra_B=160
+mem_stacks_B=0
+heap_tree=detailed
+n2: 1310720 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n0: 1310720 0x1091DD: main (transient_spike.c:20)
+ n0: 0 in 2 places, all below massif's threshold (0.10%)
+#-----------
+snapshot=140
+#-----------
+time=20921923
+mem_heap_B=1572864
+mem_heap_extra_B=168
+mem_stacks_B=0
+heap_tree=detailed
+n3: 1572864 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n0: 1310720 0x1091DD: main (transient_spike.c:20)
+ n0: 262144 0x1092C8: main (transient_spike.c:34)
+ n0: 0 in 1 place, below massif's threshold (0.10%)
+#-----------
+snapshot=141
+#-----------
+time=21184140
+mem_heap_B=1310720
+mem_heap_extra_B=160
+mem_stacks_B=0
+heap_tree=detailed
+n2: 1310720 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n0: 1310720 0x1091DD: main (transient_spike.c:20)
+ n0: 0 in 2 places, all below massif's threshold (0.10%)
+#-----------
+snapshot=142
+#-----------
+time=21184174
+mem_heap_B=1572864
+mem_heap_extra_B=168
+mem_stacks_B=0
+heap_tree=detailed
+n3: 1572864 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n0: 1310720 0x1091DD: main (transient_spike.c:20)
+ n0: 262144 0x1092C8: main (transient_spike.c:34)
+ n0: 0 in 1 place, below massif's threshold (0.10%)
+#-----------
+snapshot=143
+#-----------
+time=21446391
+mem_heap_B=1310720
+mem_heap_extra_B=160
+mem_stacks_B=0
+heap_tree=detailed
+n2: 1310720 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n0: 1310720 0x1091DD: main (transient_spike.c:20)
+ n0: 0 in 2 places, all below massif's threshold (0.10%)
+#-----------
+snapshot=144
+#-----------
+time=21446425
+mem_heap_B=1572864
+mem_heap_extra_B=168
+mem_stacks_B=0
+heap_tree=detailed
+n3: 1572864 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n0: 1310720 0x1091DD: main (transient_spike.c:20)
+ n0: 262144 0x1092C8: main (transient_spike.c:34)
+ n0: 0 in 1 place, below massif's threshold (0.10%)
+#-----------
+snapshot=145
+#-----------
+time=21708642
+mem_heap_B=1310720
+mem_heap_extra_B=160
+mem_stacks_B=0
+heap_tree=detailed
+n2: 1310720 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n0: 1310720 0x1091DD: main (transient_spike.c:20)
+ n0: 0 in 2 places, all below massif's threshold (0.10%)
+#-----------
+snapshot=146
+#-----------
+time=21708676
+mem_heap_B=1572864
+mem_heap_extra_B=168
+mem_stacks_B=0
+heap_tree=detailed
+n3: 1572864 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n0: 1310720 0x1091DD: main (transient_spike.c:20)
+ n0: 262144 0x1092C8: main (transient_spike.c:34)
+ n0: 0 in 1 place, below massif's threshold (0.10%)
+#-----------
+snapshot=147
+#-----------
+time=21970893
+mem_heap_B=1310720
+mem_heap_extra_B=160
+mem_stacks_B=0
+heap_tree=detailed
+n2: 1310720 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n0: 1310720 0x1091DD: main (transient_spike.c:20)
+ n0: 0 in 2 places, all below massif's threshold (0.10%)
+#-----------
+snapshot=148
+#-----------
+time=21970927
+mem_heap_B=1572864
+mem_heap_extra_B=168
+mem_stacks_B=0
+heap_tree=detailed
+n3: 1572864 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n0: 1310720 0x1091DD: main (transient_spike.c:20)
+ n0: 262144 0x1092C8: main (transient_spike.c:34)
+ n0: 0 in 1 place, below massif's threshold (0.10%)
+#-----------
+snapshot=149
+#-----------
+time=22233144
+mem_heap_B=1310720
+mem_heap_extra_B=160
+mem_stacks_B=0
+heap_tree=detailed
+n2: 1310720 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n0: 1310720 0x1091DD: main (transient_spike.c:20)
+ n0: 0 in 2 places, all below massif's threshold (0.10%)
+#-----------
+snapshot=150
+#-----------
+time=22233178
+mem_heap_B=1572864
+mem_heap_extra_B=168
+mem_stacks_B=0
+heap_tree=detailed
+n3: 1572864 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n0: 1310720 0x1091DD: main (transient_spike.c:20)
+ n0: 262144 0x1092C8: main (transient_spike.c:34)
+ n0: 0 in 1 place, below massif's threshold (0.10%)
+#-----------
+snapshot=151
+#-----------
+time=22495395
+mem_heap_B=1310720
+mem_heap_extra_B=160
+mem_stacks_B=0
+heap_tree=detailed
+n2: 1310720 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n0: 1310720 0x1091DD: main (transient_spike.c:20)
+ n0: 0 in 2 places, all below massif's threshold (0.10%)
+#-----------
+snapshot=152
+#-----------
+time=22495434
 mem_heap_B=1245184
 mem_heap_extra_B=152
 mem_stacks_B=0
 heap_tree=detailed
 n2: 1245184 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
- n0: 1245184 0x1091DD: main (transient_spike.c:19)
+ n0: 1245184 0x1091DD: main (transient_spike.c:20)
  n0: 0 in 2 places, all below massif's threshold (0.10%)
 #-----------
-snapshot=105
+snapshot=153
 #-----------
-time=30810816
+time=22495469
 mem_heap_B=1179648
 mem_heap_extra_B=144
 mem_stacks_B=0
 heap_tree=detailed
 n2: 1179648 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
- n0: 1179648 0x1091DD: main (transient_spike.c:19)
+ n0: 1179648 0x1091DD: main (transient_spike.c:20)
  n0: 0 in 2 places, all below massif's threshold (0.10%)
 #-----------
-snapshot=106
+snapshot=154
 #-----------
-time=30876360
+time=22495504
 mem_heap_B=1114112
 mem_heap_extra_B=136
 mem_stacks_B=0
 heap_tree=detailed
 n2: 1114112 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
- n0: 1114112 0x1091DD: main (transient_spike.c:19)
+ n0: 1114112 0x1091DD: main (transient_spike.c:20)
  n0: 0 in 2 places, all below massif's threshold (0.10%)
 #-----------
-snapshot=107
+snapshot=155
 #-----------
-time=30941904
+time=22495539
 mem_heap_B=1048576
 mem_heap_extra_B=128
 mem_stacks_B=0
 heap_tree=detailed
 n2: 1048576 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
- n0: 1048576 0x1091DD: main (transient_spike.c:19)
+ n0: 1048576 0x1091DD: main (transient_spike.c:20)
  n0: 0 in 2 places, all below massif's threshold (0.10%)
 #-----------
-snapshot=108
+snapshot=156
 #-----------
-time=31007448
+time=22495574
 mem_heap_B=983040
 mem_heap_extra_B=120
 mem_stacks_B=0
 heap_tree=detailed
 n2: 983040 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
- n0: 983040 0x1091DD: main (transient_spike.c:19)
+ n0: 983040 0x1091DD: main (transient_spike.c:20)
  n0: 0 in 2 places, all below massif's threshold (0.10%)
 #-----------
-snapshot=109
+snapshot=157
 #-----------
-time=31072992
+time=22495609
 mem_heap_B=917504
 mem_heap_extra_B=112
 mem_stacks_B=0
 heap_tree=detailed
 n2: 917504 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
- n0: 917504 0x1091DD: main (transient_spike.c:19)
+ n0: 917504 0x1091DD: main (transient_spike.c:20)
  n0: 0 in 2 places, all below massif's threshold (0.10%)
 #-----------
-snapshot=110
+snapshot=158
 #-----------
-time=31138536
+time=22495644
 mem_heap_B=851968
 mem_heap_extra_B=104
 mem_stacks_B=0
 heap_tree=detailed
 n2: 851968 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
- n0: 851968 0x1091DD: main (transient_spike.c:19)
+ n0: 851968 0x1091DD: main (transient_spike.c:20)
  n0: 0 in 2 places, all below massif's threshold (0.10%)
 #-----------
-snapshot=111
+snapshot=159
 #-----------
-time=31204080
+time=22495679
 mem_heap_B=786432
 mem_heap_extra_B=96
 mem_stacks_B=0
 heap_tree=detailed
 n2: 786432 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
- n0: 786432 0x1091DD: main (transient_spike.c:19)
+ n0: 786432 0x1091DD: main (transient_spike.c:20)
  n0: 0 in 2 places, all below massif's threshold (0.10%)
 #-----------
-snapshot=112
+snapshot=160
 #-----------
-time=31269624
+time=22495714
 mem_heap_B=720896
 mem_heap_extra_B=88
 mem_stacks_B=0
 heap_tree=detailed
 n2: 720896 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
- n0: 720896 0x1091DD: main (transient_spike.c:19)
+ n0: 720896 0x1091DD: main (transient_spike.c:20)
  n0: 0 in 2 places, all below massif's threshold (0.10%)
 #-----------
-snapshot=113
+snapshot=161
 #-----------
-time=31335168
+time=22495749
 mem_heap_B=655360
 mem_heap_extra_B=80
 mem_stacks_B=0
 heap_tree=detailed
 n2: 655360 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
- n0: 655360 0x1091DD: main (transient_spike.c:19)
+ n0: 655360 0x1091DD: main (transient_spike.c:20)
  n0: 0 in 2 places, all below massif's threshold (0.10%)
 #-----------
-snapshot=114
+snapshot=162
 #-----------
-time=31400712
+time=22495784
 mem_heap_B=589824
 mem_heap_extra_B=72
 mem_stacks_B=0
 heap_tree=detailed
 n2: 589824 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
- n0: 589824 0x1091DD: main (transient_spike.c:19)
+ n0: 589824 0x1091DD: main (transient_spike.c:20)
  n0: 0 in 2 places, all below massif's threshold (0.10%)
 #-----------
-snapshot=115
+snapshot=163
 #-----------
-time=31466256
+time=22495819
 mem_heap_B=524288
 mem_heap_extra_B=64
 mem_stacks_B=0
 heap_tree=detailed
 n2: 524288 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
- n0: 524288 0x1091DD: main (transient_spike.c:19)
+ n0: 524288 0x1091DD: main (transient_spike.c:20)
  n0: 0 in 2 places, all below massif's threshold (0.10%)
 #-----------
-snapshot=116
+snapshot=164
 #-----------
-time=31531800
+time=22495854
 mem_heap_B=458752
 mem_heap_extra_B=56
 mem_stacks_B=0
 heap_tree=detailed
 n2: 458752 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
- n0: 458752 0x1091DD: main (transient_spike.c:19)
+ n0: 458752 0x1091DD: main (transient_spike.c:20)
  n0: 0 in 2 places, all below massif's threshold (0.10%)
 #-----------
-snapshot=117
+snapshot=165
 #-----------
-time=31597344
+time=22495889
 mem_heap_B=393216
 mem_heap_extra_B=48
 mem_stacks_B=0
 heap_tree=detailed
 n2: 393216 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
- n0: 393216 0x1091DD: main (transient_spike.c:19)
+ n0: 393216 0x1091DD: main (transient_spike.c:20)
  n0: 0 in 2 places, all below massif's threshold (0.10%)
 #-----------
-snapshot=118
+snapshot=166
 #-----------
-time=31662888
+time=22495924
 mem_heap_B=327680
 mem_heap_extra_B=40
 mem_stacks_B=0
 heap_tree=detailed
 n2: 327680 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
- n0: 327680 0x1091DD: main (transient_spike.c:19)
+ n0: 327680 0x1091DD: main (transient_spike.c:20)
  n0: 0 in 2 places, all below massif's threshold (0.10%)
 #-----------
-snapshot=119
+snapshot=167
 #-----------
-time=31728432
+time=22495959
 mem_heap_B=262144
 mem_heap_extra_B=32
 mem_stacks_B=0
 heap_tree=detailed
 n2: 262144 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
- n0: 262144 0x1091DD: main (transient_spike.c:19)
+ n0: 262144 0x1091DD: main (transient_spike.c:20)
  n0: 0 in 2 places, all below massif's threshold (0.10%)
 #-----------
-snapshot=120
+snapshot=168
 #-----------
-time=31793976
+time=22495994
 mem_heap_B=196608
 mem_heap_extra_B=24
 mem_stacks_B=0
 heap_tree=detailed
 n2: 196608 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
- n0: 196608 0x1091DD: main (transient_spike.c:19)
+ n0: 196608 0x1091DD: main (transient_spike.c:20)
  n0: 0 in 2 places, all below massif's threshold (0.10%)
 #-----------
-snapshot=121
+snapshot=169
 #-----------
-time=31859520
+time=22496029
 mem_heap_B=131072
 mem_heap_extra_B=16
 mem_stacks_B=0
 heap_tree=detailed
 n2: 131072 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
- n0: 131072 0x1091DD: main (transient_spike.c:19)
+ n0: 131072 0x1091DD: main (transient_spike.c:20)
  n0: 0 in 2 places, all below massif's threshold (0.10%)
 #-----------
-snapshot=122
+snapshot=170
 #-----------
-time=31925064
+time=22496064
 mem_heap_B=65536
 mem_heap_extra_B=8
 mem_stacks_B=0
 heap_tree=detailed
 n2: 65536 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
- n0: 65536 0x1091DD: main (transient_spike.c:19)
+ n0: 65536 0x1091DD: main (transient_spike.c:20)
  n0: 0 in 2 places, all below massif's threshold (0.10%)
 #-----------
-snapshot=123
+snapshot=171
 #-----------
-time=31990608
+time=22496099
 mem_heap_B=0
 mem_heap_extra_B=0
 mem_stacks_B=0

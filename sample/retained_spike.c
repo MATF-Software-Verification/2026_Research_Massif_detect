@@ -2,7 +2,13 @@
 #include <stdlib.h>
 #include <string.h>
 
-enum { BaselineCount = 20, BaselineSize = 64 * 1024, SpikeSize = 4 * 1024 * 1024 };
+enum {
+    BaselineCount = 20,
+    BaselineSize = 64 * 1024,
+    SpikeSize = 4 * 1024 * 1024,
+    TailCount = 64,
+    TailSize = 256 * 1024
+};
 
 static volatile unsigned long observed;
 
@@ -25,6 +31,16 @@ int main(void)
 
     for (size_t i = 0; i < BaselineCount; i++)
         free(baseline[i]);
+
+    /* Keep recording snapshots long enough to observe that the spike is retained. */
+    for (size_t i = 0; i < TailCount; i++) {
+        unsigned char *tail = malloc(TailSize);
+        if (tail == NULL)
+            return 1;
+        memset(tail, (int)i, TailSize);
+        observed += tail[TailSize - 1];
+        free(tail);
+    }
 
     /* The large allocation intentionally remains resident. */
     return observed == 0;

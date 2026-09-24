@@ -6,6 +6,7 @@ enum {
     BaselineCount = 20,
     BaselineSize = 64 * 1024,
     SpikeSize = 4 * 1024 * 1024,
+    TailCount = 64,
     TailSize = 256 * 1024
 };
 
@@ -29,7 +30,7 @@ int main(void)
     observed += temporary[SpikeSize - 1];
     free(temporary);
 
-    for (size_t i = 0; i < 40; i++) {
+    for (size_t i = 0; i < TailCount; i++) {
         unsigned char *tail = malloc(TailSize);
         if (tail == NULL)
             return 1;

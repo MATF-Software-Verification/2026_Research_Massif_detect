@@ -1,6 +1,6 @@
-desc: --time-unit=B --detailed-freq=1 --max-snapshots=200 --threshold=0.1 --massif-out-file=/home/korisnik/Desktop/projects/software_verification/2026_Research_Massif_detect/sample/massif.out.retained_spike
-cmd: /tmp/tmp.8cjs8wCovW/retained_spike
-time_unit: B
+desc: --time-unit=i --detailed-freq=1 --max-snapshots=200 --threshold=0.1 --massif-out-file=/home/korisnik/Desktop/projects/software_verification/2026_Research_Massif_detect/sample/massif.out.retained_spike
+cmd: /tmp/tmp.MyNbQBY1or/retained_spike
+time_unit: i
 #-----------
 snapshot=0
 #-----------
@@ -13,442 +13,1914 @@ n0: 0 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
 #-----------
 snapshot=1
 #-----------
-time=65544
+time=204795
 mem_heap_B=65536
 mem_heap_extra_B=8
 mem_stacks_B=0
 heap_tree=detailed
 n1: 65536 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
- n0: 65536 0x1091DD: main (retained_spike.c:14)
+ n0: 65536 0x1091DD: main (retained_spike.c:20)
 #-----------
 snapshot=2
 #-----------
-time=131088
+time=270403
 mem_heap_B=131072
 mem_heap_extra_B=16
 mem_stacks_B=0
 heap_tree=detailed
 n1: 131072 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
- n0: 131072 0x1091DD: main (retained_spike.c:14)
+ n0: 131072 0x1091DD: main (retained_spike.c:20)
 #-----------
 snapshot=3
 #-----------
-time=196632
+time=336011
 mem_heap_B=196608
 mem_heap_extra_B=24
 mem_stacks_B=0
 heap_tree=detailed
 n1: 196608 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
- n0: 196608 0x1091DD: main (retained_spike.c:14)
+ n0: 196608 0x1091DD: main (retained_spike.c:20)
 #-----------
 snapshot=4
 #-----------
-time=262176
+time=401619
 mem_heap_B=262144
 mem_heap_extra_B=32
 mem_stacks_B=0
 heap_tree=detailed
 n1: 262144 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
- n0: 262144 0x1091DD: main (retained_spike.c:14)
+ n0: 262144 0x1091DD: main (retained_spike.c:20)
 #-----------
 snapshot=5
 #-----------
-time=327720
+time=467227
 mem_heap_B=327680
 mem_heap_extra_B=40
 mem_stacks_B=0
 heap_tree=detailed
 n1: 327680 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
- n0: 327680 0x1091DD: main (retained_spike.c:14)
+ n0: 327680 0x1091DD: main (retained_spike.c:20)
 #-----------
 snapshot=6
 #-----------
-time=393264
+time=532835
 mem_heap_B=393216
 mem_heap_extra_B=48
 mem_stacks_B=0
 heap_tree=detailed
 n1: 393216 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
- n0: 393216 0x1091DD: main (retained_spike.c:14)
+ n0: 393216 0x1091DD: main (retained_spike.c:20)
 #-----------
 snapshot=7
 #-----------
-time=458808
+time=598443
 mem_heap_B=458752
 mem_heap_extra_B=56
 mem_stacks_B=0
 heap_tree=detailed
 n1: 458752 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
- n0: 458752 0x1091DD: main (retained_spike.c:14)
+ n0: 458752 0x1091DD: main (retained_spike.c:20)
 #-----------
 snapshot=8
 #-----------
-time=524352
+time=664051
 mem_heap_B=524288
 mem_heap_extra_B=64
 mem_stacks_B=0
 heap_tree=detailed
 n1: 524288 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
- n0: 524288 0x1091DD: main (retained_spike.c:14)
+ n0: 524288 0x1091DD: main (retained_spike.c:20)
 #-----------
 snapshot=9
 #-----------
-time=589896
+time=729659
 mem_heap_B=589824
 mem_heap_extra_B=72
 mem_stacks_B=0
 heap_tree=detailed
 n1: 589824 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
- n0: 589824 0x1091DD: main (retained_spike.c:14)
+ n0: 589824 0x1091DD: main (retained_spike.c:20)
 #-----------
 snapshot=10
 #-----------
-time=655440
+time=795267
 mem_heap_B=655360
 mem_heap_extra_B=80
 mem_stacks_B=0
 heap_tree=detailed
 n1: 655360 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
- n0: 655360 0x1091DD: main (retained_spike.c:14)
+ n0: 655360 0x1091DD: main (retained_spike.c:20)
 #-----------
 snapshot=11
 #-----------
-time=720984
+time=860875
 mem_heap_B=720896
 mem_heap_extra_B=88
 mem_stacks_B=0
 heap_tree=detailed
 n1: 720896 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
- n0: 720896 0x1091DD: main (retained_spike.c:14)
+ n0: 720896 0x1091DD: main (retained_spike.c:20)
 #-----------
 snapshot=12
 #-----------
-time=786528
+time=926483
 mem_heap_B=786432
 mem_heap_extra_B=96
 mem_stacks_B=0
 heap_tree=detailed
 n1: 786432 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
- n0: 786432 0x1091DD: main (retained_spike.c:14)
+ n0: 786432 0x1091DD: main (retained_spike.c:20)
 #-----------
 snapshot=13
 #-----------
-time=852072
+time=992091
 mem_heap_B=851968
 mem_heap_extra_B=104
 mem_stacks_B=0
 heap_tree=detailed
 n1: 851968 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
- n0: 851968 0x1091DD: main (retained_spike.c:14)
+ n0: 851968 0x1091DD: main (retained_spike.c:20)
 #-----------
 snapshot=14
 #-----------
-time=917616
+time=1057699
 mem_heap_B=917504
 mem_heap_extra_B=112
 mem_stacks_B=0
 heap_tree=detailed
 n1: 917504 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
- n0: 917504 0x1091DD: main (retained_spike.c:14)
+ n0: 917504 0x1091DD: main (retained_spike.c:20)
 #-----------
 snapshot=15
 #-----------
-time=983160
+time=1123307
 mem_heap_B=983040
 mem_heap_extra_B=120
 mem_stacks_B=0
 heap_tree=detailed
 n1: 983040 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
- n0: 983040 0x1091DD: main (retained_spike.c:14)
+ n0: 983040 0x1091DD: main (retained_spike.c:20)
 #-----------
 snapshot=16
 #-----------
-time=1048704
+time=1188915
 mem_heap_B=1048576
 mem_heap_extra_B=128
 mem_stacks_B=0
 heap_tree=detailed
 n1: 1048576 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
- n0: 1048576 0x1091DD: main (retained_spike.c:14)
+ n0: 1048576 0x1091DD: main (retained_spike.c:20)
 #-----------
 snapshot=17
 #-----------
-time=1114248
+time=1254523
 mem_heap_B=1114112
 mem_heap_extra_B=136
 mem_stacks_B=0
 heap_tree=detailed
 n1: 1114112 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
- n0: 1114112 0x1091DD: main (retained_spike.c:14)
+ n0: 1114112 0x1091DD: main (retained_spike.c:20)
 #-----------
 snapshot=18
 #-----------
-time=1179792
+time=1320131
 mem_heap_B=1179648
 mem_heap_extra_B=144
 mem_stacks_B=0
 heap_tree=detailed
 n1: 1179648 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
- n0: 1179648 0x1091DD: main (retained_spike.c:14)
+ n0: 1179648 0x1091DD: main (retained_spike.c:20)
 #-----------
 snapshot=19
 #-----------
-time=1245336
+time=1385739
 mem_heap_B=1245184
 mem_heap_extra_B=152
 mem_stacks_B=0
 heap_tree=detailed
 n1: 1245184 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
- n0: 1245184 0x1091DD: main (retained_spike.c:14)
+ n0: 1245184 0x1091DD: main (retained_spike.c:20)
 #-----------
 snapshot=20
 #-----------
-time=1310880
+time=1451347
 mem_heap_B=1310720
 mem_heap_extra_B=160
 mem_stacks_B=0
 heap_tree=detailed
 n1: 1310720 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
- n0: 1310720 0x1091DD: main (retained_spike.c:14)
+ n0: 1310720 0x1091DD: main (retained_spike.c:20)
 #-----------
 snapshot=21
 #-----------
-time=5509224
+time=1516955
 mem_heap_B=5505024
 mem_heap_extra_B=4200
 mem_stacks_B=0
 heap_tree=detailed
 n2: 5505024 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
- n0: 4194304 0x10924A: main (retained_spike.c:20)
- n0: 1310720 0x1091DD: main (retained_spike.c:14)
+ n0: 4194304 0x10924A: main (retained_spike.c:26)
+ n0: 1310720 0x1091DD: main (retained_spike.c:20)
 #-----------
 snapshot=22
 #-----------
-time=5509224
+time=5711335
 mem_heap_B=5505024
 mem_heap_extra_B=4200
 mem_stacks_B=0
 heap_tree=peak
 n2: 5505024 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
- n0: 4194304 0x10924A: main (retained_spike.c:20)
- n0: 1310720 0x1091DD: main (retained_spike.c:14)
+ n0: 4194304 0x10924A: main (retained_spike.c:26)
+ n0: 1310720 0x1091DD: main (retained_spike.c:20)
 #-----------
 snapshot=23
 #-----------
-time=5574768
+time=5711335
 mem_heap_B=5439488
 mem_heap_extra_B=4192
 mem_stacks_B=0
 heap_tree=detailed
 n2: 5439488 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
- n0: 4194304 0x10924A: main (retained_spike.c:20)
- n0: 1245184 0x1091DD: main (retained_spike.c:14)
+ n0: 4194304 0x10924A: main (retained_spike.c:26)
+ n0: 1245184 0x1091DD: main (retained_spike.c:20)
 #-----------
 snapshot=24
 #-----------
-time=5640312
+time=5711370
 mem_heap_B=5373952
 mem_heap_extra_B=4184
 mem_stacks_B=0
 heap_tree=detailed
 n2: 5373952 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
- n0: 4194304 0x10924A: main (retained_spike.c:20)
- n0: 1179648 0x1091DD: main (retained_spike.c:14)
+ n0: 4194304 0x10924A: main (retained_spike.c:26)
+ n0: 1179648 0x1091DD: main (retained_spike.c:20)
 #-----------
 snapshot=25
 #-----------
-time=5705856
+time=5711405
 mem_heap_B=5308416
 mem_heap_extra_B=4176
 mem_stacks_B=0
 heap_tree=detailed
 n2: 5308416 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
- n0: 4194304 0x10924A: main (retained_spike.c:20)
- n0: 1114112 0x1091DD: main (retained_spike.c:14)
+ n0: 4194304 0x10924A: main (retained_spike.c:26)
+ n0: 1114112 0x1091DD: main (retained_spike.c:20)
 #-----------
 snapshot=26
 #-----------
-time=5771400
+time=5711440
 mem_heap_B=5242880
 mem_heap_extra_B=4168
 mem_stacks_B=0
 heap_tree=detailed
 n2: 5242880 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
- n0: 4194304 0x10924A: main (retained_spike.c:20)
- n0: 1048576 0x1091DD: main (retained_spike.c:14)
+ n0: 4194304 0x10924A: main (retained_spike.c:26)
+ n0: 1048576 0x1091DD: main (retained_spike.c:20)
 #-----------
 snapshot=27
 #-----------
-time=5836944
+time=5711475
 mem_heap_B=5177344
 mem_heap_extra_B=4160
 mem_stacks_B=0
 heap_tree=detailed
 n2: 5177344 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
- n0: 4194304 0x10924A: main (retained_spike.c:20)
- n0: 983040 0x1091DD: main (retained_spike.c:14)
+ n0: 4194304 0x10924A: main (retained_spike.c:26)
+ n0: 983040 0x1091DD: main (retained_spike.c:20)
 #-----------
 snapshot=28
 #-----------
-time=5902488
+time=5711510
 mem_heap_B=5111808
 mem_heap_extra_B=4152
 mem_stacks_B=0
 heap_tree=detailed
 n2: 5111808 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
- n0: 4194304 0x10924A: main (retained_spike.c:20)
- n0: 917504 0x1091DD: main (retained_spike.c:14)
+ n0: 4194304 0x10924A: main (retained_spike.c:26)
+ n0: 917504 0x1091DD: main (retained_spike.c:20)
 #-----------
 snapshot=29
 #-----------
-time=5968032
+time=5711545
 mem_heap_B=5046272
 mem_heap_extra_B=4144
 mem_stacks_B=0
 heap_tree=detailed
 n2: 5046272 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
- n0: 4194304 0x10924A: main (retained_spike.c:20)
- n0: 851968 0x1091DD: main (retained_spike.c:14)
+ n0: 4194304 0x10924A: main (retained_spike.c:26)
+ n0: 851968 0x1091DD: main (retained_spike.c:20)
 #-----------
 snapshot=30
 #-----------
-time=6033576
+time=5711580
 mem_heap_B=4980736
 mem_heap_extra_B=4136
 mem_stacks_B=0
 heap_tree=detailed
 n2: 4980736 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
- n0: 4194304 0x10924A: main (retained_spike.c:20)
- n0: 786432 0x1091DD: main (retained_spike.c:14)
+ n0: 4194304 0x10924A: main (retained_spike.c:26)
+ n0: 786432 0x1091DD: main (retained_spike.c:20)
 #-----------
 snapshot=31
 #-----------
-time=6099120
+time=5711615
 mem_heap_B=4915200
 mem_heap_extra_B=4128
 mem_stacks_B=0
 heap_tree=detailed
 n2: 4915200 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
- n0: 4194304 0x10924A: main (retained_spike.c:20)
- n0: 720896 0x1091DD: main (retained_spike.c:14)
+ n0: 4194304 0x10924A: main (retained_spike.c:26)
+ n0: 720896 0x1091DD: main (retained_spike.c:20)
 #-----------
 snapshot=32
 #-----------
-time=6164664
+time=5711650
 mem_heap_B=4849664
 mem_heap_extra_B=4120
 mem_stacks_B=0
 heap_tree=detailed
 n2: 4849664 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
- n0: 4194304 0x10924A: main (retained_spike.c:20)
- n0: 655360 0x1091DD: main (retained_spike.c:14)
+ n0: 4194304 0x10924A: main (retained_spike.c:26)
+ n0: 655360 0x1091DD: main (retained_spike.c:20)
 #-----------
 snapshot=33
 #-----------
-time=6230208
+time=5711685
 mem_heap_B=4784128
 mem_heap_extra_B=4112
 mem_stacks_B=0
 heap_tree=detailed
 n2: 4784128 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
- n0: 4194304 0x10924A: main (retained_spike.c:20)
- n0: 589824 0x1091DD: main (retained_spike.c:14)
+ n0: 4194304 0x10924A: main (retained_spike.c:26)
+ n0: 589824 0x1091DD: main (retained_spike.c:20)
 #-----------
 snapshot=34
 #-----------
-time=6295752
+time=5711720
 mem_heap_B=4718592
 mem_heap_extra_B=4104
 mem_stacks_B=0
 heap_tree=detailed
 n2: 4718592 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
- n0: 4194304 0x10924A: main (retained_spike.c:20)
- n0: 524288 0x1091DD: main (retained_spike.c:14)
+ n0: 4194304 0x10924A: main (retained_spike.c:26)
+ n0: 524288 0x1091DD: main (retained_spike.c:20)
 #-----------
 snapshot=35
 #-----------
-time=6361296
+time=5711755
 mem_heap_B=4653056
 mem_heap_extra_B=4096
 mem_stacks_B=0
 heap_tree=detailed
 n2: 4653056 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
- n0: 4194304 0x10924A: main (retained_spike.c:20)
- n0: 458752 0x1091DD: main (retained_spike.c:14)
+ n0: 4194304 0x10924A: main (retained_spike.c:26)
+ n0: 458752 0x1091DD: main (retained_spike.c:20)
 #-----------
 snapshot=36
 #-----------
-time=6426840
+time=5711790
 mem_heap_B=4587520
 mem_heap_extra_B=4088
 mem_stacks_B=0
 heap_tree=detailed
 n2: 4587520 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
- n0: 4194304 0x10924A: main (retained_spike.c:20)
- n0: 393216 0x1091DD: main (retained_spike.c:14)
+ n0: 4194304 0x10924A: main (retained_spike.c:26)
+ n0: 393216 0x1091DD: main (retained_spike.c:20)
 #-----------
 snapshot=37
 #-----------
-time=6492384
+time=5711825
 mem_heap_B=4521984
 mem_heap_extra_B=4080
 mem_stacks_B=0
 heap_tree=detailed
 n2: 4521984 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
- n0: 4194304 0x10924A: main (retained_spike.c:20)
- n0: 327680 0x1091DD: main (retained_spike.c:14)
+ n0: 4194304 0x10924A: main (retained_spike.c:26)
+ n0: 327680 0x1091DD: main (retained_spike.c:20)
 #-----------
 snapshot=38
 #-----------
-time=6557928
+time=5711860
 mem_heap_B=4456448
 mem_heap_extra_B=4072
 mem_stacks_B=0
 heap_tree=detailed
 n2: 4456448 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
- n0: 4194304 0x10924A: main (retained_spike.c:20)
- n0: 262144 0x1091DD: main (retained_spike.c:14)
+ n0: 4194304 0x10924A: main (retained_spike.c:26)
+ n0: 262144 0x1091DD: main (retained_spike.c:20)
 #-----------
 snapshot=39
 #-----------
-time=6623472
+time=5711895
 mem_heap_B=4390912
 mem_heap_extra_B=4064
 mem_stacks_B=0
 heap_tree=detailed
 n2: 4390912 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
- n0: 4194304 0x10924A: main (retained_spike.c:20)
- n0: 196608 0x1091DD: main (retained_spike.c:14)
+ n0: 4194304 0x10924A: main (retained_spike.c:26)
+ n0: 196608 0x1091DD: main (retained_spike.c:20)
 #-----------
 snapshot=40
 #-----------
-time=6689016
+time=5711930
 mem_heap_B=4325376
 mem_heap_extra_B=4056
 mem_stacks_B=0
 heap_tree=detailed
 n2: 4325376 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
- n0: 4194304 0x10924A: main (retained_spike.c:20)
- n0: 131072 0x1091DD: main (retained_spike.c:14)
+ n0: 4194304 0x10924A: main (retained_spike.c:26)
+ n0: 131072 0x1091DD: main (retained_spike.c:20)
 #-----------
 snapshot=41
 #-----------
-time=6754560
+time=5711965
 mem_heap_B=4259840
 mem_heap_extra_B=4048
 mem_stacks_B=0
 heap_tree=detailed
 n2: 4259840 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
- n0: 4194304 0x10924A: main (retained_spike.c:20)
- n0: 65536 0x1091DD: main (retained_spike.c:14)
+ n0: 4194304 0x10924A: main (retained_spike.c:26)
+ n0: 65536 0x1091DD: main (retained_spike.c:20)
 #-----------
 snapshot=42
 #-----------
-time=6820104
+time=5712000
 mem_heap_B=4194304
 mem_heap_extra_B=4040
 mem_stacks_B=0
 heap_tree=detailed
 n2: 4194304 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
- n0: 4194304 0x10924A: main (retained_spike.c:20)
+ n0: 4194304 0x10924A: main (retained_spike.c:26)
  n0: 0 in 1 place, below massif's threshold (0.10%)
+#-----------
+snapshot=43
+#-----------
+time=5712038
+mem_heap_B=4456448
+mem_heap_extra_B=4048
+mem_stacks_B=0
+heap_tree=detailed
+n3: 4456448 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n0: 4194304 0x10924A: main (retained_spike.c:26)
+ n0: 262144 0x1092EF: main (retained_spike.c:37)
+ n0: 0 in 1 place, below massif's threshold (0.10%)
+#-----------
+snapshot=44
+#-----------
+time=5974255
+mem_heap_B=4194304
+mem_heap_extra_B=4040
+mem_stacks_B=0
+heap_tree=detailed
+n2: 4194304 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n0: 4194304 0x10924A: main (retained_spike.c:26)
+ n0: 0 in 2 places, all below massif's threshold (0.10%)
+#-----------
+snapshot=45
+#-----------
+time=5974289
+mem_heap_B=4456448
+mem_heap_extra_B=4048
+mem_stacks_B=0
+heap_tree=detailed
+n3: 4456448 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n0: 4194304 0x10924A: main (retained_spike.c:26)
+ n0: 262144 0x1092EF: main (retained_spike.c:37)
+ n0: 0 in 1 place, below massif's threshold (0.10%)
+#-----------
+snapshot=46
+#-----------
+time=6236506
+mem_heap_B=4194304
+mem_heap_extra_B=4040
+mem_stacks_B=0
+heap_tree=detailed
+n2: 4194304 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n0: 4194304 0x10924A: main (retained_spike.c:26)
+ n0: 0 in 2 places, all below massif's threshold (0.10%)
+#-----------
+snapshot=47
+#-----------
+time=6236540
+mem_heap_B=4456448
+mem_heap_extra_B=4048
+mem_stacks_B=0
+heap_tree=detailed
+n3: 4456448 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n0: 4194304 0x10924A: main (retained_spike.c:26)
+ n0: 262144 0x1092EF: main (retained_spike.c:37)
+ n0: 0 in 1 place, below massif's threshold (0.10%)
+#-----------
+snapshot=48
+#-----------
+time=6498757
+mem_heap_B=4194304
+mem_heap_extra_B=4040
+mem_stacks_B=0
+heap_tree=detailed
+n2: 4194304 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n0: 4194304 0x10924A: main (retained_spike.c:26)
+ n0: 0 in 2 places, all below massif's threshold (0.10%)
+#-----------
+snapshot=49
+#-----------
+time=6498791
+mem_heap_B=4456448
+mem_heap_extra_B=4048
+mem_stacks_B=0
+heap_tree=detailed
+n3: 4456448 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n0: 4194304 0x10924A: main (retained_spike.c:26)
+ n0: 262144 0x1092EF: main (retained_spike.c:37)
+ n0: 0 in 1 place, below massif's threshold (0.10%)
+#-----------
+snapshot=50
+#-----------
+time=6761008
+mem_heap_B=4194304
+mem_heap_extra_B=4040
+mem_stacks_B=0
+heap_tree=detailed
+n2: 4194304 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n0: 4194304 0x10924A: main (retained_spike.c:26)
+ n0: 0 in 2 places, all below massif's threshold (0.10%)
+#-----------
+snapshot=51
+#-----------
+time=6761042
+mem_heap_B=4456448
+mem_heap_extra_B=4048
+mem_stacks_B=0
+heap_tree=detailed
+n3: 4456448 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n0: 4194304 0x10924A: main (retained_spike.c:26)
+ n0: 262144 0x1092EF: main (retained_spike.c:37)
+ n0: 0 in 1 place, below massif's threshold (0.10%)
+#-----------
+snapshot=52
+#-----------
+time=7023259
+mem_heap_B=4194304
+mem_heap_extra_B=4040
+mem_stacks_B=0
+heap_tree=detailed
+n2: 4194304 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n0: 4194304 0x10924A: main (retained_spike.c:26)
+ n0: 0 in 2 places, all below massif's threshold (0.10%)
+#-----------
+snapshot=53
+#-----------
+time=7023293
+mem_heap_B=4456448
+mem_heap_extra_B=4048
+mem_stacks_B=0
+heap_tree=detailed
+n3: 4456448 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n0: 4194304 0x10924A: main (retained_spike.c:26)
+ n0: 262144 0x1092EF: main (retained_spike.c:37)
+ n0: 0 in 1 place, below massif's threshold (0.10%)
+#-----------
+snapshot=54
+#-----------
+time=7285510
+mem_heap_B=4194304
+mem_heap_extra_B=4040
+mem_stacks_B=0
+heap_tree=detailed
+n2: 4194304 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n0: 4194304 0x10924A: main (retained_spike.c:26)
+ n0: 0 in 2 places, all below massif's threshold (0.10%)
+#-----------
+snapshot=55
+#-----------
+time=7285544
+mem_heap_B=4456448
+mem_heap_extra_B=4048
+mem_stacks_B=0
+heap_tree=detailed
+n3: 4456448 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n0: 4194304 0x10924A: main (retained_spike.c:26)
+ n0: 262144 0x1092EF: main (retained_spike.c:37)
+ n0: 0 in 1 place, below massif's threshold (0.10%)
+#-----------
+snapshot=56
+#-----------
+time=7547761
+mem_heap_B=4194304
+mem_heap_extra_B=4040
+mem_stacks_B=0
+heap_tree=detailed
+n2: 4194304 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n0: 4194304 0x10924A: main (retained_spike.c:26)
+ n0: 0 in 2 places, all below massif's threshold (0.10%)
+#-----------
+snapshot=57
+#-----------
+time=7547795
+mem_heap_B=4456448
+mem_heap_extra_B=4048
+mem_stacks_B=0
+heap_tree=detailed
+n3: 4456448 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n0: 4194304 0x10924A: main (retained_spike.c:26)
+ n0: 262144 0x1092EF: main (retained_spike.c:37)
+ n0: 0 in 1 place, below massif's threshold (0.10%)
+#-----------
+snapshot=58
+#-----------
+time=7810012
+mem_heap_B=4194304
+mem_heap_extra_B=4040
+mem_stacks_B=0
+heap_tree=detailed
+n2: 4194304 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n0: 4194304 0x10924A: main (retained_spike.c:26)
+ n0: 0 in 2 places, all below massif's threshold (0.10%)
+#-----------
+snapshot=59
+#-----------
+time=7810046
+mem_heap_B=4456448
+mem_heap_extra_B=4048
+mem_stacks_B=0
+heap_tree=detailed
+n3: 4456448 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n0: 4194304 0x10924A: main (retained_spike.c:26)
+ n0: 262144 0x1092EF: main (retained_spike.c:37)
+ n0: 0 in 1 place, below massif's threshold (0.10%)
+#-----------
+snapshot=60
+#-----------
+time=8072263
+mem_heap_B=4194304
+mem_heap_extra_B=4040
+mem_stacks_B=0
+heap_tree=detailed
+n2: 4194304 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n0: 4194304 0x10924A: main (retained_spike.c:26)
+ n0: 0 in 2 places, all below massif's threshold (0.10%)
+#-----------
+snapshot=61
+#-----------
+time=8072297
+mem_heap_B=4456448
+mem_heap_extra_B=4048
+mem_stacks_B=0
+heap_tree=detailed
+n3: 4456448 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n0: 4194304 0x10924A: main (retained_spike.c:26)
+ n0: 262144 0x1092EF: main (retained_spike.c:37)
+ n0: 0 in 1 place, below massif's threshold (0.10%)
+#-----------
+snapshot=62
+#-----------
+time=8334514
+mem_heap_B=4194304
+mem_heap_extra_B=4040
+mem_stacks_B=0
+heap_tree=detailed
+n2: 4194304 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n0: 4194304 0x10924A: main (retained_spike.c:26)
+ n0: 0 in 2 places, all below massif's threshold (0.10%)
+#-----------
+snapshot=63
+#-----------
+time=8334548
+mem_heap_B=4456448
+mem_heap_extra_B=4048
+mem_stacks_B=0
+heap_tree=detailed
+n3: 4456448 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n0: 4194304 0x10924A: main (retained_spike.c:26)
+ n0: 262144 0x1092EF: main (retained_spike.c:37)
+ n0: 0 in 1 place, below massif's threshold (0.10%)
+#-----------
+snapshot=64
+#-----------
+time=8596765
+mem_heap_B=4194304
+mem_heap_extra_B=4040
+mem_stacks_B=0
+heap_tree=detailed
+n2: 4194304 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n0: 4194304 0x10924A: main (retained_spike.c:26)
+ n0: 0 in 2 places, all below massif's threshold (0.10%)
+#-----------
+snapshot=65
+#-----------
+time=8596799
+mem_heap_B=4456448
+mem_heap_extra_B=4048
+mem_stacks_B=0
+heap_tree=detailed
+n3: 4456448 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n0: 4194304 0x10924A: main (retained_spike.c:26)
+ n0: 262144 0x1092EF: main (retained_spike.c:37)
+ n0: 0 in 1 place, below massif's threshold (0.10%)
+#-----------
+snapshot=66
+#-----------
+time=8859016
+mem_heap_B=4194304
+mem_heap_extra_B=4040
+mem_stacks_B=0
+heap_tree=detailed
+n2: 4194304 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n0: 4194304 0x10924A: main (retained_spike.c:26)
+ n0: 0 in 2 places, all below massif's threshold (0.10%)
+#-----------
+snapshot=67
+#-----------
+time=8859050
+mem_heap_B=4456448
+mem_heap_extra_B=4048
+mem_stacks_B=0
+heap_tree=detailed
+n3: 4456448 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n0: 4194304 0x10924A: main (retained_spike.c:26)
+ n0: 262144 0x1092EF: main (retained_spike.c:37)
+ n0: 0 in 1 place, below massif's threshold (0.10%)
+#-----------
+snapshot=68
+#-----------
+time=9121267
+mem_heap_B=4194304
+mem_heap_extra_B=4040
+mem_stacks_B=0
+heap_tree=detailed
+n2: 4194304 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n0: 4194304 0x10924A: main (retained_spike.c:26)
+ n0: 0 in 2 places, all below massif's threshold (0.10%)
+#-----------
+snapshot=69
+#-----------
+time=9121301
+mem_heap_B=4456448
+mem_heap_extra_B=4048
+mem_stacks_B=0
+heap_tree=detailed
+n3: 4456448 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n0: 4194304 0x10924A: main (retained_spike.c:26)
+ n0: 262144 0x1092EF: main (retained_spike.c:37)
+ n0: 0 in 1 place, below massif's threshold (0.10%)
+#-----------
+snapshot=70
+#-----------
+time=9383518
+mem_heap_B=4194304
+mem_heap_extra_B=4040
+mem_stacks_B=0
+heap_tree=detailed
+n2: 4194304 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n0: 4194304 0x10924A: main (retained_spike.c:26)
+ n0: 0 in 2 places, all below massif's threshold (0.10%)
+#-----------
+snapshot=71
+#-----------
+time=9383552
+mem_heap_B=4456448
+mem_heap_extra_B=4048
+mem_stacks_B=0
+heap_tree=detailed
+n3: 4456448 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n0: 4194304 0x10924A: main (retained_spike.c:26)
+ n0: 262144 0x1092EF: main (retained_spike.c:37)
+ n0: 0 in 1 place, below massif's threshold (0.10%)
+#-----------
+snapshot=72
+#-----------
+time=9645769
+mem_heap_B=4194304
+mem_heap_extra_B=4040
+mem_stacks_B=0
+heap_tree=detailed
+n2: 4194304 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n0: 4194304 0x10924A: main (retained_spike.c:26)
+ n0: 0 in 2 places, all below massif's threshold (0.10%)
+#-----------
+snapshot=73
+#-----------
+time=9645803
+mem_heap_B=4456448
+mem_heap_extra_B=4048
+mem_stacks_B=0
+heap_tree=detailed
+n3: 4456448 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n0: 4194304 0x10924A: main (retained_spike.c:26)
+ n0: 262144 0x1092EF: main (retained_spike.c:37)
+ n0: 0 in 1 place, below massif's threshold (0.10%)
+#-----------
+snapshot=74
+#-----------
+time=9908020
+mem_heap_B=4194304
+mem_heap_extra_B=4040
+mem_stacks_B=0
+heap_tree=detailed
+n2: 4194304 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n0: 4194304 0x10924A: main (retained_spike.c:26)
+ n0: 0 in 2 places, all below massif's threshold (0.10%)
+#-----------
+snapshot=75
+#-----------
+time=9908054
+mem_heap_B=4456448
+mem_heap_extra_B=4048
+mem_stacks_B=0
+heap_tree=detailed
+n3: 4456448 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n0: 4194304 0x10924A: main (retained_spike.c:26)
+ n0: 262144 0x1092EF: main (retained_spike.c:37)
+ n0: 0 in 1 place, below massif's threshold (0.10%)
+#-----------
+snapshot=76
+#-----------
+time=10170271
+mem_heap_B=4194304
+mem_heap_extra_B=4040
+mem_stacks_B=0
+heap_tree=detailed
+n2: 4194304 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n0: 4194304 0x10924A: main (retained_spike.c:26)
+ n0: 0 in 2 places, all below massif's threshold (0.10%)
+#-----------
+snapshot=77
+#-----------
+time=10170305
+mem_heap_B=4456448
+mem_heap_extra_B=4048
+mem_stacks_B=0
+heap_tree=detailed
+n3: 4456448 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n0: 4194304 0x10924A: main (retained_spike.c:26)
+ n0: 262144 0x1092EF: main (retained_spike.c:37)
+ n0: 0 in 1 place, below massif's threshold (0.10%)
+#-----------
+snapshot=78
+#-----------
+time=10432522
+mem_heap_B=4194304
+mem_heap_extra_B=4040
+mem_stacks_B=0
+heap_tree=detailed
+n2: 4194304 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n0: 4194304 0x10924A: main (retained_spike.c:26)
+ n0: 0 in 2 places, all below massif's threshold (0.10%)
+#-----------
+snapshot=79
+#-----------
+time=10432556
+mem_heap_B=4456448
+mem_heap_extra_B=4048
+mem_stacks_B=0
+heap_tree=detailed
+n3: 4456448 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n0: 4194304 0x10924A: main (retained_spike.c:26)
+ n0: 262144 0x1092EF: main (retained_spike.c:37)
+ n0: 0 in 1 place, below massif's threshold (0.10%)
+#-----------
+snapshot=80
+#-----------
+time=10694773
+mem_heap_B=4194304
+mem_heap_extra_B=4040
+mem_stacks_B=0
+heap_tree=detailed
+n2: 4194304 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n0: 4194304 0x10924A: main (retained_spike.c:26)
+ n0: 0 in 2 places, all below massif's threshold (0.10%)
+#-----------
+snapshot=81
+#-----------
+time=10694807
+mem_heap_B=4456448
+mem_heap_extra_B=4048
+mem_stacks_B=0
+heap_tree=detailed
+n3: 4456448 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n0: 4194304 0x10924A: main (retained_spike.c:26)
+ n0: 262144 0x1092EF: main (retained_spike.c:37)
+ n0: 0 in 1 place, below massif's threshold (0.10%)
+#-----------
+snapshot=82
+#-----------
+time=10957024
+mem_heap_B=4194304
+mem_heap_extra_B=4040
+mem_stacks_B=0
+heap_tree=detailed
+n2: 4194304 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n0: 4194304 0x10924A: main (retained_spike.c:26)
+ n0: 0 in 2 places, all below massif's threshold (0.10%)
+#-----------
+snapshot=83
+#-----------
+time=10957058
+mem_heap_B=4456448
+mem_heap_extra_B=4048
+mem_stacks_B=0
+heap_tree=detailed
+n3: 4456448 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n0: 4194304 0x10924A: main (retained_spike.c:26)
+ n0: 262144 0x1092EF: main (retained_spike.c:37)
+ n0: 0 in 1 place, below massif's threshold (0.10%)
+#-----------
+snapshot=84
+#-----------
+time=11219275
+mem_heap_B=4194304
+mem_heap_extra_B=4040
+mem_stacks_B=0
+heap_tree=detailed
+n2: 4194304 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n0: 4194304 0x10924A: main (retained_spike.c:26)
+ n0: 0 in 2 places, all below massif's threshold (0.10%)
+#-----------
+snapshot=85
+#-----------
+time=11219309
+mem_heap_B=4456448
+mem_heap_extra_B=4048
+mem_stacks_B=0
+heap_tree=detailed
+n3: 4456448 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n0: 4194304 0x10924A: main (retained_spike.c:26)
+ n0: 262144 0x1092EF: main (retained_spike.c:37)
+ n0: 0 in 1 place, below massif's threshold (0.10%)
+#-----------
+snapshot=86
+#-----------
+time=11481526
+mem_heap_B=4194304
+mem_heap_extra_B=4040
+mem_stacks_B=0
+heap_tree=detailed
+n2: 4194304 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n0: 4194304 0x10924A: main (retained_spike.c:26)
+ n0: 0 in 2 places, all below massif's threshold (0.10%)
+#-----------
+snapshot=87
+#-----------
+time=11481560
+mem_heap_B=4456448
+mem_heap_extra_B=4048
+mem_stacks_B=0
+heap_tree=detailed
+n3: 4456448 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n0: 4194304 0x10924A: main (retained_spike.c:26)
+ n0: 262144 0x1092EF: main (retained_spike.c:37)
+ n0: 0 in 1 place, below massif's threshold (0.10%)
+#-----------
+snapshot=88
+#-----------
+time=11743777
+mem_heap_B=4194304
+mem_heap_extra_B=4040
+mem_stacks_B=0
+heap_tree=detailed
+n2: 4194304 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n0: 4194304 0x10924A: main (retained_spike.c:26)
+ n0: 0 in 2 places, all below massif's threshold (0.10%)
+#-----------
+snapshot=89
+#-----------
+time=11743811
+mem_heap_B=4456448
+mem_heap_extra_B=4048
+mem_stacks_B=0
+heap_tree=detailed
+n3: 4456448 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n0: 4194304 0x10924A: main (retained_spike.c:26)
+ n0: 262144 0x1092EF: main (retained_spike.c:37)
+ n0: 0 in 1 place, below massif's threshold (0.10%)
+#-----------
+snapshot=90
+#-----------
+time=12006028
+mem_heap_B=4194304
+mem_heap_extra_B=4040
+mem_stacks_B=0
+heap_tree=detailed
+n2: 4194304 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n0: 4194304 0x10924A: main (retained_spike.c:26)
+ n0: 0 in 2 places, all below massif's threshold (0.10%)
+#-----------
+snapshot=91
+#-----------
+time=12006062
+mem_heap_B=4456448
+mem_heap_extra_B=4048
+mem_stacks_B=0
+heap_tree=detailed
+n3: 4456448 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n0: 4194304 0x10924A: main (retained_spike.c:26)
+ n0: 262144 0x1092EF: main (retained_spike.c:37)
+ n0: 0 in 1 place, below massif's threshold (0.10%)
+#-----------
+snapshot=92
+#-----------
+time=12268279
+mem_heap_B=4194304
+mem_heap_extra_B=4040
+mem_stacks_B=0
+heap_tree=detailed
+n2: 4194304 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n0: 4194304 0x10924A: main (retained_spike.c:26)
+ n0: 0 in 2 places, all below massif's threshold (0.10%)
+#-----------
+snapshot=93
+#-----------
+time=12268313
+mem_heap_B=4456448
+mem_heap_extra_B=4048
+mem_stacks_B=0
+heap_tree=detailed
+n3: 4456448 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n0: 4194304 0x10924A: main (retained_spike.c:26)
+ n0: 262144 0x1092EF: main (retained_spike.c:37)
+ n0: 0 in 1 place, below massif's threshold (0.10%)
+#-----------
+snapshot=94
+#-----------
+time=12530530
+mem_heap_B=4194304
+mem_heap_extra_B=4040
+mem_stacks_B=0
+heap_tree=detailed
+n2: 4194304 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n0: 4194304 0x10924A: main (retained_spike.c:26)
+ n0: 0 in 2 places, all below massif's threshold (0.10%)
+#-----------
+snapshot=95
+#-----------
+time=12530564
+mem_heap_B=4456448
+mem_heap_extra_B=4048
+mem_stacks_B=0
+heap_tree=detailed
+n3: 4456448 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n0: 4194304 0x10924A: main (retained_spike.c:26)
+ n0: 262144 0x1092EF: main (retained_spike.c:37)
+ n0: 0 in 1 place, below massif's threshold (0.10%)
+#-----------
+snapshot=96
+#-----------
+time=12792781
+mem_heap_B=4194304
+mem_heap_extra_B=4040
+mem_stacks_B=0
+heap_tree=detailed
+n2: 4194304 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n0: 4194304 0x10924A: main (retained_spike.c:26)
+ n0: 0 in 2 places, all below massif's threshold (0.10%)
+#-----------
+snapshot=97
+#-----------
+time=12792815
+mem_heap_B=4456448
+mem_heap_extra_B=4048
+mem_stacks_B=0
+heap_tree=detailed
+n3: 4456448 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n0: 4194304 0x10924A: main (retained_spike.c:26)
+ n0: 262144 0x1092EF: main (retained_spike.c:37)
+ n0: 0 in 1 place, below massif's threshold (0.10%)
+#-----------
+snapshot=98
+#-----------
+time=13055032
+mem_heap_B=4194304
+mem_heap_extra_B=4040
+mem_stacks_B=0
+heap_tree=detailed
+n2: 4194304 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n0: 4194304 0x10924A: main (retained_spike.c:26)
+ n0: 0 in 2 places, all below massif's threshold (0.10%)
+#-----------
+snapshot=99
+#-----------
+time=13055066
+mem_heap_B=4456448
+mem_heap_extra_B=4048
+mem_stacks_B=0
+heap_tree=detailed
+n3: 4456448 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n0: 4194304 0x10924A: main (retained_spike.c:26)
+ n0: 262144 0x1092EF: main (retained_spike.c:37)
+ n0: 0 in 1 place, below massif's threshold (0.10%)
+#-----------
+snapshot=100
+#-----------
+time=13317283
+mem_heap_B=4194304
+mem_heap_extra_B=4040
+mem_stacks_B=0
+heap_tree=detailed
+n2: 4194304 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n0: 4194304 0x10924A: main (retained_spike.c:26)
+ n0: 0 in 2 places, all below massif's threshold (0.10%)
+#-----------
+snapshot=101
+#-----------
+time=13317317
+mem_heap_B=4456448
+mem_heap_extra_B=4048
+mem_stacks_B=0
+heap_tree=detailed
+n3: 4456448 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n0: 4194304 0x10924A: main (retained_spike.c:26)
+ n0: 262144 0x1092EF: main (retained_spike.c:37)
+ n0: 0 in 1 place, below massif's threshold (0.10%)
+#-----------
+snapshot=102
+#-----------
+time=13579534
+mem_heap_B=4194304
+mem_heap_extra_B=4040
+mem_stacks_B=0
+heap_tree=detailed
+n2: 4194304 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n0: 4194304 0x10924A: main (retained_spike.c:26)
+ n0: 0 in 2 places, all below massif's threshold (0.10%)
+#-----------
+snapshot=103
+#-----------
+time=13579568
+mem_heap_B=4456448
+mem_heap_extra_B=4048
+mem_stacks_B=0
+heap_tree=detailed
+n3: 4456448 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n0: 4194304 0x10924A: main (retained_spike.c:26)
+ n0: 262144 0x1092EF: main (retained_spike.c:37)
+ n0: 0 in 1 place, below massif's threshold (0.10%)
+#-----------
+snapshot=104
+#-----------
+time=13841785
+mem_heap_B=4194304
+mem_heap_extra_B=4040
+mem_stacks_B=0
+heap_tree=detailed
+n2: 4194304 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n0: 4194304 0x10924A: main (retained_spike.c:26)
+ n0: 0 in 2 places, all below massif's threshold (0.10%)
+#-----------
+snapshot=105
+#-----------
+time=13841819
+mem_heap_B=4456448
+mem_heap_extra_B=4048
+mem_stacks_B=0
+heap_tree=detailed
+n3: 4456448 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n0: 4194304 0x10924A: main (retained_spike.c:26)
+ n0: 262144 0x1092EF: main (retained_spike.c:37)
+ n0: 0 in 1 place, below massif's threshold (0.10%)
+#-----------
+snapshot=106
+#-----------
+time=14104036
+mem_heap_B=4194304
+mem_heap_extra_B=4040
+mem_stacks_B=0
+heap_tree=detailed
+n2: 4194304 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n0: 4194304 0x10924A: main (retained_spike.c:26)
+ n0: 0 in 2 places, all below massif's threshold (0.10%)
+#-----------
+snapshot=107
+#-----------
+time=14104070
+mem_heap_B=4456448
+mem_heap_extra_B=4048
+mem_stacks_B=0
+heap_tree=detailed
+n3: 4456448 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n0: 4194304 0x10924A: main (retained_spike.c:26)
+ n0: 262144 0x1092EF: main (retained_spike.c:37)
+ n0: 0 in 1 place, below massif's threshold (0.10%)
+#-----------
+snapshot=108
+#-----------
+time=14366287
+mem_heap_B=4194304
+mem_heap_extra_B=4040
+mem_stacks_B=0
+heap_tree=detailed
+n2: 4194304 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n0: 4194304 0x10924A: main (retained_spike.c:26)
+ n0: 0 in 2 places, all below massif's threshold (0.10%)
+#-----------
+snapshot=109
+#-----------
+time=14366321
+mem_heap_B=4456448
+mem_heap_extra_B=4048
+mem_stacks_B=0
+heap_tree=detailed
+n3: 4456448 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n0: 4194304 0x10924A: main (retained_spike.c:26)
+ n0: 262144 0x1092EF: main (retained_spike.c:37)
+ n0: 0 in 1 place, below massif's threshold (0.10%)
+#-----------
+snapshot=110
+#-----------
+time=14628538
+mem_heap_B=4194304
+mem_heap_extra_B=4040
+mem_stacks_B=0
+heap_tree=detailed
+n2: 4194304 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n0: 4194304 0x10924A: main (retained_spike.c:26)
+ n0: 0 in 2 places, all below massif's threshold (0.10%)
+#-----------
+snapshot=111
+#-----------
+time=14628572
+mem_heap_B=4456448
+mem_heap_extra_B=4048
+mem_stacks_B=0
+heap_tree=detailed
+n3: 4456448 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n0: 4194304 0x10924A: main (retained_spike.c:26)
+ n0: 262144 0x1092EF: main (retained_spike.c:37)
+ n0: 0 in 1 place, below massif's threshold (0.10%)
+#-----------
+snapshot=112
+#-----------
+time=14890789
+mem_heap_B=4194304
+mem_heap_extra_B=4040
+mem_stacks_B=0
+heap_tree=detailed
+n2: 4194304 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n0: 4194304 0x10924A: main (retained_spike.c:26)
+ n0: 0 in 2 places, all below massif's threshold (0.10%)
+#-----------
+snapshot=113
+#-----------
+time=14890823
+mem_heap_B=4456448
+mem_heap_extra_B=4048
+mem_stacks_B=0
+heap_tree=detailed
+n3: 4456448 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n0: 4194304 0x10924A: main (retained_spike.c:26)
+ n0: 262144 0x1092EF: main (retained_spike.c:37)
+ n0: 0 in 1 place, below massif's threshold (0.10%)
+#-----------
+snapshot=114
+#-----------
+time=15153040
+mem_heap_B=4194304
+mem_heap_extra_B=4040
+mem_stacks_B=0
+heap_tree=detailed
+n2: 4194304 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n0: 4194304 0x10924A: main (retained_spike.c:26)
+ n0: 0 in 2 places, all below massif's threshold (0.10%)
+#-----------
+snapshot=115
+#-----------
+time=15153074
+mem_heap_B=4456448
+mem_heap_extra_B=4048
+mem_stacks_B=0
+heap_tree=detailed
+n3: 4456448 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n0: 4194304 0x10924A: main (retained_spike.c:26)
+ n0: 262144 0x1092EF: main (retained_spike.c:37)
+ n0: 0 in 1 place, below massif's threshold (0.10%)
+#-----------
+snapshot=116
+#-----------
+time=15415291
+mem_heap_B=4194304
+mem_heap_extra_B=4040
+mem_stacks_B=0
+heap_tree=detailed
+n2: 4194304 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n0: 4194304 0x10924A: main (retained_spike.c:26)
+ n0: 0 in 2 places, all below massif's threshold (0.10%)
+#-----------
+snapshot=117
+#-----------
+time=15415325
+mem_heap_B=4456448
+mem_heap_extra_B=4048
+mem_stacks_B=0
+heap_tree=detailed
+n3: 4456448 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n0: 4194304 0x10924A: main (retained_spike.c:26)
+ n0: 262144 0x1092EF: main (retained_spike.c:37)
+ n0: 0 in 1 place, below massif's threshold (0.10%)
+#-----------
+snapshot=118
+#-----------
+time=15677542
+mem_heap_B=4194304
+mem_heap_extra_B=4040
+mem_stacks_B=0
+heap_tree=detailed
+n2: 4194304 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n0: 4194304 0x10924A: main (retained_spike.c:26)
+ n0: 0 in 2 places, all below massif's threshold (0.10%)
+#-----------
+snapshot=119
+#-----------
+time=15677576
+mem_heap_B=4456448
+mem_heap_extra_B=4048
+mem_stacks_B=0
+heap_tree=detailed
+n3: 4456448 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n0: 4194304 0x10924A: main (retained_spike.c:26)
+ n0: 262144 0x1092EF: main (retained_spike.c:37)
+ n0: 0 in 1 place, below massif's threshold (0.10%)
+#-----------
+snapshot=120
+#-----------
+time=15939793
+mem_heap_B=4194304
+mem_heap_extra_B=4040
+mem_stacks_B=0
+heap_tree=detailed
+n2: 4194304 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n0: 4194304 0x10924A: main (retained_spike.c:26)
+ n0: 0 in 2 places, all below massif's threshold (0.10%)
+#-----------
+snapshot=121
+#-----------
+time=15939827
+mem_heap_B=4456448
+mem_heap_extra_B=4048
+mem_stacks_B=0
+heap_tree=detailed
+n3: 4456448 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n0: 4194304 0x10924A: main (retained_spike.c:26)
+ n0: 262144 0x1092EF: main (retained_spike.c:37)
+ n0: 0 in 1 place, below massif's threshold (0.10%)
+#-----------
+snapshot=122
+#-----------
+time=16202044
+mem_heap_B=4194304
+mem_heap_extra_B=4040
+mem_stacks_B=0
+heap_tree=detailed
+n2: 4194304 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n0: 4194304 0x10924A: main (retained_spike.c:26)
+ n0: 0 in 2 places, all below massif's threshold (0.10%)
+#-----------
+snapshot=123
+#-----------
+time=16202078
+mem_heap_B=4456448
+mem_heap_extra_B=4048
+mem_stacks_B=0
+heap_tree=detailed
+n3: 4456448 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n0: 4194304 0x10924A: main (retained_spike.c:26)
+ n0: 262144 0x1092EF: main (retained_spike.c:37)
+ n0: 0 in 1 place, below massif's threshold (0.10%)
+#-----------
+snapshot=124
+#-----------
+time=16464295
+mem_heap_B=4194304
+mem_heap_extra_B=4040
+mem_stacks_B=0
+heap_tree=detailed
+n2: 4194304 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n0: 4194304 0x10924A: main (retained_spike.c:26)
+ n0: 0 in 2 places, all below massif's threshold (0.10%)
+#-----------
+snapshot=125
+#-----------
+time=16464329
+mem_heap_B=4456448
+mem_heap_extra_B=4048
+mem_stacks_B=0
+heap_tree=detailed
+n3: 4456448 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n0: 4194304 0x10924A: main (retained_spike.c:26)
+ n0: 262144 0x1092EF: main (retained_spike.c:37)
+ n0: 0 in 1 place, below massif's threshold (0.10%)
+#-----------
+snapshot=126
+#-----------
+time=16726546
+mem_heap_B=4194304
+mem_heap_extra_B=4040
+mem_stacks_B=0
+heap_tree=detailed
+n2: 4194304 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n0: 4194304 0x10924A: main (retained_spike.c:26)
+ n0: 0 in 2 places, all below massif's threshold (0.10%)
+#-----------
+snapshot=127
+#-----------
+time=16726580
+mem_heap_B=4456448
+mem_heap_extra_B=4048
+mem_stacks_B=0
+heap_tree=detailed
+n3: 4456448 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n0: 4194304 0x10924A: main (retained_spike.c:26)
+ n0: 262144 0x1092EF: main (retained_spike.c:37)
+ n0: 0 in 1 place, below massif's threshold (0.10%)
+#-----------
+snapshot=128
+#-----------
+time=16988797
+mem_heap_B=4194304
+mem_heap_extra_B=4040
+mem_stacks_B=0
+heap_tree=detailed
+n2: 4194304 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n0: 4194304 0x10924A: main (retained_spike.c:26)
+ n0: 0 in 2 places, all below massif's threshold (0.10%)
+#-----------
+snapshot=129
+#-----------
+time=16988831
+mem_heap_B=4456448
+mem_heap_extra_B=4048
+mem_stacks_B=0
+heap_tree=detailed
+n3: 4456448 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n0: 4194304 0x10924A: main (retained_spike.c:26)
+ n0: 262144 0x1092EF: main (retained_spike.c:37)
+ n0: 0 in 1 place, below massif's threshold (0.10%)
+#-----------
+snapshot=130
+#-----------
+time=17251048
+mem_heap_B=4194304
+mem_heap_extra_B=4040
+mem_stacks_B=0
+heap_tree=detailed
+n2: 4194304 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n0: 4194304 0x10924A: main (retained_spike.c:26)
+ n0: 0 in 2 places, all below massif's threshold (0.10%)
+#-----------
+snapshot=131
+#-----------
+time=17251082
+mem_heap_B=4456448
+mem_heap_extra_B=4048
+mem_stacks_B=0
+heap_tree=detailed
+n3: 4456448 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n0: 4194304 0x10924A: main (retained_spike.c:26)
+ n0: 262144 0x1092EF: main (retained_spike.c:37)
+ n0: 0 in 1 place, below massif's threshold (0.10%)
+#-----------
+snapshot=132
+#-----------
+time=17513299
+mem_heap_B=4194304
+mem_heap_extra_B=4040
+mem_stacks_B=0
+heap_tree=detailed
+n2: 4194304 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n0: 4194304 0x10924A: main (retained_spike.c:26)
+ n0: 0 in 2 places, all below massif's threshold (0.10%)
+#-----------
+snapshot=133
+#-----------
+time=17513333
+mem_heap_B=4456448
+mem_heap_extra_B=4048
+mem_stacks_B=0
+heap_tree=detailed
+n3: 4456448 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n0: 4194304 0x10924A: main (retained_spike.c:26)
+ n0: 262144 0x1092EF: main (retained_spike.c:37)
+ n0: 0 in 1 place, below massif's threshold (0.10%)
+#-----------
+snapshot=134
+#-----------
+time=17775550
+mem_heap_B=4194304
+mem_heap_extra_B=4040
+mem_stacks_B=0
+heap_tree=detailed
+n2: 4194304 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n0: 4194304 0x10924A: main (retained_spike.c:26)
+ n0: 0 in 2 places, all below massif's threshold (0.10%)
+#-----------
+snapshot=135
+#-----------
+time=17775584
+mem_heap_B=4456448
+mem_heap_extra_B=4048
+mem_stacks_B=0
+heap_tree=detailed
+n3: 4456448 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n0: 4194304 0x10924A: main (retained_spike.c:26)
+ n0: 262144 0x1092EF: main (retained_spike.c:37)
+ n0: 0 in 1 place, below massif's threshold (0.10%)
+#-----------
+snapshot=136
+#-----------
+time=18037801
+mem_heap_B=4194304
+mem_heap_extra_B=4040
+mem_stacks_B=0
+heap_tree=detailed
+n2: 4194304 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n0: 4194304 0x10924A: main (retained_spike.c:26)
+ n0: 0 in 2 places, all below massif's threshold (0.10%)
+#-----------
+snapshot=137
+#-----------
+time=18037835
+mem_heap_B=4456448
+mem_heap_extra_B=4048
+mem_stacks_B=0
+heap_tree=detailed
+n3: 4456448 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n0: 4194304 0x10924A: main (retained_spike.c:26)
+ n0: 262144 0x1092EF: main (retained_spike.c:37)
+ n0: 0 in 1 place, below massif's threshold (0.10%)
+#-----------
+snapshot=138
+#-----------
+time=18300052
+mem_heap_B=4194304
+mem_heap_extra_B=4040
+mem_stacks_B=0
+heap_tree=detailed
+n2: 4194304 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n0: 4194304 0x10924A: main (retained_spike.c:26)
+ n0: 0 in 2 places, all below massif's threshold (0.10%)
+#-----------
+snapshot=139
+#-----------
+time=18300086
+mem_heap_B=4456448
+mem_heap_extra_B=4048
+mem_stacks_B=0
+heap_tree=detailed
+n3: 4456448 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n0: 4194304 0x10924A: main (retained_spike.c:26)
+ n0: 262144 0x1092EF: main (retained_spike.c:37)
+ n0: 0 in 1 place, below massif's threshold (0.10%)
+#-----------
+snapshot=140
+#-----------
+time=18562303
+mem_heap_B=4194304
+mem_heap_extra_B=4040
+mem_stacks_B=0
+heap_tree=detailed
+n2: 4194304 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n0: 4194304 0x10924A: main (retained_spike.c:26)
+ n0: 0 in 2 places, all below massif's threshold (0.10%)
+#-----------
+snapshot=141
+#-----------
+time=18562337
+mem_heap_B=4456448
+mem_heap_extra_B=4048
+mem_stacks_B=0
+heap_tree=detailed
+n3: 4456448 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n0: 4194304 0x10924A: main (retained_spike.c:26)
+ n0: 262144 0x1092EF: main (retained_spike.c:37)
+ n0: 0 in 1 place, below massif's threshold (0.10%)
+#-----------
+snapshot=142
+#-----------
+time=18824554
+mem_heap_B=4194304
+mem_heap_extra_B=4040
+mem_stacks_B=0
+heap_tree=detailed
+n2: 4194304 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n0: 4194304 0x10924A: main (retained_spike.c:26)
+ n0: 0 in 2 places, all below massif's threshold (0.10%)
+#-----------
+snapshot=143
+#-----------
+time=18824588
+mem_heap_B=4456448
+mem_heap_extra_B=4048
+mem_stacks_B=0
+heap_tree=detailed
+n3: 4456448 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n0: 4194304 0x10924A: main (retained_spike.c:26)
+ n0: 262144 0x1092EF: main (retained_spike.c:37)
+ n0: 0 in 1 place, below massif's threshold (0.10%)
+#-----------
+snapshot=144
+#-----------
+time=19086805
+mem_heap_B=4194304
+mem_heap_extra_B=4040
+mem_stacks_B=0
+heap_tree=detailed
+n2: 4194304 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n0: 4194304 0x10924A: main (retained_spike.c:26)
+ n0: 0 in 2 places, all below massif's threshold (0.10%)
+#-----------
+snapshot=145
+#-----------
+time=19086839
+mem_heap_B=4456448
+mem_heap_extra_B=4048
+mem_stacks_B=0
+heap_tree=detailed
+n3: 4456448 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n0: 4194304 0x10924A: main (retained_spike.c:26)
+ n0: 262144 0x1092EF: main (retained_spike.c:37)
+ n0: 0 in 1 place, below massif's threshold (0.10%)
+#-----------
+snapshot=146
+#-----------
+time=19349056
+mem_heap_B=4194304
+mem_heap_extra_B=4040
+mem_stacks_B=0
+heap_tree=detailed
+n2: 4194304 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n0: 4194304 0x10924A: main (retained_spike.c:26)
+ n0: 0 in 2 places, all below massif's threshold (0.10%)
+#-----------
+snapshot=147
+#-----------
+time=19349090
+mem_heap_B=4456448
+mem_heap_extra_B=4048
+mem_stacks_B=0
+heap_tree=detailed
+n3: 4456448 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n0: 4194304 0x10924A: main (retained_spike.c:26)
+ n0: 262144 0x1092EF: main (retained_spike.c:37)
+ n0: 0 in 1 place, below massif's threshold (0.10%)
+#-----------
+snapshot=148
+#-----------
+time=19611307
+mem_heap_B=4194304
+mem_heap_extra_B=4040
+mem_stacks_B=0
+heap_tree=detailed
+n2: 4194304 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n0: 4194304 0x10924A: main (retained_spike.c:26)
+ n0: 0 in 2 places, all below massif's threshold (0.10%)
+#-----------
+snapshot=149
+#-----------
+time=19611341
+mem_heap_B=4456448
+mem_heap_extra_B=4048
+mem_stacks_B=0
+heap_tree=detailed
+n3: 4456448 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n0: 4194304 0x10924A: main (retained_spike.c:26)
+ n0: 262144 0x1092EF: main (retained_spike.c:37)
+ n0: 0 in 1 place, below massif's threshold (0.10%)
+#-----------
+snapshot=150
+#-----------
+time=19873558
+mem_heap_B=4194304
+mem_heap_extra_B=4040
+mem_stacks_B=0
+heap_tree=detailed
+n2: 4194304 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n0: 4194304 0x10924A: main (retained_spike.c:26)
+ n0: 0 in 2 places, all below massif's threshold (0.10%)
+#-----------
+snapshot=151
+#-----------
+time=19873592
+mem_heap_B=4456448
+mem_heap_extra_B=4048
+mem_stacks_B=0
+heap_tree=detailed
+n3: 4456448 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n0: 4194304 0x10924A: main (retained_spike.c:26)
+ n0: 262144 0x1092EF: main (retained_spike.c:37)
+ n0: 0 in 1 place, below massif's threshold (0.10%)
+#-----------
+snapshot=152
+#-----------
+time=20135809
+mem_heap_B=4194304
+mem_heap_extra_B=4040
+mem_stacks_B=0
+heap_tree=detailed
+n2: 4194304 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n0: 4194304 0x10924A: main (retained_spike.c:26)
+ n0: 0 in 2 places, all below massif's threshold (0.10%)
+#-----------
+snapshot=153
+#-----------
+time=20135843
+mem_heap_B=4456448
+mem_heap_extra_B=4048
+mem_stacks_B=0
+heap_tree=detailed
+n3: 4456448 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n0: 4194304 0x10924A: main (retained_spike.c:26)
+ n0: 262144 0x1092EF: main (retained_spike.c:37)
+ n0: 0 in 1 place, below massif's threshold (0.10%)
+#-----------
+snapshot=154
+#-----------
+time=20398060
+mem_heap_B=4194304
+mem_heap_extra_B=4040
+mem_stacks_B=0
+heap_tree=detailed
+n2: 4194304 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n0: 4194304 0x10924A: main (retained_spike.c:26)
+ n0: 0 in 2 places, all below massif's threshold (0.10%)
+#-----------
+snapshot=155
+#-----------
+time=20398094
+mem_heap_B=4456448
+mem_heap_extra_B=4048
+mem_stacks_B=0
+heap_tree=detailed
+n3: 4456448 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n0: 4194304 0x10924A: main (retained_spike.c:26)
+ n0: 262144 0x1092EF: main (retained_spike.c:37)
+ n0: 0 in 1 place, below massif's threshold (0.10%)
+#-----------
+snapshot=156
+#-----------
+time=20660311
+mem_heap_B=4194304
+mem_heap_extra_B=4040
+mem_stacks_B=0
+heap_tree=detailed
+n2: 4194304 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n0: 4194304 0x10924A: main (retained_spike.c:26)
+ n0: 0 in 2 places, all below massif's threshold (0.10%)
+#-----------
+snapshot=157
+#-----------
+time=20660345
+mem_heap_B=4456448
+mem_heap_extra_B=4048
+mem_stacks_B=0
+heap_tree=detailed
+n3: 4456448 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n0: 4194304 0x10924A: main (retained_spike.c:26)
+ n0: 262144 0x1092EF: main (retained_spike.c:37)
+ n0: 0 in 1 place, below massif's threshold (0.10%)
+#-----------
+snapshot=158
+#-----------
+time=20922562
+mem_heap_B=4194304
+mem_heap_extra_B=4040
+mem_stacks_B=0
+heap_tree=detailed
+n2: 4194304 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n0: 4194304 0x10924A: main (retained_spike.c:26)
+ n0: 0 in 2 places, all below massif's threshold (0.10%)
+#-----------
+snapshot=159
+#-----------
+time=20922596
+mem_heap_B=4456448
+mem_heap_extra_B=4048
+mem_stacks_B=0
+heap_tree=detailed
+n3: 4456448 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n0: 4194304 0x10924A: main (retained_spike.c:26)
+ n0: 262144 0x1092EF: main (retained_spike.c:37)
+ n0: 0 in 1 place, below massif's threshold (0.10%)
+#-----------
+snapshot=160
+#-----------
+time=21184813
+mem_heap_B=4194304
+mem_heap_extra_B=4040
+mem_stacks_B=0
+heap_tree=detailed
+n2: 4194304 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n0: 4194304 0x10924A: main (retained_spike.c:26)
+ n0: 0 in 2 places, all below massif's threshold (0.10%)
+#-----------
+snapshot=161
+#-----------
+time=21184847
+mem_heap_B=4456448
+mem_heap_extra_B=4048
+mem_stacks_B=0
+heap_tree=detailed
+n3: 4456448 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n0: 4194304 0x10924A: main (retained_spike.c:26)
+ n0: 262144 0x1092EF: main (retained_spike.c:37)
+ n0: 0 in 1 place, below massif's threshold (0.10%)
+#-----------
+snapshot=162
+#-----------
+time=21447064
+mem_heap_B=4194304
+mem_heap_extra_B=4040
+mem_stacks_B=0
+heap_tree=detailed
+n2: 4194304 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n0: 4194304 0x10924A: main (retained_spike.c:26)
+ n0: 0 in 2 places, all below massif's threshold (0.10%)
+#-----------
+snapshot=163
+#-----------
+time=21447098
+mem_heap_B=4456448
+mem_heap_extra_B=4048
+mem_stacks_B=0
+heap_tree=detailed
+n3: 4456448 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n0: 4194304 0x10924A: main (retained_spike.c:26)
+ n0: 262144 0x1092EF: main (retained_spike.c:37)
+ n0: 0 in 1 place, below massif's threshold (0.10%)
+#-----------
+snapshot=164
+#-----------
+time=21709315
+mem_heap_B=4194304
+mem_heap_extra_B=4040
+mem_stacks_B=0
+heap_tree=detailed
+n2: 4194304 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n0: 4194304 0x10924A: main (retained_spike.c:26)
+ n0: 0 in 2 places, all below massif's threshold (0.10%)
+#-----------
+snapshot=165
+#-----------
+time=21709349
+mem_heap_B=4456448
+mem_heap_extra_B=4048
+mem_stacks_B=0
+heap_tree=detailed
+n3: 4456448 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n0: 4194304 0x10924A: main (retained_spike.c:26)
+ n0: 262144 0x1092EF: main (retained_spike.c:37)
+ n0: 0 in 1 place, below massif's threshold (0.10%)
+#-----------
+snapshot=166
+#-----------
+time=21971566
+mem_heap_B=4194304
+mem_heap_extra_B=4040
+mem_stacks_B=0
+heap_tree=detailed
+n2: 4194304 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n0: 4194304 0x10924A: main (retained_spike.c:26)
+ n0: 0 in 2 places, all below massif's threshold (0.10%)
+#-----------
+snapshot=167
+#-----------
+time=21971600
+mem_heap_B=4456448
+mem_heap_extra_B=4048
+mem_stacks_B=0
+heap_tree=detailed
+n3: 4456448 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n0: 4194304 0x10924A: main (retained_spike.c:26)
+ n0: 262144 0x1092EF: main (retained_spike.c:37)
+ n0: 0 in 1 place, below massif's threshold (0.10%)
+#-----------
+snapshot=168
+#-----------
+time=22233817
+mem_heap_B=4194304
+mem_heap_extra_B=4040
+mem_stacks_B=0
+heap_tree=detailed
+n2: 4194304 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n0: 4194304 0x10924A: main (retained_spike.c:26)
+ n0: 0 in 2 places, all below massif's threshold (0.10%)
+#-----------
+snapshot=169
+#-----------
+time=22233851
+mem_heap_B=4456448
+mem_heap_extra_B=4048
+mem_stacks_B=0
+heap_tree=detailed
+n3: 4456448 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n0: 4194304 0x10924A: main (retained_spike.c:26)
+ n0: 262144 0x1092EF: main (retained_spike.c:37)
+ n0: 0 in 1 place, below massif's threshold (0.10%)
+#-----------
+snapshot=170
+#-----------
+time=22496068
+mem_heap_B=4194304
+mem_heap_extra_B=4040
+mem_stacks_B=0
+heap_tree=detailed
+n2: 4194304 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n0: 4194304 0x10924A: main (retained_spike.c:26)
+ n0: 0 in 2 places, all below massif's threshold (0.10%)
