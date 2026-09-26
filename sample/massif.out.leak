@@ -1,0 +1,252 @@
+desc: --time-unit=i --detailed-freq=1 --max-snapshots=200 --threshold=0.1 --massif-out-file=/home/korisnik/Desktop/projects/software_verification/2026_Research_Massif_detect/sample/massif.out.leak
+cmd: /tmp/tmp.MyNbQBY1or/leak
+time_unit: i
+#-----------
+snapshot=0
+#-----------
+time=0
+mem_heap_B=0
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=detailed
+n0: 0 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+#-----------
+snapshot=1
+#-----------
+time=204617
+mem_heap_B=65536
+mem_heap_extra_B=8
+mem_stacks_B=0
+heap_tree=detailed
+n1: 65536 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n0: 65536 0x1091C0: main (leak.c:14)
+#-----------
+snapshot=2
+#-----------
+time=270235
+mem_heap_B=131072
+mem_heap_extra_B=16
+mem_stacks_B=0
+heap_tree=detailed
+n1: 131072 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n0: 131072 0x1091C0: main (leak.c:14)
+#-----------
+snapshot=3
+#-----------
+time=335853
+mem_heap_B=196608
+mem_heap_extra_B=24
+mem_stacks_B=0
+heap_tree=detailed
+n1: 196608 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n0: 196608 0x1091C0: main (leak.c:14)
+#-----------
+snapshot=4
+#-----------
+time=401471
+mem_heap_B=262144
+mem_heap_extra_B=32
+mem_stacks_B=0
+heap_tree=detailed
+n1: 262144 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n0: 262144 0x1091C0: main (leak.c:14)
+#-----------
+snapshot=5
+#-----------
+time=467089
+mem_heap_B=327680
+mem_heap_extra_B=40
+mem_stacks_B=0
+heap_tree=detailed
+n1: 327680 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n0: 327680 0x1091C0: main (leak.c:14)
+#-----------
+snapshot=6
+#-----------
+time=532707
+mem_heap_B=393216
+mem_heap_extra_B=48
+mem_stacks_B=0
+heap_tree=detailed
+n1: 393216 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n0: 393216 0x1091C0: main (leak.c:14)
+#-----------
+snapshot=7
+#-----------
+time=598325
+mem_heap_B=458752
+mem_heap_extra_B=56
+mem_stacks_B=0
+heap_tree=detailed
+n1: 458752 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n0: 458752 0x1091C0: main (leak.c:14)
+#-----------
+snapshot=8
+#-----------
+time=663943
+mem_heap_B=524288
+mem_heap_extra_B=64
+mem_stacks_B=0
+heap_tree=detailed
+n1: 524288 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n0: 524288 0x1091C0: main (leak.c:14)
+#-----------
+snapshot=9
+#-----------
+time=729561
+mem_heap_B=589824
+mem_heap_extra_B=72
+mem_stacks_B=0
+heap_tree=detailed
+n1: 589824 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n0: 589824 0x1091C0: main (leak.c:14)
+#-----------
+snapshot=10
+#-----------
+time=795179
+mem_heap_B=655360
+mem_heap_extra_B=80
+mem_stacks_B=0
+heap_tree=detailed
+n1: 655360 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n0: 655360 0x1091C0: main (leak.c:14)
+#-----------
+snapshot=11
+#-----------
+time=860797
+mem_heap_B=720896
+mem_heap_extra_B=88
+mem_stacks_B=0
+heap_tree=detailed
+n1: 720896 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n0: 720896 0x1091C0: main (leak.c:14)
+#-----------
+snapshot=12
+#-----------
+time=926415
+mem_heap_B=786432
+mem_heap_extra_B=96
+mem_stacks_B=0
+heap_tree=detailed
+n1: 786432 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n0: 786432 0x1091C0: main (leak.c:14)
+#-----------
+snapshot=13
+#-----------
+time=992033
+mem_heap_B=851968
+mem_heap_extra_B=104
+mem_stacks_B=0
+heap_tree=detailed
+n1: 851968 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n0: 851968 0x1091C0: main (leak.c:14)
+#-----------
+snapshot=14
+#-----------
+time=1057651
+mem_heap_B=917504
+mem_heap_extra_B=112
+mem_stacks_B=0
+heap_tree=detailed
+n1: 917504 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n0: 917504 0x1091C0: main (leak.c:14)
+#-----------
+snapshot=15
+#-----------
+time=1123269
+mem_heap_B=983040
+mem_heap_extra_B=120
+mem_stacks_B=0
+heap_tree=detailed
+n1: 983040 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n0: 983040 0x1091C0: main (leak.c:14)
+#-----------
+snapshot=16
+#-----------
+time=1188887
+mem_heap_B=1048576
+mem_heap_extra_B=128
+mem_stacks_B=0
+heap_tree=detailed
+n1: 1048576 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n0: 1048576 0x1091C0: main (leak.c:14)
+#-----------
+snapshot=17
+#-----------
+time=1254505
+mem_heap_B=1114112
+mem_heap_extra_B=136
+mem_stacks_B=0
+heap_tree=detailed
+n1: 1114112 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n0: 1114112 0x1091C0: main (leak.c:14)
+#-----------
+snapshot=18
+#-----------
+time=1320123
+mem_heap_B=1179648
+mem_heap_extra_B=144
+mem_stacks_B=0
+heap_tree=detailed
+n1: 1179648 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n0: 1179648 0x1091C0: main (leak.c:14)
+#-----------
+snapshot=19
+#-----------
+time=1385741
+mem_heap_B=1245184
+mem_heap_extra_B=152
+mem_stacks_B=0
+heap_tree=detailed
+n1: 1245184 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n0: 1245184 0x1091C0: main (leak.c:14)
+#-----------
+snapshot=20
+#-----------
+time=1451359
+mem_heap_B=1310720
+mem_heap_extra_B=160
+mem_stacks_B=0
+heap_tree=detailed
+n1: 1310720 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n0: 1310720 0x1091C0: main (leak.c:14)
+#-----------
+snapshot=21
+#-----------
+time=1516977
+mem_heap_B=1376256
+mem_heap_extra_B=168
+mem_stacks_B=0
+heap_tree=detailed
+n1: 1376256 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n0: 1376256 0x1091C0: main (leak.c:14)
+#-----------
+snapshot=22
+#-----------
+time=1582595
+mem_heap_B=1441792
+mem_heap_extra_B=176
+mem_stacks_B=0
+heap_tree=detailed
+n1: 1441792 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n0: 1441792 0x1091C0: main (leak.c:14)
+#-----------
+snapshot=23
+#-----------
+time=1648213
+mem_heap_B=1507328
+mem_heap_extra_B=184
+mem_stacks_B=0
+heap_tree=detailed
+n1: 1507328 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n0: 1507328 0x1091C0: main (leak.c:14)
+#-----------
+snapshot=24
+#-----------
+time=1713831
+mem_heap_B=1572864
+mem_heap_extra_B=192
+mem_stacks_B=0
+heap_tree=detailed
+n1: 1572864 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n0: 1572864 0x1091C0: main (leak.c:14)

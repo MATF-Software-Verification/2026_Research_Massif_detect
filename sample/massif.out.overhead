@@ -1,0 +1,1002 @@
+desc: --time-unit=i --detailed-freq=1 --max-snapshots=200 --threshold=0.1 --massif-out-file=/home/korisnik/Desktop/projects/software_verification/2026_Research_Massif_detect/sample/massif.out.overhead
+cmd: /tmp/tmp.MyNbQBY1or/overhead
+time_unit: i
+#-----------
+snapshot=0
+#-----------
+time=0
+mem_heap_B=0
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=detailed
+n0: 0 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+#-----------
+snapshot=1
+#-----------
+time=204126
+mem_heap_B=1
+mem_heap_extra_B=23
+mem_stacks_B=0
+heap_tree=detailed
+n1: 1 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n0: 1 0x1091E4: main (overhead.c:13)
+#-----------
+snapshot=2
+#-----------
+time=207838
+mem_heap_B=65
+mem_heap_extra_B=1495
+mem_stacks_B=0
+heap_tree=detailed
+n1: 65 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n0: 65 0x1091E4: main (overhead.c:13)
+#-----------
+snapshot=3
+#-----------
+time=209694
+mem_heap_B=97
+mem_heap_extra_B=2231
+mem_stacks_B=0
+heap_tree=detailed
+n1: 97 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n0: 97 0x1091E4: main (overhead.c:13)
+#-----------
+snapshot=4
+#-----------
+time=211550
+mem_heap_B=129
+mem_heap_extra_B=2967
+mem_stacks_B=0
+heap_tree=detailed
+n1: 129 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n0: 129 0x1091E4: main (overhead.c:13)
+#-----------
+snapshot=5
+#-----------
+time=213406
+mem_heap_B=161
+mem_heap_extra_B=3703
+mem_stacks_B=0
+heap_tree=detailed
+n1: 161 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n0: 161 0x1091E4: main (overhead.c:13)
+#-----------
+snapshot=6
+#-----------
+time=215262
+mem_heap_B=193
+mem_heap_extra_B=4439
+mem_stacks_B=0
+heap_tree=detailed
+n1: 193 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n0: 193 0x1091E4: main (overhead.c:13)
+#-----------
+snapshot=7
+#-----------
+time=217118
+mem_heap_B=225
+mem_heap_extra_B=5175
+mem_stacks_B=0
+heap_tree=detailed
+n1: 225 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n0: 225 0x1091E4: main (overhead.c:13)
+#-----------
+snapshot=8
+#-----------
+time=218974
+mem_heap_B=257
+mem_heap_extra_B=5911
+mem_stacks_B=0
+heap_tree=detailed
+n1: 257 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n0: 257 0x1091E4: main (overhead.c:13)
+#-----------
+snapshot=9
+#-----------
+time=220830
+mem_heap_B=289
+mem_heap_extra_B=6647
+mem_stacks_B=0
+heap_tree=detailed
+n1: 289 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n0: 289 0x1091E4: main (overhead.c:13)
+#-----------
+snapshot=10
+#-----------
+time=222686
+mem_heap_B=321
+mem_heap_extra_B=7383
+mem_stacks_B=0
+heap_tree=detailed
+n1: 321 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n0: 321 0x1091E4: main (overhead.c:13)
+#-----------
+snapshot=11
+#-----------
+time=224542
+mem_heap_B=353
+mem_heap_extra_B=8119
+mem_stacks_B=0
+heap_tree=detailed
+n1: 353 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n0: 353 0x1091E4: main (overhead.c:13)
+#-----------
+snapshot=12
+#-----------
+time=227210
+mem_heap_B=399
+mem_heap_extra_B=9177
+mem_stacks_B=0
+heap_tree=detailed
+n1: 399 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n0: 399 0x1091E4: main (overhead.c:13)
+#-----------
+snapshot=13
+#-----------
+time=229066
+mem_heap_B=431
+mem_heap_extra_B=9913
+mem_stacks_B=0
+heap_tree=detailed
+n1: 431 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n0: 431 0x1091E4: main (overhead.c:13)
+#-----------
+snapshot=14
+#-----------
+time=230922
+mem_heap_B=463
+mem_heap_extra_B=10649
+mem_stacks_B=0
+heap_tree=detailed
+n1: 463 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n0: 463 0x1091E4: main (overhead.c:13)
+#-----------
+snapshot=15
+#-----------
+time=232778
+mem_heap_B=495
+mem_heap_extra_B=11385
+mem_stacks_B=0
+heap_tree=detailed
+n1: 495 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n0: 495 0x1091E4: main (overhead.c:13)
+#-----------
+snapshot=16
+#-----------
+time=234634
+mem_heap_B=527
+mem_heap_extra_B=12121
+mem_stacks_B=0
+heap_tree=detailed
+n1: 527 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n0: 527 0x1091E4: main (overhead.c:13)
+#-----------
+snapshot=17
+#-----------
+time=236490
+mem_heap_B=559
+mem_heap_extra_B=12857
+mem_stacks_B=0
+heap_tree=detailed
+n1: 559 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n0: 559 0x1091E4: main (overhead.c:13)
+#-----------
+snapshot=18
+#-----------
+time=238346
+mem_heap_B=591
+mem_heap_extra_B=13593
+mem_stacks_B=0
+heap_tree=detailed
+n1: 591 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n0: 591 0x1091E4: main (overhead.c:13)
+#-----------
+snapshot=19
+#-----------
+time=240202
+mem_heap_B=623
+mem_heap_extra_B=14329
+mem_stacks_B=0
+heap_tree=detailed
+n1: 623 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n0: 623 0x1091E4: main (overhead.c:13)
+#-----------
+snapshot=20
+#-----------
+time=242058
+mem_heap_B=655
+mem_heap_extra_B=15065
+mem_stacks_B=0
+heap_tree=detailed
+n1: 655 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n0: 655 0x1091E4: main (overhead.c:13)
+#-----------
+snapshot=21
+#-----------
+time=243914
+mem_heap_B=687
+mem_heap_extra_B=15801
+mem_stacks_B=0
+heap_tree=detailed
+n1: 687 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n0: 687 0x1091E4: main (overhead.c:13)
+#-----------
+snapshot=22
+#-----------
+time=245770
+mem_heap_B=719
+mem_heap_extra_B=16537
+mem_stacks_B=0
+heap_tree=detailed
+n1: 719 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n0: 719 0x1091E4: main (overhead.c:13)
+#-----------
+snapshot=23
+#-----------
+time=247626
+mem_heap_B=751
+mem_heap_extra_B=17273
+mem_stacks_B=0
+heap_tree=detailed
+n1: 751 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n0: 751 0x1091E4: main (overhead.c:13)
+#-----------
+snapshot=24
+#-----------
+time=249482
+mem_heap_B=783
+mem_heap_extra_B=18009
+mem_stacks_B=0
+heap_tree=detailed
+n1: 783 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n0: 783 0x1091E4: main (overhead.c:13)
+#-----------
+snapshot=25
+#-----------
+time=251338
+mem_heap_B=815
+mem_heap_extra_B=18745
+mem_stacks_B=0
+heap_tree=detailed
+n1: 815 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n0: 815 0x1091E4: main (overhead.c:13)
+#-----------
+snapshot=26
+#-----------
+time=253194
+mem_heap_B=847
+mem_heap_extra_B=19481
+mem_stacks_B=0
+heap_tree=detailed
+n1: 847 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n0: 847 0x1091E4: main (overhead.c:13)
+#-----------
+snapshot=27
+#-----------
+time=255050
+mem_heap_B=879
+mem_heap_extra_B=20217
+mem_stacks_B=0
+heap_tree=detailed
+n1: 879 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n0: 879 0x1091E4: main (overhead.c:13)
+#-----------
+snapshot=28
+#-----------
+time=256906
+mem_heap_B=911
+mem_heap_extra_B=20953
+mem_stacks_B=0
+heap_tree=detailed
+n1: 911 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n0: 911 0x1091E4: main (overhead.c:13)
+#-----------
+snapshot=29
+#-----------
+time=258762
+mem_heap_B=943
+mem_heap_extra_B=21689
+mem_stacks_B=0
+heap_tree=detailed
+n1: 943 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n0: 943 0x1091E4: main (overhead.c:13)
+#-----------
+snapshot=30
+#-----------
+time=260618
+mem_heap_B=975
+mem_heap_extra_B=22425
+mem_stacks_B=0
+heap_tree=detailed
+n1: 975 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n0: 975 0x1091E4: main (overhead.c:13)
+#-----------
+snapshot=31
+#-----------
+time=262474
+mem_heap_B=1007
+mem_heap_extra_B=23161
+mem_stacks_B=0
+heap_tree=detailed
+n1: 1007 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n0: 1007 0x1091E4: main (overhead.c:13)
+#-----------
+snapshot=32
+#-----------
+time=264330
+mem_heap_B=1039
+mem_heap_extra_B=23897
+mem_stacks_B=0
+heap_tree=detailed
+n1: 1039 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n0: 1039 0x1091E4: main (overhead.c:13)
+#-----------
+snapshot=33
+#-----------
+time=266186
+mem_heap_B=1071
+mem_heap_extra_B=24633
+mem_stacks_B=0
+heap_tree=detailed
+n1: 1071 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n0: 1071 0x1091E4: main (overhead.c:13)
+#-----------
+snapshot=34
+#-----------
+time=268042
+mem_heap_B=1103
+mem_heap_extra_B=25369
+mem_stacks_B=0
+heap_tree=detailed
+n1: 1103 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n0: 1103 0x1091E4: main (overhead.c:13)
+#-----------
+snapshot=35
+#-----------
+time=269898
+mem_heap_B=1135
+mem_heap_extra_B=26105
+mem_stacks_B=0
+heap_tree=detailed
+n1: 1135 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n0: 1135 0x1091E4: main (overhead.c:13)
+#-----------
+snapshot=36
+#-----------
+time=271754
+mem_heap_B=1167
+mem_heap_extra_B=26841
+mem_stacks_B=0
+heap_tree=detailed
+n1: 1167 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n0: 1167 0x1091E4: main (overhead.c:13)
+#-----------
+snapshot=37
+#-----------
+time=273610
+mem_heap_B=1199
+mem_heap_extra_B=27577
+mem_stacks_B=0
+heap_tree=detailed
+n1: 1199 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n0: 1199 0x1091E4: main (overhead.c:13)
+#-----------
+snapshot=38
+#-----------
+time=275466
+mem_heap_B=1231
+mem_heap_extra_B=28313
+mem_stacks_B=0
+heap_tree=detailed
+n1: 1231 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n0: 1231 0x1091E4: main (overhead.c:13)
+#-----------
+snapshot=39
+#-----------
+time=277322
+mem_heap_B=1263
+mem_heap_extra_B=29049
+mem_stacks_B=0
+heap_tree=detailed
+n1: 1263 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n0: 1263 0x1091E4: main (overhead.c:13)
+#-----------
+snapshot=40
+#-----------
+time=279178
+mem_heap_B=1295
+mem_heap_extra_B=29785
+mem_stacks_B=0
+heap_tree=detailed
+n1: 1295 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n0: 1295 0x1091E4: main (overhead.c:13)
+#-----------
+snapshot=41
+#-----------
+time=281034
+mem_heap_B=1327
+mem_heap_extra_B=30521
+mem_stacks_B=0
+heap_tree=detailed
+n1: 1327 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n0: 1327 0x1091E4: main (overhead.c:13)
+#-----------
+snapshot=42
+#-----------
+time=282890
+mem_heap_B=1359
+mem_heap_extra_B=31257
+mem_stacks_B=0
+heap_tree=detailed
+n1: 1359 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n0: 1359 0x1091E4: main (overhead.c:13)
+#-----------
+snapshot=43
+#-----------
+time=284746
+mem_heap_B=1391
+mem_heap_extra_B=31993
+mem_stacks_B=0
+heap_tree=detailed
+n1: 1391 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n0: 1391 0x1091E4: main (overhead.c:13)
+#-----------
+snapshot=44
+#-----------
+time=286602
+mem_heap_B=1423
+mem_heap_extra_B=32729
+mem_stacks_B=0
+heap_tree=detailed
+n1: 1423 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n0: 1423 0x1091E4: main (overhead.c:13)
+#-----------
+snapshot=45
+#-----------
+time=288458
+mem_heap_B=1455
+mem_heap_extra_B=33465
+mem_stacks_B=0
+heap_tree=detailed
+n1: 1455 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n0: 1455 0x1091E4: main (overhead.c:13)
+#-----------
+snapshot=46
+#-----------
+time=290314
+mem_heap_B=1487
+mem_heap_extra_B=34201
+mem_stacks_B=0
+heap_tree=detailed
+n1: 1487 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n0: 1487 0x1091E4: main (overhead.c:13)
+#-----------
+snapshot=47
+#-----------
+time=292170
+mem_heap_B=1519
+mem_heap_extra_B=34937
+mem_stacks_B=0
+heap_tree=detailed
+n1: 1519 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n0: 1519 0x1091E4: main (overhead.c:13)
+#-----------
+snapshot=48
+#-----------
+time=294026
+mem_heap_B=1551
+mem_heap_extra_B=35673
+mem_stacks_B=0
+heap_tree=detailed
+n1: 1551 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n0: 1551 0x1091E4: main (overhead.c:13)
+#-----------
+snapshot=49
+#-----------
+time=295882
+mem_heap_B=1583
+mem_heap_extra_B=36409
+mem_stacks_B=0
+heap_tree=detailed
+n1: 1583 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n0: 1583 0x1091E4: main (overhead.c:13)
+#-----------
+snapshot=50
+#-----------
+time=297738
+mem_heap_B=1615
+mem_heap_extra_B=37145
+mem_stacks_B=0
+heap_tree=detailed
+n1: 1615 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n0: 1615 0x1091E4: main (overhead.c:13)
+#-----------
+snapshot=51
+#-----------
+time=299594
+mem_heap_B=1647
+mem_heap_extra_B=37881
+mem_stacks_B=0
+heap_tree=detailed
+n1: 1647 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n0: 1647 0x1091E4: main (overhead.c:13)
+#-----------
+snapshot=52
+#-----------
+time=301450
+mem_heap_B=1679
+mem_heap_extra_B=38617
+mem_stacks_B=0
+heap_tree=detailed
+n1: 1679 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n0: 1679 0x1091E4: main (overhead.c:13)
+#-----------
+snapshot=53
+#-----------
+time=303306
+mem_heap_B=1711
+mem_heap_extra_B=39353
+mem_stacks_B=0
+heap_tree=detailed
+n1: 1711 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n0: 1711 0x1091E4: main (overhead.c:13)
+#-----------
+snapshot=54
+#-----------
+time=305162
+mem_heap_B=1743
+mem_heap_extra_B=40089
+mem_stacks_B=0
+heap_tree=detailed
+n1: 1743 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n0: 1743 0x1091E4: main (overhead.c:13)
+#-----------
+snapshot=55
+#-----------
+time=307018
+mem_heap_B=1775
+mem_heap_extra_B=40825
+mem_stacks_B=0
+heap_tree=detailed
+n1: 1775 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n0: 1775 0x1091E4: main (overhead.c:13)
+#-----------
+snapshot=56
+#-----------
+time=308874
+mem_heap_B=1807
+mem_heap_extra_B=41561
+mem_stacks_B=0
+heap_tree=detailed
+n1: 1807 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n0: 1807 0x1091E4: main (overhead.c:13)
+#-----------
+snapshot=57
+#-----------
+time=310730
+mem_heap_B=1839
+mem_heap_extra_B=42297
+mem_stacks_B=0
+heap_tree=detailed
+n1: 1839 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n0: 1839 0x1091E4: main (overhead.c:13)
+#-----------
+snapshot=58
+#-----------
+time=312586
+mem_heap_B=1871
+mem_heap_extra_B=43033
+mem_stacks_B=0
+heap_tree=detailed
+n1: 1871 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n0: 1871 0x1091E4: main (overhead.c:13)
+#-----------
+snapshot=59
+#-----------
+time=314442
+mem_heap_B=1903
+mem_heap_extra_B=43769
+mem_stacks_B=0
+heap_tree=detailed
+n1: 1903 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n0: 1903 0x1091E4: main (overhead.c:13)
+#-----------
+snapshot=60
+#-----------
+time=316298
+mem_heap_B=1935
+mem_heap_extra_B=44505
+mem_stacks_B=0
+heap_tree=detailed
+n1: 1935 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n0: 1935 0x1091E4: main (overhead.c:13)
+#-----------
+snapshot=61
+#-----------
+time=318154
+mem_heap_B=1967
+mem_heap_extra_B=45241
+mem_stacks_B=0
+heap_tree=detailed
+n1: 1967 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n0: 1967 0x1091E4: main (overhead.c:13)
+#-----------
+snapshot=62
+#-----------
+time=320131
+mem_heap_B=2000
+mem_heap_extra_B=46000
+mem_stacks_B=0
+heap_tree=peak
+n1: 2000 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n0: 2000 0x1091E4: main (overhead.c:13)
+#-----------
+snapshot=63
+#-----------
+time=322021
+mem_heap_B=1945
+mem_heap_extra_B=44735
+mem_stacks_B=0
+heap_tree=detailed
+n1: 1945 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n0: 1945 0x1091E4: main (overhead.c:13)
+#-----------
+snapshot=64
+#-----------
+time=323911
+mem_heap_B=1891
+mem_heap_extra_B=43493
+mem_stacks_B=0
+heap_tree=detailed
+n1: 1891 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n0: 1891 0x1091E4: main (overhead.c:13)
+#-----------
+snapshot=65
+#-----------
+time=325801
+mem_heap_B=1837
+mem_heap_extra_B=42251
+mem_stacks_B=0
+heap_tree=detailed
+n1: 1837 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n0: 1837 0x1091E4: main (overhead.c:13)
+#-----------
+snapshot=66
+#-----------
+time=327691
+mem_heap_B=1783
+mem_heap_extra_B=41009
+mem_stacks_B=0
+heap_tree=detailed
+n1: 1783 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n0: 1783 0x1091E4: main (overhead.c:13)
+#-----------
+snapshot=67
+#-----------
+time=329581
+mem_heap_B=1729
+mem_heap_extra_B=39767
+mem_stacks_B=0
+heap_tree=detailed
+n1: 1729 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n0: 1729 0x1091E4: main (overhead.c:13)
+#-----------
+snapshot=68
+#-----------
+time=331471
+mem_heap_B=1675
+mem_heap_extra_B=38525
+mem_stacks_B=0
+heap_tree=detailed
+n1: 1675 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n0: 1675 0x1091E4: main (overhead.c:13)
+#-----------
+snapshot=69
+#-----------
+time=333361
+mem_heap_B=1621
+mem_heap_extra_B=37283
+mem_stacks_B=0
+heap_tree=detailed
+n1: 1621 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n0: 1621 0x1091E4: main (overhead.c:13)
+#-----------
+snapshot=70
+#-----------
+time=335251
+mem_heap_B=1567
+mem_heap_extra_B=36041
+mem_stacks_B=0
+heap_tree=detailed
+n1: 1567 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n0: 1567 0x1091E4: main (overhead.c:13)
+#-----------
+snapshot=71
+#-----------
+time=337141
+mem_heap_B=1513
+mem_heap_extra_B=34799
+mem_stacks_B=0
+heap_tree=detailed
+n1: 1513 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n0: 1513 0x1091E4: main (overhead.c:13)
+#-----------
+snapshot=72
+#-----------
+time=339031
+mem_heap_B=1459
+mem_heap_extra_B=33557
+mem_stacks_B=0
+heap_tree=detailed
+n1: 1459 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n0: 1459 0x1091E4: main (overhead.c:13)
+#-----------
+snapshot=73
+#-----------
+time=340921
+mem_heap_B=1405
+mem_heap_extra_B=32315
+mem_stacks_B=0
+heap_tree=detailed
+n1: 1405 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n0: 1405 0x1091E4: main (overhead.c:13)
+#-----------
+snapshot=74
+#-----------
+time=342811
+mem_heap_B=1351
+mem_heap_extra_B=31073
+mem_stacks_B=0
+heap_tree=detailed
+n1: 1351 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n0: 1351 0x1091E4: main (overhead.c:13)
+#-----------
+snapshot=75
+#-----------
+time=344701
+mem_heap_B=1297
+mem_heap_extra_B=29831
+mem_stacks_B=0
+heap_tree=detailed
+n1: 1297 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n0: 1297 0x1091E4: main (overhead.c:13)
+#-----------
+snapshot=76
+#-----------
+time=346591
+mem_heap_B=1243
+mem_heap_extra_B=28589
+mem_stacks_B=0
+heap_tree=detailed
+n1: 1243 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n0: 1243 0x1091E4: main (overhead.c:13)
+#-----------
+snapshot=77
+#-----------
+time=348481
+mem_heap_B=1189
+mem_heap_extra_B=27347
+mem_stacks_B=0
+heap_tree=detailed
+n1: 1189 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n0: 1189 0x1091E4: main (overhead.c:13)
+#-----------
+snapshot=78
+#-----------
+time=350371
+mem_heap_B=1135
+mem_heap_extra_B=26105
+mem_stacks_B=0
+heap_tree=detailed
+n1: 1135 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n0: 1135 0x1091E4: main (overhead.c:13)
+#-----------
+snapshot=79
+#-----------
+time=352261
+mem_heap_B=1081
+mem_heap_extra_B=24863
+mem_stacks_B=0
+heap_tree=detailed
+n1: 1081 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n0: 1081 0x1091E4: main (overhead.c:13)
+#-----------
+snapshot=80
+#-----------
+time=354151
+mem_heap_B=1027
+mem_heap_extra_B=23621
+mem_stacks_B=0
+heap_tree=detailed
+n1: 1027 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n0: 1027 0x1091E4: main (overhead.c:13)
+#-----------
+snapshot=81
+#-----------
+time=356041
+mem_heap_B=973
+mem_heap_extra_B=22379
+mem_stacks_B=0
+heap_tree=detailed
+n1: 973 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n0: 973 0x1091E4: main (overhead.c:13)
+#-----------
+snapshot=82
+#-----------
+time=357931
+mem_heap_B=919
+mem_heap_extra_B=21137
+mem_stacks_B=0
+heap_tree=detailed
+n1: 919 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n0: 919 0x1091E4: main (overhead.c:13)
+#-----------
+snapshot=83
+#-----------
+time=359821
+mem_heap_B=865
+mem_heap_extra_B=19895
+mem_stacks_B=0
+heap_tree=detailed
+n1: 865 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n0: 865 0x1091E4: main (overhead.c:13)
+#-----------
+snapshot=84
+#-----------
+time=361711
+mem_heap_B=811
+mem_heap_extra_B=18653
+mem_stacks_B=0
+heap_tree=detailed
+n1: 811 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n0: 811 0x1091E4: main (overhead.c:13)
+#-----------
+snapshot=85
+#-----------
+time=363601
+mem_heap_B=757
+mem_heap_extra_B=17411
+mem_stacks_B=0
+heap_tree=detailed
+n1: 757 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n0: 757 0x1091E4: main (overhead.c:13)
+#-----------
+snapshot=86
+#-----------
+time=365491
+mem_heap_B=703
+mem_heap_extra_B=16169
+mem_stacks_B=0
+heap_tree=detailed
+n1: 703 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n0: 703 0x1091E4: main (overhead.c:13)
+#-----------
+snapshot=87
+#-----------
+time=367381
+mem_heap_B=649
+mem_heap_extra_B=14927
+mem_stacks_B=0
+heap_tree=detailed
+n1: 649 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n0: 649 0x1091E4: main (overhead.c:13)
+#-----------
+snapshot=88
+#-----------
+time=369271
+mem_heap_B=595
+mem_heap_extra_B=13685
+mem_stacks_B=0
+heap_tree=detailed
+n1: 595 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n0: 595 0x1091E4: main (overhead.c:13)
+#-----------
+snapshot=89
+#-----------
+time=371161
+mem_heap_B=541
+mem_heap_extra_B=12443
+mem_stacks_B=0
+heap_tree=detailed
+n1: 541 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n0: 541 0x1091E4: main (overhead.c:13)
+#-----------
+snapshot=90
+#-----------
+time=373051
+mem_heap_B=487
+mem_heap_extra_B=11201
+mem_stacks_B=0
+heap_tree=detailed
+n1: 487 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n0: 487 0x1091E4: main (overhead.c:13)
+#-----------
+snapshot=91
+#-----------
+time=374941
+mem_heap_B=433
+mem_heap_extra_B=9959
+mem_stacks_B=0
+heap_tree=detailed
+n1: 433 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n0: 433 0x1091E4: main (overhead.c:13)
+#-----------
+snapshot=92
+#-----------
+time=376831
+mem_heap_B=379
+mem_heap_extra_B=8717
+mem_stacks_B=0
+heap_tree=detailed
+n1: 379 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n0: 379 0x1091E4: main (overhead.c:13)
+#-----------
+snapshot=93
+#-----------
+time=378721
+mem_heap_B=325
+mem_heap_extra_B=7475
+mem_stacks_B=0
+heap_tree=detailed
+n1: 325 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n0: 325 0x1091E4: main (overhead.c:13)
+#-----------
+snapshot=94
+#-----------
+time=380611
+mem_heap_B=271
+mem_heap_extra_B=6233
+mem_stacks_B=0
+heap_tree=detailed
+n1: 271 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n0: 271 0x1091E4: main (overhead.c:13)
+#-----------
+snapshot=95
+#-----------
+time=382501
+mem_heap_B=217
+mem_heap_extra_B=4991
+mem_stacks_B=0
+heap_tree=detailed
+n1: 217 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n0: 217 0x1091E4: main (overhead.c:13)
+#-----------
+snapshot=96
+#-----------
+time=384391
+mem_heap_B=163
+mem_heap_extra_B=3749
+mem_stacks_B=0
+heap_tree=detailed
+n1: 163 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n0: 163 0x1091E4: main (overhead.c:13)
+#-----------
+snapshot=97
+#-----------
+time=386281
+mem_heap_B=109
+mem_heap_extra_B=2507
+mem_stacks_B=0
+heap_tree=detailed
+n1: 109 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n0: 109 0x1091E4: main (overhead.c:13)
+#-----------
+snapshot=98
+#-----------
+time=388171
+mem_heap_B=55
+mem_heap_extra_B=1265
+mem_stacks_B=0
+heap_tree=detailed
+n1: 55 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n0: 55 0x1091E4: main (overhead.c:13)
+#-----------
+snapshot=99
+#-----------
+time=390061
+mem_heap_B=1
+mem_heap_extra_B=23
+mem_stacks_B=0
+heap_tree=detailed
+n1: 1 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n0: 1 0x1091E4: main (overhead.c:13)

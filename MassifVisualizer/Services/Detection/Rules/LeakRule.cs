@@ -1,4 +1,3 @@
-using System;
 using System.Collections.Generic;
 using System.Linq;
 using MassifVisualizer.Models;
@@ -16,45 +15,43 @@ public class LeakRule : IDetectionRule
             yield break;
 
         double rho = Statistics.Spearman(ctx.T, ctx.H);
-        double dd = Statistics.MaxDrawdown(ctx.H, ctx.Peak);
+        double growth = ctx.H[^1] - ctx.H[0];
+        double growthShare = growth / ctx.Peak;
         double retention = ctx.H[^1] / ctx.Peak;
 
-        if (rho <= th.LeakMonotonicity || dd >= th.LeakMaxDrawdown || retention <= th.LeakFinalRetention)
+        if (rho <= th.LeakMonotonicity ||
+            growthShare <= th.LeakMinGrowthShare ||
+            retention <= th.LeakFinalRetention)
             yield break;
 
         int n = ctx.Snapshots.Count;
-        double mono = Clamp01((rho - th.LeakMonotonicity) / 0.10);
-        double drop = Clamp01((th.LeakMaxDrawdown - dd) / 0.10);
-        double reten = Clamp01((retention - th.LeakFinalRetention) / 0.20);
-        double sample = Clamp01(n / 30.0);
-        double confidence = (0.55 + 0.45 * new[] { mono, drop, reten }.Average()) * (0.7 + 0.3 * sample);
+        var attribution = AnalyzeAttribution(ctx, growth);
+        string? suspectSite = attribution.Site;
+        string caveat = "This may indicate a memory leak, but the program may also be keeping the memory intentionally. " +
+                        "Massif cannot tell whether this memory is still reachable or has been leaked.";
 
-        string? suspectSite = FindSuspectSite(ctx);
-        string caveat = "a program designed to accumulate until exit (e.g. loading a full dataset before " +
-                        "processing it) looks identical to a leak from a single Massif run — this is a " +
-                        "suspicion, not a verdict.";
+        string attributionDescription;
+        if (suspectSite != null)
+            attributionDescription = $"The largest recorded increase was at {suspectSite}.";
+        else if (!attribution.TreesCoverRun)
+            attributionDescription = "The allocation trees do not cover enough of the run to identify an allocation site.";
+        else
+            attributionDescription = "No single allocation site explains enough of the increase to be identified.";
 
-        var description = suspectSite != null
-            ? $"Heap grew monotonically across the whole run, never released a significant amount, and ended " +
-              $"near its peak. The most likely suspect is {suspectSite}, whose allocations grew the same way. " +
-              $"Caveat: {caveat}"
-            : $"Heap grew monotonically across the whole run, never released a significant amount, and ended " +
-              $"near its peak. No single allocation site accounts for the growth clearly enough to name a " +
-              $"suspect. Caveat: {caveat}";
+        string description = "Heap usage increased over the run and ended close to its peak. " +
+                             $"{attributionDescription} {caveat}";
 
         var suggestion = suspectSite != null
-            ? $"Add the matching free() before control leaves the scope of the allocation at {suspectSite}; " +
-              "confirm with `valgrind --leak-check=full` (Memcheck distinguishes definitely lost from still " +
-              "reachable, which Massif cannot)."
-            : "Audit allocation sites for a missing free(); confirm with `valgrind --leak-check=full` " +
-              "(Memcheck distinguishes definitely lost from still reachable, which Massif cannot).";
+            ? $"Check whether memory allocated at {suspectSite} is freed when no longer needed. " +
+              "Run `valgrind --leak-check=full` to check for leaks."
+            : "Check whether allocations are freed when no longer needed. " +
+              "Run `valgrind --leak-check=full` to check for leaks.";
 
         var finding = new Finding
         {
             RuleId = Id,
             Title = "Suspected memory leak",
             Severity = Severity.Warning,
-            Confidence = confidence,
             Description = description,
             Suggestion = suggestion,
             SuspectSite = suspectSite,
@@ -64,25 +61,58 @@ public class LeakRule : IDetectionRule
         };
 
         finding.Evidence.Add($"Monotonicity (Spearman ρ): {rho:F2} — threshold {th.LeakMonotonicity:F2}");
-        finding.Evidence.Add($"Largest release: {dd * 100:F1} % of peak — threshold {th.LeakMaxDrawdown * 100:F0} %");
+        finding.Evidence.Add($"Net growth: {ByteFormatter.Format((long)growth)} ({growthShare * 100:F1} % of peak) — threshold {th.LeakMinGrowthShare * 100:F0} %");
         finding.Evidence.Add($"Final heap: {retention * 100:F1} % of peak — threshold {th.LeakFinalRetention * 100:F0} %");
         finding.Evidence.Add($"Snapshots analyzed: {n}");
+        finding.Evidence.Add(attribution.CoverageEvidence);
+        if (suspectSite != null)
+            finding.Evidence.Add($"Largest recorded site growth: {ByteFormatter.Format((long)attribution.Growth)} " +
+                                 $"({attribution.Growth * 100 / growth:F1} % of net growth) at {suspectSite}");
+        else if (attribution.TreesCoverRun && attribution.Growth > 0)
+            finding.Evidence.Add($"Largest recorded site growth: {attribution.Growth * 100 / growth:F1} % of net growth " +
+                                 $"— threshold {th.LeakMinSiteGrowthShare * 100:F0} %; no site named");
 
         yield return finding;
     }
 
-    private static string? FindSuspectSite(AnalysisContext ctx)
+    private static (string? Site, double Growth, string CoverageEvidence, bool TreesCoverRun)
+        AnalyzeAttribution(AnalysisContext ctx, double totalGrowth)
     {
-        if (ctx.Detailed.Count < 3) return null;
+        if (ctx.Detailed.Count < 2)
+            return (null, 0, "Attribution unavailable: fewer than two snapshots contain allocation trees", false);
 
-        var siteT = ctx.SiteT();
+        double firstTreeT = NormalizedTimeOf(ctx, ctx.Detailed[0]);
+        double lastTreeT = NormalizedTimeOf(ctx, ctx.Detailed[^1]);
+        double edge = ctx.Thresholds.LeakAttributionEdgeWindow;
+        bool treesCoverRun = firstTreeT <= edge && lastTreeT >= 1 - edge;
+
+        string coverageEvidence = treesCoverRun
+            ? $"Allocation-tree coverage: first tree at {firstTreeT * 100:F0} %, last tree at {lastTreeT * 100:F0} % of the run"
+            : $"Attribution unavailable: first tree at {firstTreeT * 100:F0} %, last tree at {lastTreeT * 100:F0} % " +
+              $"— required at most {edge * 100:F0} % and at least {(1 - edge) * 100:F0} %";
+
+        if (!treesCoverRun || totalGrowth <= 0)
+            return (null, 0, coverageEvidence, treesCoverRun);
+
         var suspect = ctx.Sites
-            .Where(s => Statistics.Spearman(siteT, s.Bytes) > ctx.Thresholds.LeakSiteMonotonicity)
-            .OrderByDescending(s => s.Last - s.First)
+            .Select(s => (s.Site, Growth: s.Last - s.First))
+            .Where(s => s.Growth > 0)
+            .OrderByDescending(s => s.Growth)
             .FirstOrDefault();
 
-        return suspect?.Site;
+        string? site = suspect.Growth >= ctx.Thresholds.LeakMinSiteGrowthShare * totalGrowth
+            ? suspect.Site
+            : null;
+
+        return (site, suspect.Growth, coverageEvidence, true);
     }
 
-    private static double Clamp01(double v) => Math.Clamp(v, 0, 1);
+    private static double NormalizedTimeOf(AnalysisContext ctx, MassifSnapshot snapshot)
+    {
+        for (int i = 0; i < ctx.Snapshots.Count; i++)
+            if (ReferenceEquals(ctx.Snapshots[i], snapshot))
+                return ctx.T[i];
+
+        throw new System.InvalidOperationException("Allocation-tree snapshot is not part of the profile.");
+    }
 }

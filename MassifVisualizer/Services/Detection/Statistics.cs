@@ -53,22 +53,6 @@ public static class Statistics
         return ranks;
     }
 
-    public static double MaxDrawdown(IReadOnlyList<double> y, double peak)
-    {
-        if (peak <= 0) return 0;
-
-        double runningMax = double.NegativeInfinity;
-        double worst = 0;
-        foreach (var v in y)
-        {
-            if (v > runningMax) runningMax = v;
-            double drawdown = (runningMax - v) / peak;
-            if (drawdown > worst) worst = drawdown;
-        }
-
-        return worst;
-    }
-
     public static double[] Normalize(IReadOnlyList<long> times)
     {
         int n = times.Count;
@@ -81,41 +65,6 @@ public static class Statistics
             return Enumerable.Range(0, n).Select(i => n == 1 ? 0.0 : i / (double)(n - 1)).ToArray();
 
         return times.Select(t => (t - t0) / span).ToArray();
-    }
-
-    public static (double Slope, double R2) LinearFit(IReadOnlyList<double> x, IReadOnlyList<double> y)
-    {
-        int n = x.Count;
-        if (n < 3 || y.Count != n) return (0, 0);
-
-        double meanX = x.Average();
-        double meanY = y.Average();
-
-        double sxx = 0, sxy = 0;
-        for (int i = 0; i < n; i++)
-        {
-            double dx = x[i] - meanX;
-            sxx += dx * dx;
-            sxy += dx * (y[i] - meanY);
-        }
-
-        if (sxx <= 0) return (0, 0);
-
-        double slope = sxy / sxx;
-        double intercept = meanY - slope * meanX;
-
-        // R2 tells us whether the slope means anything: a regression through pure noise
-        // still yields some slope, but will not fit.
-        double ssRes = 0, ssTot = 0;
-        for (int i = 0; i < n; i++)
-        {
-            double residual = y[i] - (slope * x[i] + intercept);
-            double spread = y[i] - meanY;
-            ssRes += residual * residual;
-            ssTot += spread * spread;
-        }
-
-        return (slope, ssTot > 0 ? 1 - ssRes / ssTot : 0);
     }
 
     public static double Median(IReadOnlyList<double> values)
