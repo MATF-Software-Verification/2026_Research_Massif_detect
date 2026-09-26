@@ -1,68 +1,90 @@
 # MassifDetect
 
-MassifDetect is a C# desktop app for viewing and analyzing Valgrind Massif heap
-profiles. It uses Avalonia for the interface and ScottPlot for the memory chart.
+MassifDetect is a desktop application for viewing and analyzing Valgrind Massif
+heap profiles. It shows memory usage over time and highlights suspicious patterns
+such as steady growth, retained memory, sudden spikes, and high allocator overhead.
 
 ![MassifDetect showing an instruction-based memory chart and findings](docs/massifdetect.png)
 
-## Requirements and setup
+## Authors
 
-- .NET 10 SDK to build and run the app.
-- GCC and Valgrind on your PATH to profile C source files. Use Linux for this workflow.
-- GCC and Valgrind are not needed to open an existing Massif profile.
+- Vladeta Vujacic 1017/2024
+- Marko Nikitovic 1007/2024
+
+## Requirements
+
+- .NET 10 SDK
+- GCC and Valgrind for compiling and profiling C source files
+- Avalonia and ScottPlot packages (downloaded automatically by
+`dotnet restore`)
+- GCC and Valgrind (not required if you only want to open an
+existing `massif.out.*` profile)
+
+## Build and run
 
 Run these commands from the repository root:
 
 ```sh
 dotnet restore
-dotnet build
+dotnet build -c Release
 dotnet run --project MassifVisualizer/MassifVisualizer.csproj
 ```
 
-To start with one of the included profiles:
+After the Release build, you can also run the built application directly:
+
+```sh
+dotnet MassifVisualizer/bin/Release/net10.0/MassifVisualizer.dll
+```
+
+To open a profile immediately when the application starts, pass its path as an
+argument:
 
 ```sh
 dotnet run --project MassifVisualizer/MassifVisualizer.csproj -- sample/massif.out.leak
 ```
 
-## What you can do
+## Usage example
 
-- Open a `massif.out.*` file through **File > Open massif file**.
-- Compile and profile a single C file through **File > Open source file**.
-  The app runs GCC and Valgrind, then loads the result.
-- View heap usage and allocator overhead over time.
-- Browse snapshots, allocation trees, and snapshot details.
-- View hot functions ranked by their largest recorded memory use.
-- Filter findings by severity and jump to their evidence snapshots.
-- View source locations when the profile was generated from a C file in the app.
+To inspect an existing profile:
 
-The app includes four detection rules:
+1. Start the application or use the command above with `sample/massif.out.leak`.
+2. If no profile was passed on startup, select **File > Open massif file** and
+   choose `sample/massif.out.leak`.
+3. Select snapshots on the left to inspect their allocation tree and details.
+4. Open the **Hot Functions** tab to see the largest allocation sites.
+5. Open the **Findings** tab. This example should show a `LEAK` warning and an
+   `ATEXIT` information finding. Select a finding to jump to its evidence
+   snapshot.
 
-| Rule | What it looks for |
+To analyze a C source file directly:
+
+1. Start the application and select **File > Open source file**.
+2. Choose a file such as `sample/leak.c`.
+3. The application uses GCC to compile the file and Valgrind Massif to profile
+   it, then loads the generated profile automatically.
+
+The **Settings** window can change Massif options and detection thresholds for
+the current session.
+
+## Included examples
+
+The `sample/` directory contains focused C programs and matching Massif profiles:
+
+| Input | Expected result |
 | --- | --- |
-| LEAK | Heap growth with high memory retention at the end. |
-| ATEXIT | A significant amount of memory in the last snapshot. |
-| SPIKE | Sudden increases in heap usage and whether usage later drops. |
-| FRAG | High estimated allocator overhead compared with the useful heap. |
+| `normal.c` | No findings |
+| `leak.c` | `LEAK` warning and `ATEXIT` information |
+| `at_exit.c` | `ATEXIT` information |
+| `transient_spike.c` | Transient `SPIKE` information |
+| `retained_spike.c` | Retained `SPIKE` warning and `ATEXIT` information |
+| `overhead.c` | `FRAG` warning |
 
-Findings include supporting values and suggestions. They are clues, not proof of
-a bug. Massif cannot confirm memory leaks; use Memcheck to investigate them.
-
-**Settings** lets you change Massif options and detection thresholds. Settings last
-only for the current session. Massif options apply to the next C profiling run.
-Detection thresholds apply the next time a profile is loaded or generated;
-existing findings are not recalculated when you press Apply.
-
-## Examples
-
-The [sample](sample/) folder contains six C programs and their profiles: normal
-behavior, suspected leaks, memory left at the end, temporary and retained spikes,
-and high allocator overhead.
-
-The examples use executed instructions (`i`) for the time axis, not seconds.
-
-To regenerate them with GCC and Valgrind:
+The matching `massif.out.*` files can be opened without compiling the C files.
+To regenerate all profiles, run:
 
 ```sh
 ./sample/generate.sh
 ```
+
+This command requires GCC and Valgrind. The generated profiles use executed
+instructions as the time unit.
