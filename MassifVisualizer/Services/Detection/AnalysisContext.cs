@@ -16,19 +16,9 @@ public class AnalysisContext
     public required double Peak { get; init; }
     public required int PeakIndex { get; init; }
 
-    private readonly Dictionary<MassifSnapshot, int> _positionOf;
     private List<SiteSeries>? _sites;
 
     public List<SiteSeries> Sites => _sites ??= SiteSeriesBuilder.Build(Detailed);
-
-    public AnalysisContext()
-    {
-        _positionOf = [];
-    }
-
-    public int PositionOf(MassifSnapshot snap) => _positionOf[snap];
-
-    public double[] SiteT() => Detailed.Select(s => T[PositionOf(s)]).ToArray();
 
     public long TimeAt(double t)
     {
@@ -54,7 +44,7 @@ public class AnalysisContext
         double peak = h.Length > 0 ? h.Max() : 0;
         int peakIndex = h.Length > 0 ? System.Array.IndexOf(h, peak) : -1;
 
-        var ctx = new AnalysisContext
+        return new AnalysisContext
         {
             Profile = profile,
             Thresholds = thresholds,
@@ -66,10 +56,5 @@ public class AnalysisContext
             Peak = peak,
             PeakIndex = peakIndex
         };
-
-        for (int i = 0; i < snapshots.Count; i++)
-            ctx._positionOf[snapshots[i]] = i;
-
-        return ctx;
     }
 }

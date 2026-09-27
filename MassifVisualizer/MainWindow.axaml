@@ -19,6 +19,7 @@
         <Separator/>
         <MenuItem Header="E_xit" Name="MenuExit"/>
       </MenuItem>
+      <MenuItem Header="_Settings" Name="MenuSettings"/>
     </Menu>
 
     <!-- Summary strip -->

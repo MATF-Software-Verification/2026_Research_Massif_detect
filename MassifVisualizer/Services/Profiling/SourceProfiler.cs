@@ -13,7 +13,8 @@ public sealed record ProfileResult(MassifProfile? Profile, string SourcePath, st
 
 public static class SourceProfiler
 {
-    public static async Task<ProfileResult> RunAsync(string sourcePath, CancellationToken token = default)
+    public static async Task<ProfileResult> RunAsync(string sourcePath, MassifOptions options,
+                                                       CancellationToken token = default)
     {
         sourcePath = Path.GetFullPath(sourcePath);
         var work = Directory.CreateTempSubdirectory("massifdetect");
@@ -26,7 +27,7 @@ public static class SourceProfiler
                 return new ProfileResult(null, sourcePath, build.Output, null);
 
             var massifOut = Path.Combine(work.FullName, "massif.out");
-            var run = await MassifRunner.RunAsync(binary, massifOut, token);
+            var run = await MassifRunner.RunAsync(binary, massifOut, options, token);
 
             // Valgrind passes the program's own exit code through, so a program that returns
             // non-zero is not a failure on our side. What matters is whether we got a file
