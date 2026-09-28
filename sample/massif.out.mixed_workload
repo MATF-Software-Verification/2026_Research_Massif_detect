@@ -1,0 +1,1834 @@
+desc: --time-unit=i --detailed-freq=1 --max-snapshots=200 --threshold=0.1 --massif-out-file=sample/massif.out.mixed_workload
+cmd: /tmp/massif-complex-A25cDU/mixed_workload
+time_unit: i
+#-----------
+snapshot=0
+#-----------
+time=0
+mem_heap_B=0
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=detailed
+n0: 0 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+#-----------
+snapshot=1
+#-----------
+time=206691
+mem_heap_B=32768
+mem_heap_extra_B=8
+mem_stacks_B=0
+heap_tree=detailed
+n1: 32768 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 32768 0x1091CB: load_inputs (mixed_workload.c:25)
+  n0: 32768 0x10943C: main (mixed_workload.c:69)
+#-----------
+snapshot=2
+#-----------
+time=338123
+mem_heap_B=163840
+mem_heap_extra_B=40
+mem_stacks_B=0
+heap_tree=detailed
+n1: 163840 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 163840 0x1091CB: load_inputs (mixed_workload.c:25)
+  n0: 163840 0x10943C: main (mixed_workload.c:69)
+#-----------
+snapshot=3
+#-----------
+time=469555
+mem_heap_B=294912
+mem_heap_extra_B=72
+mem_stacks_B=0
+heap_tree=detailed
+n1: 294912 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 294912 0x1091CB: load_inputs (mixed_workload.c:25)
+  n0: 294912 0x10943C: main (mixed_workload.c:69)
+#-----------
+snapshot=4
+#-----------
+time=535271
+mem_heap_B=360448
+mem_heap_extra_B=88
+mem_stacks_B=0
+heap_tree=detailed
+n1: 360448 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 360448 0x1091CB: load_inputs (mixed_workload.c:25)
+  n0: 360448 0x10943C: main (mixed_workload.c:69)
+#-----------
+snapshot=5
+#-----------
+time=600987
+mem_heap_B=425984
+mem_heap_extra_B=104
+mem_stacks_B=0
+heap_tree=detailed
+n1: 425984 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 425984 0x1091CB: load_inputs (mixed_workload.c:25)
+  n0: 425984 0x10943C: main (mixed_workload.c:69)
+#-----------
+snapshot=6
+#-----------
+time=666703
+mem_heap_B=491520
+mem_heap_extra_B=120
+mem_stacks_B=0
+heap_tree=detailed
+n1: 491520 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 491520 0x1091CB: load_inputs (mixed_workload.c:25)
+  n0: 491520 0x10943C: main (mixed_workload.c:69)
+#-----------
+snapshot=7
+#-----------
+time=732427
+mem_heap_B=2621440
+mem_heap_extra_B=136
+mem_stacks_B=0
+heap_tree=detailed
+n2: 2621440 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 2097152 0x109291: build_index (mixed_workload.c:35)
+  n0: 2097152 0x109441: main (mixed_workload.c:70)
+ n1: 524288 0x1091CB: load_inputs (mixed_workload.c:25)
+  n0: 524288 0x10943C: main (mixed_workload.c:69)
+#-----------
+snapshot=8
+#-----------
+time=2829666
+mem_heap_B=2629632
+mem_heap_extra_B=144
+mem_stacks_B=0
+heap_tree=detailed
+n3: 2629632 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 2097152 0x109291: build_index (mixed_workload.c:35)
+  n0: 2097152 0x109441: main (mixed_workload.c:70)
+ n1: 524288 0x1091CB: load_inputs (mixed_workload.c:25)
+  n0: 524288 0x10943C: main (mixed_workload.c:69)
+ n1: 8192 0x10938E: process_batch (mixed_workload.c:58)
+  n0: 8192 0x109457: main (mixed_workload.c:72)
+#-----------
+snapshot=9
+#-----------
+time=2837951
+mem_heap_B=2695168
+mem_heap_extra_B=152
+mem_stacks_B=0
+heap_tree=detailed
+n4: 2695168 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 2097152 0x109291: build_index (mixed_workload.c:35)
+  n0: 2097152 0x109441: main (mixed_workload.c:70)
+ n1: 524288 0x1091CB: load_inputs (mixed_workload.c:25)
+  n0: 524288 0x10943C: main (mixed_workload.c:69)
+ n1: 65536 0x109308: cache_result (mixed_workload.c:44)
+  n1: 65536 0x10941C: process_batch (mixed_workload.c:63)
+   n0: 65536 0x109457: main (mixed_workload.c:72)
+ n1: 8192 0x10938E: process_batch (mixed_workload.c:58)
+  n0: 8192 0x109457: main (mixed_workload.c:72)
+#-----------
+snapshot=10
+#-----------
+time=3100295
+mem_heap_B=2695168
+mem_heap_extra_B=152
+mem_stacks_B=0
+heap_tree=detailed
+n4: 2695168 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 2097152 0x109291: build_index (mixed_workload.c:35)
+  n0: 2097152 0x109441: main (mixed_workload.c:70)
+ n1: 524288 0x1091CB: load_inputs (mixed_workload.c:25)
+  n0: 524288 0x10943C: main (mixed_workload.c:69)
+ n1: 65536 0x109308: cache_result (mixed_workload.c:44)
+  n1: 65536 0x10941C: process_batch (mixed_workload.c:63)
+   n0: 65536 0x109457: main (mixed_workload.c:72)
+ n1: 8192 0x10938E: process_batch (mixed_workload.c:58)
+  n0: 8192 0x109457: main (mixed_workload.c:72)
+#-----------
+snapshot=11
+#-----------
+time=3108625
+mem_heap_B=2760704
+mem_heap_extra_B=160
+mem_stacks_B=0
+heap_tree=detailed
+n4: 2760704 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 2097152 0x109291: build_index (mixed_workload.c:35)
+  n0: 2097152 0x109441: main (mixed_workload.c:70)
+ n1: 524288 0x1091CB: load_inputs (mixed_workload.c:25)
+  n0: 524288 0x10943C: main (mixed_workload.c:69)
+ n1: 131072 0x109308: cache_result (mixed_workload.c:44)
+  n1: 131072 0x10941C: process_batch (mixed_workload.c:63)
+   n0: 131072 0x109457: main (mixed_workload.c:72)
+ n1: 8192 0x10938E: process_batch (mixed_workload.c:58)
+  n0: 8192 0x109457: main (mixed_workload.c:72)
+#-----------
+snapshot=12
+#-----------
+time=3370969
+mem_heap_B=2760704
+mem_heap_extra_B=160
+mem_stacks_B=0
+heap_tree=detailed
+n4: 2760704 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 2097152 0x109291: build_index (mixed_workload.c:35)
+  n0: 2097152 0x109441: main (mixed_workload.c:70)
+ n1: 524288 0x1091CB: load_inputs (mixed_workload.c:25)
+  n0: 524288 0x10943C: main (mixed_workload.c:69)
+ n1: 131072 0x109308: cache_result (mixed_workload.c:44)
+  n1: 131072 0x10941C: process_batch (mixed_workload.c:63)
+   n0: 131072 0x109457: main (mixed_workload.c:72)
+ n1: 8192 0x10938E: process_batch (mixed_workload.c:58)
+  n0: 8192 0x109457: main (mixed_workload.c:72)
+#-----------
+snapshot=13
+#-----------
+time=3379299
+mem_heap_B=2826240
+mem_heap_extra_B=168
+mem_stacks_B=0
+heap_tree=detailed
+n4: 2826240 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 2097152 0x109291: build_index (mixed_workload.c:35)
+  n0: 2097152 0x109441: main (mixed_workload.c:70)
+ n1: 524288 0x1091CB: load_inputs (mixed_workload.c:25)
+  n0: 524288 0x10943C: main (mixed_workload.c:69)
+ n1: 196608 0x109308: cache_result (mixed_workload.c:44)
+  n1: 196608 0x10941C: process_batch (mixed_workload.c:63)
+   n0: 196608 0x109457: main (mixed_workload.c:72)
+ n1: 8192 0x10938E: process_batch (mixed_workload.c:58)
+  n0: 8192 0x109457: main (mixed_workload.c:72)
+#-----------
+snapshot=14
+#-----------
+time=3641643
+mem_heap_B=2826240
+mem_heap_extra_B=168
+mem_stacks_B=0
+heap_tree=detailed
+n4: 2826240 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 2097152 0x109291: build_index (mixed_workload.c:35)
+  n0: 2097152 0x109441: main (mixed_workload.c:70)
+ n1: 524288 0x1091CB: load_inputs (mixed_workload.c:25)
+  n0: 524288 0x10943C: main (mixed_workload.c:69)
+ n1: 196608 0x109308: cache_result (mixed_workload.c:44)
+  n1: 196608 0x10941C: process_batch (mixed_workload.c:63)
+   n0: 196608 0x109457: main (mixed_workload.c:72)
+ n1: 8192 0x10938E: process_batch (mixed_workload.c:58)
+  n0: 8192 0x109457: main (mixed_workload.c:72)
+#-----------
+snapshot=15
+#-----------
+time=3649973
+mem_heap_B=2891776
+mem_heap_extra_B=176
+mem_stacks_B=0
+heap_tree=detailed
+n4: 2891776 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 2097152 0x109291: build_index (mixed_workload.c:35)
+  n0: 2097152 0x109441: main (mixed_workload.c:70)
+ n1: 524288 0x1091CB: load_inputs (mixed_workload.c:25)
+  n0: 524288 0x10943C: main (mixed_workload.c:69)
+ n1: 262144 0x109308: cache_result (mixed_workload.c:44)
+  n1: 262144 0x10941C: process_batch (mixed_workload.c:63)
+   n0: 262144 0x109457: main (mixed_workload.c:72)
+ n1: 8192 0x10938E: process_batch (mixed_workload.c:58)
+  n0: 8192 0x109457: main (mixed_workload.c:72)
+#-----------
+snapshot=16
+#-----------
+time=3912317
+mem_heap_B=2891776
+mem_heap_extra_B=176
+mem_stacks_B=0
+heap_tree=detailed
+n4: 2891776 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 2097152 0x109291: build_index (mixed_workload.c:35)
+  n0: 2097152 0x109441: main (mixed_workload.c:70)
+ n1: 524288 0x1091CB: load_inputs (mixed_workload.c:25)
+  n0: 524288 0x10943C: main (mixed_workload.c:69)
+ n1: 262144 0x109308: cache_result (mixed_workload.c:44)
+  n1: 262144 0x10941C: process_batch (mixed_workload.c:63)
+   n0: 262144 0x109457: main (mixed_workload.c:72)
+ n1: 8192 0x10938E: process_batch (mixed_workload.c:58)
+  n0: 8192 0x109457: main (mixed_workload.c:72)
+#-----------
+snapshot=17
+#-----------
+time=3920647
+mem_heap_B=2957312
+mem_heap_extra_B=184
+mem_stacks_B=0
+heap_tree=detailed
+n4: 2957312 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 2097152 0x109291: build_index (mixed_workload.c:35)
+  n0: 2097152 0x109441: main (mixed_workload.c:70)
+ n1: 524288 0x1091CB: load_inputs (mixed_workload.c:25)
+  n0: 524288 0x10943C: main (mixed_workload.c:69)
+ n1: 327680 0x109308: cache_result (mixed_workload.c:44)
+  n1: 327680 0x10941C: process_batch (mixed_workload.c:63)
+   n0: 327680 0x109457: main (mixed_workload.c:72)
+ n1: 8192 0x10938E: process_batch (mixed_workload.c:58)
+  n0: 8192 0x109457: main (mixed_workload.c:72)
+#-----------
+snapshot=18
+#-----------
+time=4182991
+mem_heap_B=2957312
+mem_heap_extra_B=184
+mem_stacks_B=0
+heap_tree=detailed
+n4: 2957312 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 2097152 0x109291: build_index (mixed_workload.c:35)
+  n0: 2097152 0x109441: main (mixed_workload.c:70)
+ n1: 524288 0x1091CB: load_inputs (mixed_workload.c:25)
+  n0: 524288 0x10943C: main (mixed_workload.c:69)
+ n1: 327680 0x109308: cache_result (mixed_workload.c:44)
+  n1: 327680 0x10941C: process_batch (mixed_workload.c:63)
+   n0: 327680 0x109457: main (mixed_workload.c:72)
+ n1: 8192 0x10938E: process_batch (mixed_workload.c:58)
+  n0: 8192 0x109457: main (mixed_workload.c:72)
+#-----------
+snapshot=19
+#-----------
+time=4191321
+mem_heap_B=3022848
+mem_heap_extra_B=192
+mem_stacks_B=0
+heap_tree=detailed
+n4: 3022848 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 2097152 0x109291: build_index (mixed_workload.c:35)
+  n0: 2097152 0x109441: main (mixed_workload.c:70)
+ n1: 524288 0x1091CB: load_inputs (mixed_workload.c:25)
+  n0: 524288 0x10943C: main (mixed_workload.c:69)
+ n1: 393216 0x109308: cache_result (mixed_workload.c:44)
+  n1: 393216 0x10941C: process_batch (mixed_workload.c:63)
+   n0: 393216 0x109457: main (mixed_workload.c:72)
+ n1: 8192 0x10938E: process_batch (mixed_workload.c:58)
+  n0: 8192 0x109457: main (mixed_workload.c:72)
+#-----------
+snapshot=20
+#-----------
+time=4453665
+mem_heap_B=3022848
+mem_heap_extra_B=192
+mem_stacks_B=0
+heap_tree=detailed
+n4: 3022848 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 2097152 0x109291: build_index (mixed_workload.c:35)
+  n0: 2097152 0x109441: main (mixed_workload.c:70)
+ n1: 524288 0x1091CB: load_inputs (mixed_workload.c:25)
+  n0: 524288 0x10943C: main (mixed_workload.c:69)
+ n1: 393216 0x109308: cache_result (mixed_workload.c:44)
+  n1: 393216 0x10941C: process_batch (mixed_workload.c:63)
+   n0: 393216 0x109457: main (mixed_workload.c:72)
+ n1: 8192 0x10938E: process_batch (mixed_workload.c:58)
+  n0: 8192 0x109457: main (mixed_workload.c:72)
+#-----------
+snapshot=21
+#-----------
+time=4461995
+mem_heap_B=3088384
+mem_heap_extra_B=200
+mem_stacks_B=0
+heap_tree=detailed
+n4: 3088384 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 2097152 0x109291: build_index (mixed_workload.c:35)
+  n0: 2097152 0x109441: main (mixed_workload.c:70)
+ n1: 524288 0x1091CB: load_inputs (mixed_workload.c:25)
+  n0: 524288 0x10943C: main (mixed_workload.c:69)
+ n1: 458752 0x109308: cache_result (mixed_workload.c:44)
+  n1: 458752 0x10941C: process_batch (mixed_workload.c:63)
+   n0: 458752 0x109457: main (mixed_workload.c:72)
+ n1: 8192 0x10938E: process_batch (mixed_workload.c:58)
+  n0: 8192 0x109457: main (mixed_workload.c:72)
+#-----------
+snapshot=22
+#-----------
+time=4724339
+mem_heap_B=3088384
+mem_heap_extra_B=200
+mem_stacks_B=0
+heap_tree=detailed
+n4: 3088384 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 2097152 0x109291: build_index (mixed_workload.c:35)
+  n0: 2097152 0x109441: main (mixed_workload.c:70)
+ n1: 524288 0x1091CB: load_inputs (mixed_workload.c:25)
+  n0: 524288 0x10943C: main (mixed_workload.c:69)
+ n1: 458752 0x109308: cache_result (mixed_workload.c:44)
+  n1: 458752 0x10941C: process_batch (mixed_workload.c:63)
+   n0: 458752 0x109457: main (mixed_workload.c:72)
+ n1: 8192 0x10938E: process_batch (mixed_workload.c:58)
+  n0: 8192 0x109457: main (mixed_workload.c:72)
+#-----------
+snapshot=23
+#-----------
+time=4732669
+mem_heap_B=3153920
+mem_heap_extra_B=208
+mem_stacks_B=0
+heap_tree=detailed
+n4: 3153920 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 2097152 0x109291: build_index (mixed_workload.c:35)
+  n0: 2097152 0x109441: main (mixed_workload.c:70)
+ n1: 524288 0x1091CB: load_inputs (mixed_workload.c:25)
+  n0: 524288 0x10943C: main (mixed_workload.c:69)
+ n1: 524288 0x109308: cache_result (mixed_workload.c:44)
+  n1: 524288 0x10941C: process_batch (mixed_workload.c:63)
+   n0: 524288 0x109457: main (mixed_workload.c:72)
+ n1: 8192 0x10938E: process_batch (mixed_workload.c:58)
+  n0: 8192 0x109457: main (mixed_workload.c:72)
+#-----------
+snapshot=24
+#-----------
+time=4995013
+mem_heap_B=3153920
+mem_heap_extra_B=208
+mem_stacks_B=0
+heap_tree=detailed
+n4: 3153920 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 2097152 0x109291: build_index (mixed_workload.c:35)
+  n0: 2097152 0x109441: main (mixed_workload.c:70)
+ n1: 524288 0x1091CB: load_inputs (mixed_workload.c:25)
+  n0: 524288 0x10943C: main (mixed_workload.c:69)
+ n1: 524288 0x109308: cache_result (mixed_workload.c:44)
+  n1: 524288 0x10941C: process_batch (mixed_workload.c:63)
+   n0: 524288 0x109457: main (mixed_workload.c:72)
+ n1: 8192 0x10938E: process_batch (mixed_workload.c:58)
+  n0: 8192 0x109457: main (mixed_workload.c:72)
+#-----------
+snapshot=25
+#-----------
+time=5003343
+mem_heap_B=3219456
+mem_heap_extra_B=216
+mem_stacks_B=0
+heap_tree=detailed
+n4: 3219456 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 2097152 0x109291: build_index (mixed_workload.c:35)
+  n0: 2097152 0x109441: main (mixed_workload.c:70)
+ n1: 589824 0x109308: cache_result (mixed_workload.c:44)
+  n1: 589824 0x10941C: process_batch (mixed_workload.c:63)
+   n0: 589824 0x109457: main (mixed_workload.c:72)
+ n1: 524288 0x1091CB: load_inputs (mixed_workload.c:25)
+  n0: 524288 0x10943C: main (mixed_workload.c:69)
+ n1: 8192 0x10938E: process_batch (mixed_workload.c:58)
+  n0: 8192 0x109457: main (mixed_workload.c:72)
+#-----------
+snapshot=26
+#-----------
+time=5265687
+mem_heap_B=3219456
+mem_heap_extra_B=216
+mem_stacks_B=0
+heap_tree=detailed
+n4: 3219456 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 2097152 0x109291: build_index (mixed_workload.c:35)
+  n0: 2097152 0x109441: main (mixed_workload.c:70)
+ n1: 589824 0x109308: cache_result (mixed_workload.c:44)
+  n1: 589824 0x10941C: process_batch (mixed_workload.c:63)
+   n0: 589824 0x109457: main (mixed_workload.c:72)
+ n1: 524288 0x1091CB: load_inputs (mixed_workload.c:25)
+  n0: 524288 0x10943C: main (mixed_workload.c:69)
+ n1: 8192 0x10938E: process_batch (mixed_workload.c:58)
+  n0: 8192 0x109457: main (mixed_workload.c:72)
+#-----------
+snapshot=27
+#-----------
+time=5274017
+mem_heap_B=3284992
+mem_heap_extra_B=224
+mem_stacks_B=0
+heap_tree=detailed
+n4: 3284992 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 2097152 0x109291: build_index (mixed_workload.c:35)
+  n0: 2097152 0x109441: main (mixed_workload.c:70)
+ n1: 655360 0x109308: cache_result (mixed_workload.c:44)
+  n1: 655360 0x10941C: process_batch (mixed_workload.c:63)
+   n0: 655360 0x109457: main (mixed_workload.c:72)
+ n1: 524288 0x1091CB: load_inputs (mixed_workload.c:25)
+  n0: 524288 0x10943C: main (mixed_workload.c:69)
+ n1: 8192 0x10938E: process_batch (mixed_workload.c:58)
+  n0: 8192 0x109457: main (mixed_workload.c:72)
+#-----------
+snapshot=28
+#-----------
+time=5536361
+mem_heap_B=3284992
+mem_heap_extra_B=224
+mem_stacks_B=0
+heap_tree=detailed
+n4: 3284992 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 2097152 0x109291: build_index (mixed_workload.c:35)
+  n0: 2097152 0x109441: main (mixed_workload.c:70)
+ n1: 655360 0x109308: cache_result (mixed_workload.c:44)
+  n1: 655360 0x10941C: process_batch (mixed_workload.c:63)
+   n0: 655360 0x109457: main (mixed_workload.c:72)
+ n1: 524288 0x1091CB: load_inputs (mixed_workload.c:25)
+  n0: 524288 0x10943C: main (mixed_workload.c:69)
+ n1: 8192 0x10938E: process_batch (mixed_workload.c:58)
+  n0: 8192 0x109457: main (mixed_workload.c:72)
+#-----------
+snapshot=29
+#-----------
+time=5544691
+mem_heap_B=3350528
+mem_heap_extra_B=232
+mem_stacks_B=0
+heap_tree=detailed
+n4: 3350528 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 2097152 0x109291: build_index (mixed_workload.c:35)
+  n0: 2097152 0x109441: main (mixed_workload.c:70)
+ n1: 720896 0x109308: cache_result (mixed_workload.c:44)
+  n1: 720896 0x10941C: process_batch (mixed_workload.c:63)
+   n0: 720896 0x109457: main (mixed_workload.c:72)
+ n1: 524288 0x1091CB: load_inputs (mixed_workload.c:25)
+  n0: 524288 0x10943C: main (mixed_workload.c:69)
+ n1: 8192 0x10938E: process_batch (mixed_workload.c:58)
+  n0: 8192 0x109457: main (mixed_workload.c:72)
+#-----------
+snapshot=30
+#-----------
+time=5807035
+mem_heap_B=3350528
+mem_heap_extra_B=232
+mem_stacks_B=0
+heap_tree=detailed
+n4: 3350528 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 2097152 0x109291: build_index (mixed_workload.c:35)
+  n0: 2097152 0x109441: main (mixed_workload.c:70)
+ n1: 720896 0x109308: cache_result (mixed_workload.c:44)
+  n1: 720896 0x10941C: process_batch (mixed_workload.c:63)
+   n0: 720896 0x109457: main (mixed_workload.c:72)
+ n1: 524288 0x1091CB: load_inputs (mixed_workload.c:25)
+  n0: 524288 0x10943C: main (mixed_workload.c:69)
+ n1: 8192 0x10938E: process_batch (mixed_workload.c:58)
+  n0: 8192 0x109457: main (mixed_workload.c:72)
+#-----------
+snapshot=31
+#-----------
+time=5815365
+mem_heap_B=3416064
+mem_heap_extra_B=240
+mem_stacks_B=0
+heap_tree=detailed
+n4: 3416064 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 2097152 0x109291: build_index (mixed_workload.c:35)
+  n0: 2097152 0x109441: main (mixed_workload.c:70)
+ n1: 786432 0x109308: cache_result (mixed_workload.c:44)
+  n1: 786432 0x10941C: process_batch (mixed_workload.c:63)
+   n0: 786432 0x109457: main (mixed_workload.c:72)
+ n1: 524288 0x1091CB: load_inputs (mixed_workload.c:25)
+  n0: 524288 0x10943C: main (mixed_workload.c:69)
+ n1: 8192 0x10938E: process_batch (mixed_workload.c:58)
+  n0: 8192 0x109457: main (mixed_workload.c:72)
+#-----------
+snapshot=32
+#-----------
+time=6077709
+mem_heap_B=3416064
+mem_heap_extra_B=240
+mem_stacks_B=0
+heap_tree=detailed
+n4: 3416064 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 2097152 0x109291: build_index (mixed_workload.c:35)
+  n0: 2097152 0x109441: main (mixed_workload.c:70)
+ n1: 786432 0x109308: cache_result (mixed_workload.c:44)
+  n1: 786432 0x10941C: process_batch (mixed_workload.c:63)
+   n0: 786432 0x109457: main (mixed_workload.c:72)
+ n1: 524288 0x1091CB: load_inputs (mixed_workload.c:25)
+  n0: 524288 0x10943C: main (mixed_workload.c:69)
+ n1: 8192 0x10938E: process_batch (mixed_workload.c:58)
+  n0: 8192 0x109457: main (mixed_workload.c:72)
+#-----------
+snapshot=33
+#-----------
+time=6086039
+mem_heap_B=3481600
+mem_heap_extra_B=248
+mem_stacks_B=0
+heap_tree=detailed
+n4: 3481600 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 2097152 0x109291: build_index (mixed_workload.c:35)
+  n0: 2097152 0x109441: main (mixed_workload.c:70)
+ n1: 851968 0x109308: cache_result (mixed_workload.c:44)
+  n1: 851968 0x10941C: process_batch (mixed_workload.c:63)
+   n0: 851968 0x109457: main (mixed_workload.c:72)
+ n1: 524288 0x1091CB: load_inputs (mixed_workload.c:25)
+  n0: 524288 0x10943C: main (mixed_workload.c:69)
+ n1: 8192 0x10938E: process_batch (mixed_workload.c:58)
+  n0: 8192 0x109457: main (mixed_workload.c:72)
+#-----------
+snapshot=34
+#-----------
+time=6348383
+mem_heap_B=3481600
+mem_heap_extra_B=248
+mem_stacks_B=0
+heap_tree=detailed
+n4: 3481600 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 2097152 0x109291: build_index (mixed_workload.c:35)
+  n0: 2097152 0x109441: main (mixed_workload.c:70)
+ n1: 851968 0x109308: cache_result (mixed_workload.c:44)
+  n1: 851968 0x10941C: process_batch (mixed_workload.c:63)
+   n0: 851968 0x109457: main (mixed_workload.c:72)
+ n1: 524288 0x1091CB: load_inputs (mixed_workload.c:25)
+  n0: 524288 0x10943C: main (mixed_workload.c:69)
+ n1: 8192 0x10938E: process_batch (mixed_workload.c:58)
+  n0: 8192 0x109457: main (mixed_workload.c:72)
+#-----------
+snapshot=35
+#-----------
+time=6356713
+mem_heap_B=3547136
+mem_heap_extra_B=256
+mem_stacks_B=0
+heap_tree=detailed
+n4: 3547136 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 2097152 0x109291: build_index (mixed_workload.c:35)
+  n0: 2097152 0x109441: main (mixed_workload.c:70)
+ n1: 917504 0x109308: cache_result (mixed_workload.c:44)
+  n1: 917504 0x10941C: process_batch (mixed_workload.c:63)
+   n0: 917504 0x109457: main (mixed_workload.c:72)
+ n1: 524288 0x1091CB: load_inputs (mixed_workload.c:25)
+  n0: 524288 0x10943C: main (mixed_workload.c:69)
+ n1: 8192 0x10938E: process_batch (mixed_workload.c:58)
+  n0: 8192 0x109457: main (mixed_workload.c:72)
+#-----------
+snapshot=36
+#-----------
+time=6619057
+mem_heap_B=3547136
+mem_heap_extra_B=256
+mem_stacks_B=0
+heap_tree=detailed
+n4: 3547136 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 2097152 0x109291: build_index (mixed_workload.c:35)
+  n0: 2097152 0x109441: main (mixed_workload.c:70)
+ n1: 917504 0x109308: cache_result (mixed_workload.c:44)
+  n1: 917504 0x10941C: process_batch (mixed_workload.c:63)
+   n0: 917504 0x109457: main (mixed_workload.c:72)
+ n1: 524288 0x1091CB: load_inputs (mixed_workload.c:25)
+  n0: 524288 0x10943C: main (mixed_workload.c:69)
+ n1: 8192 0x10938E: process_batch (mixed_workload.c:58)
+  n0: 8192 0x109457: main (mixed_workload.c:72)
+#-----------
+snapshot=37
+#-----------
+time=6627387
+mem_heap_B=3612672
+mem_heap_extra_B=264
+mem_stacks_B=0
+heap_tree=detailed
+n4: 3612672 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 2097152 0x109291: build_index (mixed_workload.c:35)
+  n0: 2097152 0x109441: main (mixed_workload.c:70)
+ n1: 983040 0x109308: cache_result (mixed_workload.c:44)
+  n1: 983040 0x10941C: process_batch (mixed_workload.c:63)
+   n0: 983040 0x109457: main (mixed_workload.c:72)
+ n1: 524288 0x1091CB: load_inputs (mixed_workload.c:25)
+  n0: 524288 0x10943C: main (mixed_workload.c:69)
+ n1: 8192 0x10938E: process_batch (mixed_workload.c:58)
+  n0: 8192 0x109457: main (mixed_workload.c:72)
+#-----------
+snapshot=38
+#-----------
+time=6889731
+mem_heap_B=3612672
+mem_heap_extra_B=264
+mem_stacks_B=0
+heap_tree=detailed
+n4: 3612672 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 2097152 0x109291: build_index (mixed_workload.c:35)
+  n0: 2097152 0x109441: main (mixed_workload.c:70)
+ n1: 983040 0x109308: cache_result (mixed_workload.c:44)
+  n1: 983040 0x10941C: process_batch (mixed_workload.c:63)
+   n0: 983040 0x109457: main (mixed_workload.c:72)
+ n1: 524288 0x1091CB: load_inputs (mixed_workload.c:25)
+  n0: 524288 0x10943C: main (mixed_workload.c:69)
+ n1: 8192 0x10938E: process_batch (mixed_workload.c:58)
+  n0: 8192 0x109457: main (mixed_workload.c:72)
+#-----------
+snapshot=39
+#-----------
+time=6898061
+mem_heap_B=3678208
+mem_heap_extra_B=272
+mem_stacks_B=0
+heap_tree=detailed
+n4: 3678208 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 2097152 0x109291: build_index (mixed_workload.c:35)
+  n0: 2097152 0x109441: main (mixed_workload.c:70)
+ n1: 1048576 0x109308: cache_result (mixed_workload.c:44)
+  n1: 1048576 0x10941C: process_batch (mixed_workload.c:63)
+   n0: 1048576 0x109457: main (mixed_workload.c:72)
+ n1: 524288 0x1091CB: load_inputs (mixed_workload.c:25)
+  n0: 524288 0x10943C: main (mixed_workload.c:69)
+ n1: 8192 0x10938E: process_batch (mixed_workload.c:58)
+  n0: 8192 0x109457: main (mixed_workload.c:72)
+#-----------
+snapshot=40
+#-----------
+time=7160405
+mem_heap_B=3678208
+mem_heap_extra_B=272
+mem_stacks_B=0
+heap_tree=detailed
+n4: 3678208 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 2097152 0x109291: build_index (mixed_workload.c:35)
+  n0: 2097152 0x109441: main (mixed_workload.c:70)
+ n1: 1048576 0x109308: cache_result (mixed_workload.c:44)
+  n1: 1048576 0x10941C: process_batch (mixed_workload.c:63)
+   n0: 1048576 0x109457: main (mixed_workload.c:72)
+ n1: 524288 0x1091CB: load_inputs (mixed_workload.c:25)
+  n0: 524288 0x10943C: main (mixed_workload.c:69)
+ n1: 8192 0x10938E: process_batch (mixed_workload.c:58)
+  n0: 8192 0x109457: main (mixed_workload.c:72)
+#-----------
+snapshot=41
+#-----------
+time=7168735
+mem_heap_B=3743744
+mem_heap_extra_B=280
+mem_stacks_B=0
+heap_tree=detailed
+n4: 3743744 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 2097152 0x109291: build_index (mixed_workload.c:35)
+  n0: 2097152 0x109441: main (mixed_workload.c:70)
+ n1: 1114112 0x109308: cache_result (mixed_workload.c:44)
+  n1: 1114112 0x10941C: process_batch (mixed_workload.c:63)
+   n0: 1114112 0x109457: main (mixed_workload.c:72)
+ n1: 524288 0x1091CB: load_inputs (mixed_workload.c:25)
+  n0: 524288 0x10943C: main (mixed_workload.c:69)
+ n1: 8192 0x10938E: process_batch (mixed_workload.c:58)
+  n0: 8192 0x109457: main (mixed_workload.c:72)
+#-----------
+snapshot=42
+#-----------
+time=7431079
+mem_heap_B=3743744
+mem_heap_extra_B=280
+mem_stacks_B=0
+heap_tree=detailed
+n4: 3743744 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 2097152 0x109291: build_index (mixed_workload.c:35)
+  n0: 2097152 0x109441: main (mixed_workload.c:70)
+ n1: 1114112 0x109308: cache_result (mixed_workload.c:44)
+  n1: 1114112 0x10941C: process_batch (mixed_workload.c:63)
+   n0: 1114112 0x109457: main (mixed_workload.c:72)
+ n1: 524288 0x1091CB: load_inputs (mixed_workload.c:25)
+  n0: 524288 0x10943C: main (mixed_workload.c:69)
+ n1: 8192 0x10938E: process_batch (mixed_workload.c:58)
+  n0: 8192 0x109457: main (mixed_workload.c:72)
+#-----------
+snapshot=43
+#-----------
+time=7439409
+mem_heap_B=3809280
+mem_heap_extra_B=288
+mem_stacks_B=0
+heap_tree=detailed
+n4: 3809280 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 2097152 0x109291: build_index (mixed_workload.c:35)
+  n0: 2097152 0x109441: main (mixed_workload.c:70)
+ n1: 1179648 0x109308: cache_result (mixed_workload.c:44)
+  n1: 1179648 0x10941C: process_batch (mixed_workload.c:63)
+   n0: 1179648 0x109457: main (mixed_workload.c:72)
+ n1: 524288 0x1091CB: load_inputs (mixed_workload.c:25)
+  n0: 524288 0x10943C: main (mixed_workload.c:69)
+ n1: 8192 0x10938E: process_batch (mixed_workload.c:58)
+  n0: 8192 0x109457: main (mixed_workload.c:72)
+#-----------
+snapshot=44
+#-----------
+time=7701753
+mem_heap_B=3809280
+mem_heap_extra_B=288
+mem_stacks_B=0
+heap_tree=detailed
+n4: 3809280 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 2097152 0x109291: build_index (mixed_workload.c:35)
+  n0: 2097152 0x109441: main (mixed_workload.c:70)
+ n1: 1179648 0x109308: cache_result (mixed_workload.c:44)
+  n1: 1179648 0x10941C: process_batch (mixed_workload.c:63)
+   n0: 1179648 0x109457: main (mixed_workload.c:72)
+ n1: 524288 0x1091CB: load_inputs (mixed_workload.c:25)
+  n0: 524288 0x10943C: main (mixed_workload.c:69)
+ n1: 8192 0x10938E: process_batch (mixed_workload.c:58)
+  n0: 8192 0x109457: main (mixed_workload.c:72)
+#-----------
+snapshot=45
+#-----------
+time=7710083
+mem_heap_B=3874816
+mem_heap_extra_B=296
+mem_stacks_B=0
+heap_tree=detailed
+n4: 3874816 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 2097152 0x109291: build_index (mixed_workload.c:35)
+  n0: 2097152 0x109441: main (mixed_workload.c:70)
+ n1: 1245184 0x109308: cache_result (mixed_workload.c:44)
+  n1: 1245184 0x10941C: process_batch (mixed_workload.c:63)
+   n0: 1245184 0x109457: main (mixed_workload.c:72)
+ n1: 524288 0x1091CB: load_inputs (mixed_workload.c:25)
+  n0: 524288 0x10943C: main (mixed_workload.c:69)
+ n1: 8192 0x10938E: process_batch (mixed_workload.c:58)
+  n0: 8192 0x109457: main (mixed_workload.c:72)
+#-----------
+snapshot=46
+#-----------
+time=7972427
+mem_heap_B=3874816
+mem_heap_extra_B=296
+mem_stacks_B=0
+heap_tree=detailed
+n4: 3874816 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 2097152 0x109291: build_index (mixed_workload.c:35)
+  n0: 2097152 0x109441: main (mixed_workload.c:70)
+ n1: 1245184 0x109308: cache_result (mixed_workload.c:44)
+  n1: 1245184 0x10941C: process_batch (mixed_workload.c:63)
+   n0: 1245184 0x109457: main (mixed_workload.c:72)
+ n1: 524288 0x1091CB: load_inputs (mixed_workload.c:25)
+  n0: 524288 0x10943C: main (mixed_workload.c:69)
+ n1: 8192 0x10938E: process_batch (mixed_workload.c:58)
+  n0: 8192 0x109457: main (mixed_workload.c:72)
+#-----------
+snapshot=47
+#-----------
+time=7980757
+mem_heap_B=3940352
+mem_heap_extra_B=304
+mem_stacks_B=0
+heap_tree=detailed
+n4: 3940352 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 2097152 0x109291: build_index (mixed_workload.c:35)
+  n0: 2097152 0x109441: main (mixed_workload.c:70)
+ n1: 1310720 0x109308: cache_result (mixed_workload.c:44)
+  n1: 1310720 0x10941C: process_batch (mixed_workload.c:63)
+   n0: 1310720 0x109457: main (mixed_workload.c:72)
+ n1: 524288 0x1091CB: load_inputs (mixed_workload.c:25)
+  n0: 524288 0x10943C: main (mixed_workload.c:69)
+ n1: 8192 0x10938E: process_batch (mixed_workload.c:58)
+  n0: 8192 0x109457: main (mixed_workload.c:72)
+#-----------
+snapshot=48
+#-----------
+time=8243101
+mem_heap_B=3940352
+mem_heap_extra_B=304
+mem_stacks_B=0
+heap_tree=detailed
+n4: 3940352 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 2097152 0x109291: build_index (mixed_workload.c:35)
+  n0: 2097152 0x109441: main (mixed_workload.c:70)
+ n1: 1310720 0x109308: cache_result (mixed_workload.c:44)
+  n1: 1310720 0x10941C: process_batch (mixed_workload.c:63)
+   n0: 1310720 0x109457: main (mixed_workload.c:72)
+ n1: 524288 0x1091CB: load_inputs (mixed_workload.c:25)
+  n0: 524288 0x10943C: main (mixed_workload.c:69)
+ n1: 8192 0x10938E: process_batch (mixed_workload.c:58)
+  n0: 8192 0x109457: main (mixed_workload.c:72)
+#-----------
+snapshot=49
+#-----------
+time=8251431
+mem_heap_B=4005888
+mem_heap_extra_B=312
+mem_stacks_B=0
+heap_tree=detailed
+n4: 4005888 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 2097152 0x109291: build_index (mixed_workload.c:35)
+  n0: 2097152 0x109441: main (mixed_workload.c:70)
+ n1: 1376256 0x109308: cache_result (mixed_workload.c:44)
+  n1: 1376256 0x10941C: process_batch (mixed_workload.c:63)
+   n0: 1376256 0x109457: main (mixed_workload.c:72)
+ n1: 524288 0x1091CB: load_inputs (mixed_workload.c:25)
+  n0: 524288 0x10943C: main (mixed_workload.c:69)
+ n1: 8192 0x10938E: process_batch (mixed_workload.c:58)
+  n0: 8192 0x109457: main (mixed_workload.c:72)
+#-----------
+snapshot=50
+#-----------
+time=8513775
+mem_heap_B=4005888
+mem_heap_extra_B=312
+mem_stacks_B=0
+heap_tree=detailed
+n4: 4005888 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 2097152 0x109291: build_index (mixed_workload.c:35)
+  n0: 2097152 0x109441: main (mixed_workload.c:70)
+ n1: 1376256 0x109308: cache_result (mixed_workload.c:44)
+  n1: 1376256 0x10941C: process_batch (mixed_workload.c:63)
+   n0: 1376256 0x109457: main (mixed_workload.c:72)
+ n1: 524288 0x1091CB: load_inputs (mixed_workload.c:25)
+  n0: 524288 0x10943C: main (mixed_workload.c:69)
+ n1: 8192 0x10938E: process_batch (mixed_workload.c:58)
+  n0: 8192 0x109457: main (mixed_workload.c:72)
+#-----------
+snapshot=51
+#-----------
+time=8522105
+mem_heap_B=4071424
+mem_heap_extra_B=320
+mem_stacks_B=0
+heap_tree=detailed
+n4: 4071424 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 2097152 0x109291: build_index (mixed_workload.c:35)
+  n0: 2097152 0x109441: main (mixed_workload.c:70)
+ n1: 1441792 0x109308: cache_result (mixed_workload.c:44)
+  n1: 1441792 0x10941C: process_batch (mixed_workload.c:63)
+   n0: 1441792 0x109457: main (mixed_workload.c:72)
+ n1: 524288 0x1091CB: load_inputs (mixed_workload.c:25)
+  n0: 524288 0x10943C: main (mixed_workload.c:69)
+ n1: 8192 0x10938E: process_batch (mixed_workload.c:58)
+  n0: 8192 0x109457: main (mixed_workload.c:72)
+#-----------
+snapshot=52
+#-----------
+time=8784449
+mem_heap_B=4071424
+mem_heap_extra_B=320
+mem_stacks_B=0
+heap_tree=detailed
+n4: 4071424 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 2097152 0x109291: build_index (mixed_workload.c:35)
+  n0: 2097152 0x109441: main (mixed_workload.c:70)
+ n1: 1441792 0x109308: cache_result (mixed_workload.c:44)
+  n1: 1441792 0x10941C: process_batch (mixed_workload.c:63)
+   n0: 1441792 0x109457: main (mixed_workload.c:72)
+ n1: 524288 0x1091CB: load_inputs (mixed_workload.c:25)
+  n0: 524288 0x10943C: main (mixed_workload.c:69)
+ n1: 8192 0x10938E: process_batch (mixed_workload.c:58)
+  n0: 8192 0x109457: main (mixed_workload.c:72)
+#-----------
+snapshot=53
+#-----------
+time=8792779
+mem_heap_B=4136960
+mem_heap_extra_B=328
+mem_stacks_B=0
+heap_tree=detailed
+n4: 4136960 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 2097152 0x109291: build_index (mixed_workload.c:35)
+  n0: 2097152 0x109441: main (mixed_workload.c:70)
+ n1: 1507328 0x109308: cache_result (mixed_workload.c:44)
+  n1: 1507328 0x10941C: process_batch (mixed_workload.c:63)
+   n0: 1507328 0x109457: main (mixed_workload.c:72)
+ n1: 524288 0x1091CB: load_inputs (mixed_workload.c:25)
+  n0: 524288 0x10943C: main (mixed_workload.c:69)
+ n1: 8192 0x10938E: process_batch (mixed_workload.c:58)
+  n0: 8192 0x109457: main (mixed_workload.c:72)
+#-----------
+snapshot=54
+#-----------
+time=9055123
+mem_heap_B=4136960
+mem_heap_extra_B=328
+mem_stacks_B=0
+heap_tree=detailed
+n4: 4136960 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 2097152 0x109291: build_index (mixed_workload.c:35)
+  n0: 2097152 0x109441: main (mixed_workload.c:70)
+ n1: 1507328 0x109308: cache_result (mixed_workload.c:44)
+  n1: 1507328 0x10941C: process_batch (mixed_workload.c:63)
+   n0: 1507328 0x109457: main (mixed_workload.c:72)
+ n1: 524288 0x1091CB: load_inputs (mixed_workload.c:25)
+  n0: 524288 0x10943C: main (mixed_workload.c:69)
+ n1: 8192 0x10938E: process_batch (mixed_workload.c:58)
+  n0: 8192 0x109457: main (mixed_workload.c:72)
+#-----------
+snapshot=55
+#-----------
+time=9063453
+mem_heap_B=4202496
+mem_heap_extra_B=336
+mem_stacks_B=0
+heap_tree=detailed
+n4: 4202496 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 2097152 0x109291: build_index (mixed_workload.c:35)
+  n0: 2097152 0x109441: main (mixed_workload.c:70)
+ n1: 1572864 0x109308: cache_result (mixed_workload.c:44)
+  n1: 1572864 0x10941C: process_batch (mixed_workload.c:63)
+   n0: 1572864 0x109457: main (mixed_workload.c:72)
+ n1: 524288 0x1091CB: load_inputs (mixed_workload.c:25)
+  n0: 524288 0x10943C: main (mixed_workload.c:69)
+ n1: 8192 0x10938E: process_batch (mixed_workload.c:58)
+  n0: 8192 0x109457: main (mixed_workload.c:72)
+#-----------
+snapshot=56
+#-----------
+time=9325797
+mem_heap_B=4202496
+mem_heap_extra_B=336
+mem_stacks_B=0
+heap_tree=detailed
+n4: 4202496 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 2097152 0x109291: build_index (mixed_workload.c:35)
+  n0: 2097152 0x109441: main (mixed_workload.c:70)
+ n1: 1572864 0x109308: cache_result (mixed_workload.c:44)
+  n1: 1572864 0x10941C: process_batch (mixed_workload.c:63)
+   n0: 1572864 0x109457: main (mixed_workload.c:72)
+ n1: 524288 0x1091CB: load_inputs (mixed_workload.c:25)
+  n0: 524288 0x10943C: main (mixed_workload.c:69)
+ n1: 8192 0x10938E: process_batch (mixed_workload.c:58)
+  n0: 8192 0x109457: main (mixed_workload.c:72)
+#-----------
+snapshot=57
+#-----------
+time=9334127
+mem_heap_B=4268032
+mem_heap_extra_B=344
+mem_stacks_B=0
+heap_tree=detailed
+n4: 4268032 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 2097152 0x109291: build_index (mixed_workload.c:35)
+  n0: 2097152 0x109441: main (mixed_workload.c:70)
+ n1: 1638400 0x109308: cache_result (mixed_workload.c:44)
+  n1: 1638400 0x10941C: process_batch (mixed_workload.c:63)
+   n0: 1638400 0x109457: main (mixed_workload.c:72)
+ n1: 524288 0x1091CB: load_inputs (mixed_workload.c:25)
+  n0: 524288 0x10943C: main (mixed_workload.c:69)
+ n1: 8192 0x10938E: process_batch (mixed_workload.c:58)
+  n0: 8192 0x109457: main (mixed_workload.c:72)
+#-----------
+snapshot=58
+#-----------
+time=9596471
+mem_heap_B=4268032
+mem_heap_extra_B=344
+mem_stacks_B=0
+heap_tree=detailed
+n4: 4268032 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 2097152 0x109291: build_index (mixed_workload.c:35)
+  n0: 2097152 0x109441: main (mixed_workload.c:70)
+ n1: 1638400 0x109308: cache_result (mixed_workload.c:44)
+  n1: 1638400 0x10941C: process_batch (mixed_workload.c:63)
+   n0: 1638400 0x109457: main (mixed_workload.c:72)
+ n1: 524288 0x1091CB: load_inputs (mixed_workload.c:25)
+  n0: 524288 0x10943C: main (mixed_workload.c:69)
+ n1: 8192 0x10938E: process_batch (mixed_workload.c:58)
+  n0: 8192 0x109457: main (mixed_workload.c:72)
+#-----------
+snapshot=59
+#-----------
+time=9604801
+mem_heap_B=4333568
+mem_heap_extra_B=352
+mem_stacks_B=0
+heap_tree=detailed
+n4: 4333568 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 2097152 0x109291: build_index (mixed_workload.c:35)
+  n0: 2097152 0x109441: main (mixed_workload.c:70)
+ n1: 1703936 0x109308: cache_result (mixed_workload.c:44)
+  n1: 1703936 0x10941C: process_batch (mixed_workload.c:63)
+   n0: 1703936 0x109457: main (mixed_workload.c:72)
+ n1: 524288 0x1091CB: load_inputs (mixed_workload.c:25)
+  n0: 524288 0x10943C: main (mixed_workload.c:69)
+ n1: 8192 0x10938E: process_batch (mixed_workload.c:58)
+  n0: 8192 0x109457: main (mixed_workload.c:72)
+#-----------
+snapshot=60
+#-----------
+time=9867145
+mem_heap_B=4333568
+mem_heap_extra_B=352
+mem_stacks_B=0
+heap_tree=detailed
+n4: 4333568 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 2097152 0x109291: build_index (mixed_workload.c:35)
+  n0: 2097152 0x109441: main (mixed_workload.c:70)
+ n1: 1703936 0x109308: cache_result (mixed_workload.c:44)
+  n1: 1703936 0x10941C: process_batch (mixed_workload.c:63)
+   n0: 1703936 0x109457: main (mixed_workload.c:72)
+ n1: 524288 0x1091CB: load_inputs (mixed_workload.c:25)
+  n0: 524288 0x10943C: main (mixed_workload.c:69)
+ n1: 8192 0x10938E: process_batch (mixed_workload.c:58)
+  n0: 8192 0x109457: main (mixed_workload.c:72)
+#-----------
+snapshot=61
+#-----------
+time=9875475
+mem_heap_B=4399104
+mem_heap_extra_B=360
+mem_stacks_B=0
+heap_tree=detailed
+n4: 4399104 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 2097152 0x109291: build_index (mixed_workload.c:35)
+  n0: 2097152 0x109441: main (mixed_workload.c:70)
+ n1: 1769472 0x109308: cache_result (mixed_workload.c:44)
+  n1: 1769472 0x10941C: process_batch (mixed_workload.c:63)
+   n0: 1769472 0x109457: main (mixed_workload.c:72)
+ n1: 524288 0x1091CB: load_inputs (mixed_workload.c:25)
+  n0: 524288 0x10943C: main (mixed_workload.c:69)
+ n1: 8192 0x10938E: process_batch (mixed_workload.c:58)
+  n0: 8192 0x109457: main (mixed_workload.c:72)
+#-----------
+snapshot=62
+#-----------
+time=10137819
+mem_heap_B=4399104
+mem_heap_extra_B=360
+mem_stacks_B=0
+heap_tree=detailed
+n4: 4399104 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 2097152 0x109291: build_index (mixed_workload.c:35)
+  n0: 2097152 0x109441: main (mixed_workload.c:70)
+ n1: 1769472 0x109308: cache_result (mixed_workload.c:44)
+  n1: 1769472 0x10941C: process_batch (mixed_workload.c:63)
+   n0: 1769472 0x109457: main (mixed_workload.c:72)
+ n1: 524288 0x1091CB: load_inputs (mixed_workload.c:25)
+  n0: 524288 0x10943C: main (mixed_workload.c:69)
+ n1: 8192 0x10938E: process_batch (mixed_workload.c:58)
+  n0: 8192 0x109457: main (mixed_workload.c:72)
+#-----------
+snapshot=63
+#-----------
+time=10146149
+mem_heap_B=4464640
+mem_heap_extra_B=368
+mem_stacks_B=0
+heap_tree=detailed
+n4: 4464640 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 2097152 0x109291: build_index (mixed_workload.c:35)
+  n0: 2097152 0x109441: main (mixed_workload.c:70)
+ n1: 1835008 0x109308: cache_result (mixed_workload.c:44)
+  n1: 1835008 0x10941C: process_batch (mixed_workload.c:63)
+   n0: 1835008 0x109457: main (mixed_workload.c:72)
+ n1: 524288 0x1091CB: load_inputs (mixed_workload.c:25)
+  n0: 524288 0x10943C: main (mixed_workload.c:69)
+ n1: 8192 0x10938E: process_batch (mixed_workload.c:58)
+  n0: 8192 0x109457: main (mixed_workload.c:72)
+#-----------
+snapshot=64
+#-----------
+time=10408493
+mem_heap_B=4464640
+mem_heap_extra_B=368
+mem_stacks_B=0
+heap_tree=detailed
+n4: 4464640 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 2097152 0x109291: build_index (mixed_workload.c:35)
+  n0: 2097152 0x109441: main (mixed_workload.c:70)
+ n1: 1835008 0x109308: cache_result (mixed_workload.c:44)
+  n1: 1835008 0x10941C: process_batch (mixed_workload.c:63)
+   n0: 1835008 0x109457: main (mixed_workload.c:72)
+ n1: 524288 0x1091CB: load_inputs (mixed_workload.c:25)
+  n0: 524288 0x10943C: main (mixed_workload.c:69)
+ n1: 8192 0x10938E: process_batch (mixed_workload.c:58)
+  n0: 8192 0x109457: main (mixed_workload.c:72)
+#-----------
+snapshot=65
+#-----------
+time=10416823
+mem_heap_B=4530176
+mem_heap_extra_B=376
+mem_stacks_B=0
+heap_tree=detailed
+n4: 4530176 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 2097152 0x109291: build_index (mixed_workload.c:35)
+  n0: 2097152 0x109441: main (mixed_workload.c:70)
+ n1: 1900544 0x109308: cache_result (mixed_workload.c:44)
+  n1: 1900544 0x10941C: process_batch (mixed_workload.c:63)
+   n0: 1900544 0x109457: main (mixed_workload.c:72)
+ n1: 524288 0x1091CB: load_inputs (mixed_workload.c:25)
+  n0: 524288 0x10943C: main (mixed_workload.c:69)
+ n1: 8192 0x10938E: process_batch (mixed_workload.c:58)
+  n0: 8192 0x109457: main (mixed_workload.c:72)
+#-----------
+snapshot=66
+#-----------
+time=10679167
+mem_heap_B=4530176
+mem_heap_extra_B=376
+mem_stacks_B=0
+heap_tree=detailed
+n4: 4530176 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 2097152 0x109291: build_index (mixed_workload.c:35)
+  n0: 2097152 0x109441: main (mixed_workload.c:70)
+ n1: 1900544 0x109308: cache_result (mixed_workload.c:44)
+  n1: 1900544 0x10941C: process_batch (mixed_workload.c:63)
+   n0: 1900544 0x109457: main (mixed_workload.c:72)
+ n1: 524288 0x1091CB: load_inputs (mixed_workload.c:25)
+  n0: 524288 0x10943C: main (mixed_workload.c:69)
+ n1: 8192 0x10938E: process_batch (mixed_workload.c:58)
+  n0: 8192 0x109457: main (mixed_workload.c:72)
+#-----------
+snapshot=67
+#-----------
+time=10687497
+mem_heap_B=4595712
+mem_heap_extra_B=384
+mem_stacks_B=0
+heap_tree=detailed
+n4: 4595712 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 2097152 0x109291: build_index (mixed_workload.c:35)
+  n0: 2097152 0x109441: main (mixed_workload.c:70)
+ n1: 1966080 0x109308: cache_result (mixed_workload.c:44)
+  n1: 1966080 0x10941C: process_batch (mixed_workload.c:63)
+   n0: 1966080 0x109457: main (mixed_workload.c:72)
+ n1: 524288 0x1091CB: load_inputs (mixed_workload.c:25)
+  n0: 524288 0x10943C: main (mixed_workload.c:69)
+ n1: 8192 0x10938E: process_batch (mixed_workload.c:58)
+  n0: 8192 0x109457: main (mixed_workload.c:72)
+#-----------
+snapshot=68
+#-----------
+time=10949841
+mem_heap_B=4595712
+mem_heap_extra_B=384
+mem_stacks_B=0
+heap_tree=detailed
+n4: 4595712 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 2097152 0x109291: build_index (mixed_workload.c:35)
+  n0: 2097152 0x109441: main (mixed_workload.c:70)
+ n1: 1966080 0x109308: cache_result (mixed_workload.c:44)
+  n1: 1966080 0x10941C: process_batch (mixed_workload.c:63)
+   n0: 1966080 0x109457: main (mixed_workload.c:72)
+ n1: 524288 0x1091CB: load_inputs (mixed_workload.c:25)
+  n0: 524288 0x10943C: main (mixed_workload.c:69)
+ n1: 8192 0x10938E: process_batch (mixed_workload.c:58)
+  n0: 8192 0x109457: main (mixed_workload.c:72)
+#-----------
+snapshot=69
+#-----------
+time=10958171
+mem_heap_B=4661248
+mem_heap_extra_B=392
+mem_stacks_B=0
+heap_tree=detailed
+n4: 4661248 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 2097152 0x109291: build_index (mixed_workload.c:35)
+  n0: 2097152 0x109441: main (mixed_workload.c:70)
+ n1: 2031616 0x109308: cache_result (mixed_workload.c:44)
+  n1: 2031616 0x10941C: process_batch (mixed_workload.c:63)
+   n0: 2031616 0x109457: main (mixed_workload.c:72)
+ n1: 524288 0x1091CB: load_inputs (mixed_workload.c:25)
+  n0: 524288 0x10943C: main (mixed_workload.c:69)
+ n1: 8192 0x10938E: process_batch (mixed_workload.c:58)
+  n0: 8192 0x109457: main (mixed_workload.c:72)
+#-----------
+snapshot=70
+#-----------
+time=11220515
+mem_heap_B=4661248
+mem_heap_extra_B=392
+mem_stacks_B=0
+heap_tree=detailed
+n4: 4661248 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 2097152 0x109291: build_index (mixed_workload.c:35)
+  n0: 2097152 0x109441: main (mixed_workload.c:70)
+ n1: 2031616 0x109308: cache_result (mixed_workload.c:44)
+  n1: 2031616 0x10941C: process_batch (mixed_workload.c:63)
+   n0: 2031616 0x109457: main (mixed_workload.c:72)
+ n1: 524288 0x1091CB: load_inputs (mixed_workload.c:25)
+  n0: 524288 0x10943C: main (mixed_workload.c:69)
+ n1: 8192 0x10938E: process_batch (mixed_workload.c:58)
+  n0: 8192 0x109457: main (mixed_workload.c:72)
+#-----------
+snapshot=71
+#-----------
+time=11228845
+mem_heap_B=4726784
+mem_heap_extra_B=400
+mem_stacks_B=0
+heap_tree=detailed
+n4: 4726784 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 2097152 0x109291: build_index (mixed_workload.c:35)
+  n0: 2097152 0x109441: main (mixed_workload.c:70)
+ n1: 2097152 0x109308: cache_result (mixed_workload.c:44)
+  n1: 2097152 0x10941C: process_batch (mixed_workload.c:63)
+   n0: 2097152 0x109457: main (mixed_workload.c:72)
+ n1: 524288 0x1091CB: load_inputs (mixed_workload.c:25)
+  n0: 524288 0x10943C: main (mixed_workload.c:69)
+ n1: 8192 0x10938E: process_batch (mixed_workload.c:58)
+  n0: 8192 0x109457: main (mixed_workload.c:72)
+#-----------
+snapshot=72
+#-----------
+time=11491189
+mem_heap_B=4726784
+mem_heap_extra_B=400
+mem_stacks_B=0
+heap_tree=detailed
+n4: 4726784 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 2097152 0x109291: build_index (mixed_workload.c:35)
+  n0: 2097152 0x109441: main (mixed_workload.c:70)
+ n1: 2097152 0x109308: cache_result (mixed_workload.c:44)
+  n1: 2097152 0x10941C: process_batch (mixed_workload.c:63)
+   n0: 2097152 0x109457: main (mixed_workload.c:72)
+ n1: 524288 0x1091CB: load_inputs (mixed_workload.c:25)
+  n0: 524288 0x10943C: main (mixed_workload.c:69)
+ n1: 8192 0x10938E: process_batch (mixed_workload.c:58)
+  n0: 8192 0x109457: main (mixed_workload.c:72)
+#-----------
+snapshot=73
+#-----------
+time=11499519
+mem_heap_B=4792320
+mem_heap_extra_B=408
+mem_stacks_B=0
+heap_tree=detailed
+n4: 4792320 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 2162688 0x109308: cache_result (mixed_workload.c:44)
+  n1: 2162688 0x10941C: process_batch (mixed_workload.c:63)
+   n0: 2162688 0x109457: main (mixed_workload.c:72)
+ n1: 2097152 0x109291: build_index (mixed_workload.c:35)
+  n0: 2097152 0x109441: main (mixed_workload.c:70)
+ n1: 524288 0x1091CB: load_inputs (mixed_workload.c:25)
+  n0: 524288 0x10943C: main (mixed_workload.c:69)
+ n1: 8192 0x10938E: process_batch (mixed_workload.c:58)
+  n0: 8192 0x109457: main (mixed_workload.c:72)
+#-----------
+snapshot=74
+#-----------
+time=11761863
+mem_heap_B=4792320
+mem_heap_extra_B=408
+mem_stacks_B=0
+heap_tree=detailed
+n4: 4792320 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 2162688 0x109308: cache_result (mixed_workload.c:44)
+  n1: 2162688 0x10941C: process_batch (mixed_workload.c:63)
+   n0: 2162688 0x109457: main (mixed_workload.c:72)
+ n1: 2097152 0x109291: build_index (mixed_workload.c:35)
+  n0: 2097152 0x109441: main (mixed_workload.c:70)
+ n1: 524288 0x1091CB: load_inputs (mixed_workload.c:25)
+  n0: 524288 0x10943C: main (mixed_workload.c:69)
+ n1: 8192 0x10938E: process_batch (mixed_workload.c:58)
+  n0: 8192 0x109457: main (mixed_workload.c:72)
+#-----------
+snapshot=75
+#-----------
+time=11770193
+mem_heap_B=4857856
+mem_heap_extra_B=416
+mem_stacks_B=0
+heap_tree=detailed
+n4: 4857856 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 2228224 0x109308: cache_result (mixed_workload.c:44)
+  n1: 2228224 0x10941C: process_batch (mixed_workload.c:63)
+   n0: 2228224 0x109457: main (mixed_workload.c:72)
+ n1: 2097152 0x109291: build_index (mixed_workload.c:35)
+  n0: 2097152 0x109441: main (mixed_workload.c:70)
+ n1: 524288 0x1091CB: load_inputs (mixed_workload.c:25)
+  n0: 524288 0x10943C: main (mixed_workload.c:69)
+ n1: 8192 0x10938E: process_batch (mixed_workload.c:58)
+  n0: 8192 0x109457: main (mixed_workload.c:72)
+#-----------
+snapshot=76
+#-----------
+time=12032537
+mem_heap_B=4857856
+mem_heap_extra_B=416
+mem_stacks_B=0
+heap_tree=detailed
+n4: 4857856 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 2228224 0x109308: cache_result (mixed_workload.c:44)
+  n1: 2228224 0x10941C: process_batch (mixed_workload.c:63)
+   n0: 2228224 0x109457: main (mixed_workload.c:72)
+ n1: 2097152 0x109291: build_index (mixed_workload.c:35)
+  n0: 2097152 0x109441: main (mixed_workload.c:70)
+ n1: 524288 0x1091CB: load_inputs (mixed_workload.c:25)
+  n0: 524288 0x10943C: main (mixed_workload.c:69)
+ n1: 8192 0x10938E: process_batch (mixed_workload.c:58)
+  n0: 8192 0x109457: main (mixed_workload.c:72)
+#-----------
+snapshot=77
+#-----------
+time=12040867
+mem_heap_B=4923392
+mem_heap_extra_B=424
+mem_stacks_B=0
+heap_tree=detailed
+n4: 4923392 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 2293760 0x109308: cache_result (mixed_workload.c:44)
+  n1: 2293760 0x10941C: process_batch (mixed_workload.c:63)
+   n0: 2293760 0x109457: main (mixed_workload.c:72)
+ n1: 2097152 0x109291: build_index (mixed_workload.c:35)
+  n0: 2097152 0x109441: main (mixed_workload.c:70)
+ n1: 524288 0x1091CB: load_inputs (mixed_workload.c:25)
+  n0: 524288 0x10943C: main (mixed_workload.c:69)
+ n1: 8192 0x10938E: process_batch (mixed_workload.c:58)
+  n0: 8192 0x109457: main (mixed_workload.c:72)
+#-----------
+snapshot=78
+#-----------
+time=12303211
+mem_heap_B=4923392
+mem_heap_extra_B=424
+mem_stacks_B=0
+heap_tree=detailed
+n4: 4923392 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 2293760 0x109308: cache_result (mixed_workload.c:44)
+  n1: 2293760 0x10941C: process_batch (mixed_workload.c:63)
+   n0: 2293760 0x109457: main (mixed_workload.c:72)
+ n1: 2097152 0x109291: build_index (mixed_workload.c:35)
+  n0: 2097152 0x109441: main (mixed_workload.c:70)
+ n1: 524288 0x1091CB: load_inputs (mixed_workload.c:25)
+  n0: 524288 0x10943C: main (mixed_workload.c:69)
+ n1: 8192 0x10938E: process_batch (mixed_workload.c:58)
+  n0: 8192 0x109457: main (mixed_workload.c:72)
+#-----------
+snapshot=79
+#-----------
+time=12311541
+mem_heap_B=4988928
+mem_heap_extra_B=432
+mem_stacks_B=0
+heap_tree=detailed
+n4: 4988928 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 2359296 0x109308: cache_result (mixed_workload.c:44)
+  n1: 2359296 0x10941C: process_batch (mixed_workload.c:63)
+   n0: 2359296 0x109457: main (mixed_workload.c:72)
+ n1: 2097152 0x109291: build_index (mixed_workload.c:35)
+  n0: 2097152 0x109441: main (mixed_workload.c:70)
+ n1: 524288 0x1091CB: load_inputs (mixed_workload.c:25)
+  n0: 524288 0x10943C: main (mixed_workload.c:69)
+ n1: 8192 0x10938E: process_batch (mixed_workload.c:58)
+  n0: 8192 0x109457: main (mixed_workload.c:72)
+#-----------
+snapshot=80
+#-----------
+time=12573885
+mem_heap_B=4988928
+mem_heap_extra_B=432
+mem_stacks_B=0
+heap_tree=detailed
+n4: 4988928 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 2359296 0x109308: cache_result (mixed_workload.c:44)
+  n1: 2359296 0x10941C: process_batch (mixed_workload.c:63)
+   n0: 2359296 0x109457: main (mixed_workload.c:72)
+ n1: 2097152 0x109291: build_index (mixed_workload.c:35)
+  n0: 2097152 0x109441: main (mixed_workload.c:70)
+ n1: 524288 0x1091CB: load_inputs (mixed_workload.c:25)
+  n0: 524288 0x10943C: main (mixed_workload.c:69)
+ n1: 8192 0x10938E: process_batch (mixed_workload.c:58)
+  n0: 8192 0x109457: main (mixed_workload.c:72)
+#-----------
+snapshot=81
+#-----------
+time=12582215
+mem_heap_B=5054464
+mem_heap_extra_B=440
+mem_stacks_B=0
+heap_tree=detailed
+n4: 5054464 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 2424832 0x109308: cache_result (mixed_workload.c:44)
+  n1: 2424832 0x10941C: process_batch (mixed_workload.c:63)
+   n0: 2424832 0x109457: main (mixed_workload.c:72)
+ n1: 2097152 0x109291: build_index (mixed_workload.c:35)
+  n0: 2097152 0x109441: main (mixed_workload.c:70)
+ n1: 524288 0x1091CB: load_inputs (mixed_workload.c:25)
+  n0: 524288 0x10943C: main (mixed_workload.c:69)
+ n1: 8192 0x10938E: process_batch (mixed_workload.c:58)
+  n0: 8192 0x109457: main (mixed_workload.c:72)
+#-----------
+snapshot=82
+#-----------
+time=12844559
+mem_heap_B=5054464
+mem_heap_extra_B=440
+mem_stacks_B=0
+heap_tree=detailed
+n4: 5054464 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 2424832 0x109308: cache_result (mixed_workload.c:44)
+  n1: 2424832 0x10941C: process_batch (mixed_workload.c:63)
+   n0: 2424832 0x109457: main (mixed_workload.c:72)
+ n1: 2097152 0x109291: build_index (mixed_workload.c:35)
+  n0: 2097152 0x109441: main (mixed_workload.c:70)
+ n1: 524288 0x1091CB: load_inputs (mixed_workload.c:25)
+  n0: 524288 0x10943C: main (mixed_workload.c:69)
+ n1: 8192 0x10938E: process_batch (mixed_workload.c:58)
+  n0: 8192 0x109457: main (mixed_workload.c:72)
+#-----------
+snapshot=83
+#-----------
+time=12852889
+mem_heap_B=5120000
+mem_heap_extra_B=448
+mem_stacks_B=0
+heap_tree=detailed
+n4: 5120000 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 2490368 0x109308: cache_result (mixed_workload.c:44)
+  n1: 2490368 0x10941C: process_batch (mixed_workload.c:63)
+   n0: 2490368 0x109457: main (mixed_workload.c:72)
+ n1: 2097152 0x109291: build_index (mixed_workload.c:35)
+  n0: 2097152 0x109441: main (mixed_workload.c:70)
+ n1: 524288 0x1091CB: load_inputs (mixed_workload.c:25)
+  n0: 524288 0x10943C: main (mixed_workload.c:69)
+ n1: 8192 0x10938E: process_batch (mixed_workload.c:58)
+  n0: 8192 0x109457: main (mixed_workload.c:72)
+#-----------
+snapshot=84
+#-----------
+time=13115233
+mem_heap_B=5120000
+mem_heap_extra_B=448
+mem_stacks_B=0
+heap_tree=detailed
+n4: 5120000 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 2490368 0x109308: cache_result (mixed_workload.c:44)
+  n1: 2490368 0x10941C: process_batch (mixed_workload.c:63)
+   n0: 2490368 0x109457: main (mixed_workload.c:72)
+ n1: 2097152 0x109291: build_index (mixed_workload.c:35)
+  n0: 2097152 0x109441: main (mixed_workload.c:70)
+ n1: 524288 0x1091CB: load_inputs (mixed_workload.c:25)
+  n0: 524288 0x10943C: main (mixed_workload.c:69)
+ n1: 8192 0x10938E: process_batch (mixed_workload.c:58)
+  n0: 8192 0x109457: main (mixed_workload.c:72)
+#-----------
+snapshot=85
+#-----------
+time=13123563
+mem_heap_B=5185536
+mem_heap_extra_B=456
+mem_stacks_B=0
+heap_tree=detailed
+n4: 5185536 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 2555904 0x109308: cache_result (mixed_workload.c:44)
+  n1: 2555904 0x10941C: process_batch (mixed_workload.c:63)
+   n0: 2555904 0x109457: main (mixed_workload.c:72)
+ n1: 2097152 0x109291: build_index (mixed_workload.c:35)
+  n0: 2097152 0x109441: main (mixed_workload.c:70)
+ n1: 524288 0x1091CB: load_inputs (mixed_workload.c:25)
+  n0: 524288 0x10943C: main (mixed_workload.c:69)
+ n1: 8192 0x10938E: process_batch (mixed_workload.c:58)
+  n0: 8192 0x109457: main (mixed_workload.c:72)
+#-----------
+snapshot=86
+#-----------
+time=13385907
+mem_heap_B=5185536
+mem_heap_extra_B=456
+mem_stacks_B=0
+heap_tree=detailed
+n4: 5185536 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 2555904 0x109308: cache_result (mixed_workload.c:44)
+  n1: 2555904 0x10941C: process_batch (mixed_workload.c:63)
+   n0: 2555904 0x109457: main (mixed_workload.c:72)
+ n1: 2097152 0x109291: build_index (mixed_workload.c:35)
+  n0: 2097152 0x109441: main (mixed_workload.c:70)
+ n1: 524288 0x1091CB: load_inputs (mixed_workload.c:25)
+  n0: 524288 0x10943C: main (mixed_workload.c:69)
+ n1: 8192 0x10938E: process_batch (mixed_workload.c:58)
+  n0: 8192 0x109457: main (mixed_workload.c:72)
+#-----------
+snapshot=87
+#-----------
+time=13394237
+mem_heap_B=5251072
+mem_heap_extra_B=464
+mem_stacks_B=0
+heap_tree=detailed
+n4: 5251072 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 2621440 0x109308: cache_result (mixed_workload.c:44)
+  n1: 2621440 0x10941C: process_batch (mixed_workload.c:63)
+   n0: 2621440 0x109457: main (mixed_workload.c:72)
+ n1: 2097152 0x109291: build_index (mixed_workload.c:35)
+  n0: 2097152 0x109441: main (mixed_workload.c:70)
+ n1: 524288 0x1091CB: load_inputs (mixed_workload.c:25)
+  n0: 524288 0x10943C: main (mixed_workload.c:69)
+ n1: 8192 0x10938E: process_batch (mixed_workload.c:58)
+  n0: 8192 0x109457: main (mixed_workload.c:72)
+#-----------
+snapshot=88
+#-----------
+time=13656581
+mem_heap_B=5251072
+mem_heap_extra_B=464
+mem_stacks_B=0
+heap_tree=detailed
+n4: 5251072 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 2621440 0x109308: cache_result (mixed_workload.c:44)
+  n1: 2621440 0x10941C: process_batch (mixed_workload.c:63)
+   n0: 2621440 0x109457: main (mixed_workload.c:72)
+ n1: 2097152 0x109291: build_index (mixed_workload.c:35)
+  n0: 2097152 0x109441: main (mixed_workload.c:70)
+ n1: 524288 0x1091CB: load_inputs (mixed_workload.c:25)
+  n0: 524288 0x10943C: main (mixed_workload.c:69)
+ n1: 8192 0x10938E: process_batch (mixed_workload.c:58)
+  n0: 8192 0x109457: main (mixed_workload.c:72)
+#-----------
+snapshot=89
+#-----------
+time=13664911
+mem_heap_B=5316608
+mem_heap_extra_B=472
+mem_stacks_B=0
+heap_tree=detailed
+n4: 5316608 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 2686976 0x109308: cache_result (mixed_workload.c:44)
+  n1: 2686976 0x10941C: process_batch (mixed_workload.c:63)
+   n0: 2686976 0x109457: main (mixed_workload.c:72)
+ n1: 2097152 0x109291: build_index (mixed_workload.c:35)
+  n0: 2097152 0x109441: main (mixed_workload.c:70)
+ n1: 524288 0x1091CB: load_inputs (mixed_workload.c:25)
+  n0: 524288 0x10943C: main (mixed_workload.c:69)
+ n1: 8192 0x10938E: process_batch (mixed_workload.c:58)
+  n0: 8192 0x109457: main (mixed_workload.c:72)
+#-----------
+snapshot=90
+#-----------
+time=13927255
+mem_heap_B=5316608
+mem_heap_extra_B=472
+mem_stacks_B=0
+heap_tree=detailed
+n4: 5316608 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 2686976 0x109308: cache_result (mixed_workload.c:44)
+  n1: 2686976 0x10941C: process_batch (mixed_workload.c:63)
+   n0: 2686976 0x109457: main (mixed_workload.c:72)
+ n1: 2097152 0x109291: build_index (mixed_workload.c:35)
+  n0: 2097152 0x109441: main (mixed_workload.c:70)
+ n1: 524288 0x1091CB: load_inputs (mixed_workload.c:25)
+  n0: 524288 0x10943C: main (mixed_workload.c:69)
+ n1: 8192 0x10938E: process_batch (mixed_workload.c:58)
+  n0: 8192 0x109457: main (mixed_workload.c:72)
+#-----------
+snapshot=91
+#-----------
+time=13935585
+mem_heap_B=5382144
+mem_heap_extra_B=480
+mem_stacks_B=0
+heap_tree=detailed
+n4: 5382144 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 2752512 0x109308: cache_result (mixed_workload.c:44)
+  n1: 2752512 0x10941C: process_batch (mixed_workload.c:63)
+   n0: 2752512 0x109457: main (mixed_workload.c:72)
+ n1: 2097152 0x109291: build_index (mixed_workload.c:35)
+  n0: 2097152 0x109441: main (mixed_workload.c:70)
+ n1: 524288 0x1091CB: load_inputs (mixed_workload.c:25)
+  n0: 524288 0x10943C: main (mixed_workload.c:69)
+ n1: 8192 0x10938E: process_batch (mixed_workload.c:58)
+  n0: 8192 0x109457: main (mixed_workload.c:72)
+#-----------
+snapshot=92
+#-----------
+time=14197929
+mem_heap_B=5382144
+mem_heap_extra_B=480
+mem_stacks_B=0
+heap_tree=detailed
+n4: 5382144 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 2752512 0x109308: cache_result (mixed_workload.c:44)
+  n1: 2752512 0x10941C: process_batch (mixed_workload.c:63)
+   n0: 2752512 0x109457: main (mixed_workload.c:72)
+ n1: 2097152 0x109291: build_index (mixed_workload.c:35)
+  n0: 2097152 0x109441: main (mixed_workload.c:70)
+ n1: 524288 0x1091CB: load_inputs (mixed_workload.c:25)
+  n0: 524288 0x10943C: main (mixed_workload.c:69)
+ n1: 8192 0x10938E: process_batch (mixed_workload.c:58)
+  n0: 8192 0x109457: main (mixed_workload.c:72)
+#-----------
+snapshot=93
+#-----------
+time=14206259
+mem_heap_B=5447680
+mem_heap_extra_B=488
+mem_stacks_B=0
+heap_tree=detailed
+n4: 5447680 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 2818048 0x109308: cache_result (mixed_workload.c:44)
+  n1: 2818048 0x10941C: process_batch (mixed_workload.c:63)
+   n0: 2818048 0x109457: main (mixed_workload.c:72)
+ n1: 2097152 0x109291: build_index (mixed_workload.c:35)
+  n0: 2097152 0x109441: main (mixed_workload.c:70)
+ n1: 524288 0x1091CB: load_inputs (mixed_workload.c:25)
+  n0: 524288 0x10943C: main (mixed_workload.c:69)
+ n1: 8192 0x10938E: process_batch (mixed_workload.c:58)
+  n0: 8192 0x109457: main (mixed_workload.c:72)
+#-----------
+snapshot=94
+#-----------
+time=14468603
+mem_heap_B=5447680
+mem_heap_extra_B=488
+mem_stacks_B=0
+heap_tree=detailed
+n4: 5447680 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 2818048 0x109308: cache_result (mixed_workload.c:44)
+  n1: 2818048 0x10941C: process_batch (mixed_workload.c:63)
+   n0: 2818048 0x109457: main (mixed_workload.c:72)
+ n1: 2097152 0x109291: build_index (mixed_workload.c:35)
+  n0: 2097152 0x109441: main (mixed_workload.c:70)
+ n1: 524288 0x1091CB: load_inputs (mixed_workload.c:25)
+  n0: 524288 0x10943C: main (mixed_workload.c:69)
+ n1: 8192 0x10938E: process_batch (mixed_workload.c:58)
+  n0: 8192 0x109457: main (mixed_workload.c:72)
+#-----------
+snapshot=95
+#-----------
+time=14476933
+mem_heap_B=5513216
+mem_heap_extra_B=496
+mem_stacks_B=0
+heap_tree=detailed
+n4: 5513216 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 2883584 0x109308: cache_result (mixed_workload.c:44)
+  n1: 2883584 0x10941C: process_batch (mixed_workload.c:63)
+   n0: 2883584 0x109457: main (mixed_workload.c:72)
+ n1: 2097152 0x109291: build_index (mixed_workload.c:35)
+  n0: 2097152 0x109441: main (mixed_workload.c:70)
+ n1: 524288 0x1091CB: load_inputs (mixed_workload.c:25)
+  n0: 524288 0x10943C: main (mixed_workload.c:69)
+ n1: 8192 0x10938E: process_batch (mixed_workload.c:58)
+  n0: 8192 0x109457: main (mixed_workload.c:72)
+#-----------
+snapshot=96
+#-----------
+time=14739277
+mem_heap_B=5513216
+mem_heap_extra_B=496
+mem_stacks_B=0
+heap_tree=detailed
+n4: 5513216 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 2883584 0x109308: cache_result (mixed_workload.c:44)
+  n1: 2883584 0x10941C: process_batch (mixed_workload.c:63)
+   n0: 2883584 0x109457: main (mixed_workload.c:72)
+ n1: 2097152 0x109291: build_index (mixed_workload.c:35)
+  n0: 2097152 0x109441: main (mixed_workload.c:70)
+ n1: 524288 0x1091CB: load_inputs (mixed_workload.c:25)
+  n0: 524288 0x10943C: main (mixed_workload.c:69)
+ n1: 8192 0x10938E: process_batch (mixed_workload.c:58)
+  n0: 8192 0x109457: main (mixed_workload.c:72)
+#-----------
+snapshot=97
+#-----------
+time=14747607
+mem_heap_B=5578752
+mem_heap_extra_B=504
+mem_stacks_B=0
+heap_tree=detailed
+n4: 5578752 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 2949120 0x109308: cache_result (mixed_workload.c:44)
+  n1: 2949120 0x10941C: process_batch (mixed_workload.c:63)
+   n0: 2949120 0x109457: main (mixed_workload.c:72)
+ n1: 2097152 0x109291: build_index (mixed_workload.c:35)
+  n0: 2097152 0x109441: main (mixed_workload.c:70)
+ n1: 524288 0x1091CB: load_inputs (mixed_workload.c:25)
+  n0: 524288 0x10943C: main (mixed_workload.c:69)
+ n1: 8192 0x10938E: process_batch (mixed_workload.c:58)
+  n0: 8192 0x109457: main (mixed_workload.c:72)
+#-----------
+snapshot=98
+#-----------
+time=15009951
+mem_heap_B=5578752
+mem_heap_extra_B=504
+mem_stacks_B=0
+heap_tree=detailed
+n4: 5578752 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 2949120 0x109308: cache_result (mixed_workload.c:44)
+  n1: 2949120 0x10941C: process_batch (mixed_workload.c:63)
+   n0: 2949120 0x109457: main (mixed_workload.c:72)
+ n1: 2097152 0x109291: build_index (mixed_workload.c:35)
+  n0: 2097152 0x109441: main (mixed_workload.c:70)
+ n1: 524288 0x1091CB: load_inputs (mixed_workload.c:25)
+  n0: 524288 0x10943C: main (mixed_workload.c:69)
+ n1: 8192 0x10938E: process_batch (mixed_workload.c:58)
+  n0: 8192 0x109457: main (mixed_workload.c:72)
+#-----------
+snapshot=99
+#-----------
+time=15018281
+mem_heap_B=5644288
+mem_heap_extra_B=512
+mem_stacks_B=0
+heap_tree=detailed
+n4: 5644288 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 3014656 0x109308: cache_result (mixed_workload.c:44)
+  n1: 3014656 0x10941C: process_batch (mixed_workload.c:63)
+   n0: 3014656 0x109457: main (mixed_workload.c:72)
+ n1: 2097152 0x109291: build_index (mixed_workload.c:35)
+  n0: 2097152 0x109441: main (mixed_workload.c:70)
+ n1: 524288 0x1091CB: load_inputs (mixed_workload.c:25)
+  n0: 524288 0x10943C: main (mixed_workload.c:69)
+ n1: 8192 0x10938E: process_batch (mixed_workload.c:58)
+  n0: 8192 0x109457: main (mixed_workload.c:72)
+#-----------
+snapshot=100
+#-----------
+time=15280625
+mem_heap_B=5644288
+mem_heap_extra_B=512
+mem_stacks_B=0
+heap_tree=detailed
+n4: 5644288 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 3014656 0x109308: cache_result (mixed_workload.c:44)
+  n1: 3014656 0x10941C: process_batch (mixed_workload.c:63)
+   n0: 3014656 0x109457: main (mixed_workload.c:72)
+ n1: 2097152 0x109291: build_index (mixed_workload.c:35)
+  n0: 2097152 0x109441: main (mixed_workload.c:70)
+ n1: 524288 0x1091CB: load_inputs (mixed_workload.c:25)
+  n0: 524288 0x10943C: main (mixed_workload.c:69)
+ n1: 8192 0x10938E: process_batch (mixed_workload.c:58)
+  n0: 8192 0x109457: main (mixed_workload.c:72)
+#-----------
+snapshot=101
+#-----------
+time=15288955
+mem_heap_B=5709824
+mem_heap_extra_B=520
+mem_stacks_B=0
+heap_tree=detailed
+n4: 5709824 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 3080192 0x109308: cache_result (mixed_workload.c:44)
+  n1: 3080192 0x10941C: process_batch (mixed_workload.c:63)
+   n0: 3080192 0x109457: main (mixed_workload.c:72)
+ n1: 2097152 0x109291: build_index (mixed_workload.c:35)
+  n0: 2097152 0x109441: main (mixed_workload.c:70)
+ n1: 524288 0x1091CB: load_inputs (mixed_workload.c:25)
+  n0: 524288 0x10943C: main (mixed_workload.c:69)
+ n1: 8192 0x10938E: process_batch (mixed_workload.c:58)
+  n0: 8192 0x109457: main (mixed_workload.c:72)
+#-----------
+snapshot=102
+#-----------
+time=15551299
+mem_heap_B=5709824
+mem_heap_extra_B=520
+mem_stacks_B=0
+heap_tree=detailed
+n4: 5709824 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 3080192 0x109308: cache_result (mixed_workload.c:44)
+  n1: 3080192 0x10941C: process_batch (mixed_workload.c:63)
+   n0: 3080192 0x109457: main (mixed_workload.c:72)
+ n1: 2097152 0x109291: build_index (mixed_workload.c:35)
+  n0: 2097152 0x109441: main (mixed_workload.c:70)
+ n1: 524288 0x1091CB: load_inputs (mixed_workload.c:25)
+  n0: 524288 0x10943C: main (mixed_workload.c:69)
+ n1: 8192 0x10938E: process_batch (mixed_workload.c:58)
+  n0: 8192 0x109457: main (mixed_workload.c:72)
+#-----------
+snapshot=103
+#-----------
+time=15559629
+mem_heap_B=5775360
+mem_heap_extra_B=528
+mem_stacks_B=0
+heap_tree=detailed
+n4: 5775360 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 3145728 0x109308: cache_result (mixed_workload.c:44)
+  n1: 3145728 0x10941C: process_batch (mixed_workload.c:63)
+   n0: 3145728 0x109457: main (mixed_workload.c:72)
+ n1: 2097152 0x109291: build_index (mixed_workload.c:35)
+  n0: 2097152 0x109441: main (mixed_workload.c:70)
+ n1: 524288 0x1091CB: load_inputs (mixed_workload.c:25)
+  n0: 524288 0x10943C: main (mixed_workload.c:69)
+ n1: 8192 0x10938E: process_batch (mixed_workload.c:58)
+  n0: 8192 0x109457: main (mixed_workload.c:72)
+#-----------
+snapshot=104
+#-----------
+time=15821973
+mem_heap_B=5775360
+mem_heap_extra_B=528
+mem_stacks_B=0
+heap_tree=peak
+n4: 5775360 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 3145728 0x109308: cache_result (mixed_workload.c:44)
+  n1: 3145728 0x10941C: process_batch (mixed_workload.c:63)
+   n0: 3145728 0x109457: main (mixed_workload.c:72)
+ n1: 2097152 0x109291: build_index (mixed_workload.c:35)
+  n0: 2097152 0x109441: main (mixed_workload.c:70)
+ n1: 524288 0x1091CB: load_inputs (mixed_workload.c:25)
+  n0: 524288 0x10943C: main (mixed_workload.c:69)
+ n1: 8192 0x10938E: process_batch (mixed_workload.c:58)
+  n0: 8192 0x109457: main (mixed_workload.c:72)
