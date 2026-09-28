@@ -69,11 +69,25 @@ public static class HotFunctionAnalyzer
         var root = snap.HeapTree.FirstOrDefault();
         if (root == null) return [];
 
-        return root.Children
+        return MergeCallers(root.Children
             .Where(n => FunctionKey(SiteSeriesBuilder.SiteKey(n)) == function)
-            .OrderByDescending(n => n.Bytes)
-            .SelectMany(n => n.Children)
-            .Select(ToCallSite);
+            .SelectMany(n => n.Children));
+    }
+
+    // A function that allocates on several lines has one node per line, each with its own
+    // copy of the same callers, so they have to be added up instead of listed twice.
+    private static List<CallSite> MergeCallers(IEnumerable<HeapNode> nodes)
+    {
+        var merged = new List<CallSite>();
+
+        foreach (var group in nodes.GroupBy(SiteSeriesBuilder.SiteKey))
+        {
+            var site = new CallSite { Label = group.Key, Bytes = group.Sum(n => n.Bytes) };
+            site.Callers.AddRange(MergeCallers(group.SelectMany(n => n.Children)));
+            merged.Add(site);
+        }
+
+        return merged.OrderByDescending(s => s.Bytes).ToList();
     }
 
     /// "parse_line (logcrunch.c:74)" -> "parse_line (logcrunch.c)". The file stays, otherwise two
@@ -92,12 +106,5 @@ public static class HotFunctionAnalyzer
         int close = site.LastIndexOf(')');
         int open = close > 0 ? site.LastIndexOf('(', close) : -1;
         return open >= 0 ? site[(open + 1)..close] : site;
-    }
-
-    private static CallSite ToCallSite(HeapNode node)
-    {
-        var site = new CallSite { Label = SiteSeriesBuilder.SiteKey(node), Bytes = node.Bytes };
-        site.Callers.AddRange(node.Children.Select(ToCallSite));
-        return site;
     }
 }
