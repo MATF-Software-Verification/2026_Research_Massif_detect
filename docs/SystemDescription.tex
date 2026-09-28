@@ -1,0 +1,231 @@
+% Prevodjenje: pdflatex SystemDescription_docs.tex (dva puta za sadrzaj)
+% Fajl je samostalan: nisu potrebne spoljne slike niti bibliografija.
+\documentclass[a4paper,10pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[serbian]{babel}
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{enumitem}
+\usepackage{graphicx}
+\usepackage[hidelinks]{hyperref}
+
+\title{Korišćenje izlaznih fajlova Valgrind-ovog alata Massif u pronalasku neispravnog/nepotrebnog korišćenja memorije}
+\author{Marko Nikitović\\1007/2024 \and Vladeta Vujačić\\1017/2024}
+\date{Septembar 2026}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+U ovom radu razvijena je desktop aplikacija za pregled i analizu Valgrind Massif profila.
+Prikazuje potrošnju memorije kroz vreme i izdvaja rast sa zadržavanjem memorije,
+memoriju prisutnu na kraju profila, nagle skokove i visok dodatni trošak
+alokatora. Uz nalaze prikazuje izmerene vrednosti i, kada ima dovoljno podataka,
+mesto alokacije u izvornom kodu. U radu su opisani osnovni moduli aplikacije,
+pravila analize i ograničenja zaključaka koji se mogu izvesti iz profila.
+\end{abstract}
+
+\tableofcontents
+
+\section{Uvod i opis problema}
+
+Program može da daje tačne rezultate, a da pritom nepotrebno zadržava memoriju
+ili pravi veliki broj sitnih alokacija. Sam podatak o najvećoj potrošnji memorije
+ne pokazuje da li je ona rasla tokom celog izvršavanja, naglo skočila u jednom
+trenutku ili ostala zauzeta do kraja.
+
+Valgrind Massif beleži potrošnju dinamički alocirane memorije, odnosno hipa
+(engl.\ heap), u nizu snimaka stanja. Snimak sadrži položaj u toku izvršavanja,
+veličinu korisnog hipa i procenu dodatne memorije potrebne alokatoru. Neki snimci
+sadrže i stablo poziva povezano sa alokacijama. Ručno pregledanje takvog
+tekstualnog profila otežava praćenje promena i izdvajanje mesta koja treba
+proveriti u izvornom kodu.
+
+Aplikacija razvijena u okviru rada učitava ove profile, prikazuje ih grafički i izdvaja četiri obrasca:
+postepen rast sa visokim zadržavanjem memorije, memoriju prisutnu u poslednjem
+snimku, nagli skok potrošnje i visok dodatni trošak alokatora. Svaki nalaz sadrži
+objašnjenje, izmerene vrednosti i predlog za dalju proveru. Cilj je da se
+programeru olakša pregled konkretnog izvršavanja, a ne da se dokaže ispravnost
+upravljanja memorijom. Massif ne pokazuje da li su objekti i dalje dostupni preko
+pokazivača, pa se iz samog profila ne može potvrditi curenje memorije.
+
+\section{Arhitektura sistema}
+
+Aplikacija je napisana u jeziku C\# za .NET~10. Avalonia služi za desktop
+interfejs, a ScottPlot za crtanje grafikona. Sistem čine tri osnovna dela:
+modeli podataka, servisi za obradu i korisnički interfejs. Modeli predstavljaju
+podatke koji se razmenjuju, servisi ih učitavaju i analiziraju, a interfejs
+omogućava izbor ulaza i pregled rezultata. Servisi su ovde klase unutar
+aplikacije, koje imaju zasebne zadatke i izvršavaju se na istom računaru.
+
+\subsection{Modeli podataka}
+
+Osnovni model je profil, on sadrži podatke o izvršavanju i niz snimaka stanja
+memorije. Svaki snimak čuva zauzeće memorije i, ukoliko postoji, stablo alokacija.
+Rezultati analize predstavljeni su nalazima i rangiranim funkcijama. Nalaz
+sadrži opis uočenog obrasca, ozbiljnost, vrednosti koje ga potkrepljuju i vezu
+ka relevantnom snimku. Ovi tipovi nalaze se u direktorijumu \texttt{Models}.
+
+\subsection{Servisi za učitavanje i analizu}
+
+Servisi u direktorijumu \texttt{Services} obavljaju sledeće zadatke:
+
+\begin{description}
+  \item[Učitavanje profila (\texttt{MassifParser}).]
+  Pretvara tekstualni fajl \texttt{massif.out.*} u model profila. Čita podatke
+  o izvršavanju, snimke i stabla alokacija, tako da ostali delovi aplikacije
+  mogu da rade sa tim podacima bez ponovnog tumačenja teksta.
+
+  \item[Profilisanje C programa (\texttt{SourceProfiler}).]
+  Omogućava korisniku da umesto gotovog profila izabere C fajl.
+  \texttt{CompilerRunner} pokreće GCC i prevodi program, a
+  \texttt{MassifRunner} pokreće njegovo izvršavanje pod Massifom.
+  Zajednička pomoćna klasa \texttt{ExternalTool} pokreće spoljne procese i
+  prikuplja njihov izlaz. Dobijeni profil učitava se kroz \texttt{MassifParser},
+  a privremeni fajlovi se zatim uklanjaju.
+
+  \item[Prepoznavanje obrazaca (\texttt{DetectionEngine}).]
+  Prima profil i zadate pragove, priprema podatke za analizu i pokreće četiri
+  pravila: LEAK, ATEXIT, SPIKE i FRAG. Vraća listu nalaza poređanih po
+  ozbiljnosti. Svako pravilo je izdvojeno u posebnu klasu, dok su zajednički
+  proračuni i pragovi objedinjeni. Time se izbegava ponavljanje iste obrade
+  u više pravila.
+
+  \item[Rangiranje funkcija (\texttt{HotFunctionAnalyzer}).]
+  Grupisanjem mesta alokacije izdvaja funkcije i rangira ih prema najvećem
+  zabeleženom zauzeću. Ovaj pregled pomaže korisniku da pronađe velike
+  potrošače memorije čak i kada nijedno pravilo ne prijavi nalaz.
+\end{description}
+
+\subsection{Korisnički interfejs i povezivanje modula}
+
+Ulazna tačka programa pokreće Avalonia okruženje, a klasa \texttt{App} kreira
+glavni prozor \texttt{MainWindow}. Glavni prozor povezuje rad servisa:
+na zahtev korisnika poziva parser ili servis za profilisanje, dobijeni profil
+prosleđuje servisima za prepoznavanje obrazaca i rangiranje funkcija, a zatim
+prikazuje rezultate.
+
+Tok podataka je zato isti nakon oba načina unosa, odnosno učitani profil postaje ulaz
+za analizu i grafički prikaz. Prozor prikazuje graf potrošnje, snimke,
+stabla alokacija, rangirane funkcije i nalaze. Izbor nalaza vodi na snimak koji
+ga potkrepljuje. Posebni prozori omogućavaju promenu podešavanja i pregled
+izvornog koda kada je dostupan.
+
+Ovakva podela odvaja proračune od prikaza, tj. parser i analiza ne zavise od
+Avalonia interfejsa, dok glavni prozor obrađuje korisničke radnje i osvežava
+prikaz. Oba načina unosa koriste istu analizu, pa nije potrebna posebna obrada
+za upravo generisan profil. Otvaranje postojećih profila ne zahteva GCC ni
+Valgrind, oni su potrebni samo za direktno profilisanje C programa.
+
+\section{Postupak analize i pravila}
+
+Za svaki snimak sa indeksom $i$ izdvajaju se korisni hip $H_i$, dodatni trošak
+alokatora $E_i$ i položaj $t_i$ u izvršavanju. Računa se maksimum
+$P=\max_i H_i$, a položaji se normalizuju na interval $[0,1]$ prema prvom i
+poslednjem snimku. Ako svi imaju istu vremensku oznaku, koriste se njihovi
+relativni indeksi. Normalizacija omogućava da se prozori posmatranja izraze kao
+deo trajanja profila, nezavisno od izabrane jedinice. Podrazumevana jedinica pri
+profilisanju jeste broj izvršenih instrukcija, a ne broj sekundi.
+
+Pravila se primenjuju nezavisno. Sa podrazumevanim podešavanjima nijedno pravilo ne daje
+nalaz ako profil ima manje od deset snimaka ili ako je maksimalni hip jednak nuli.
+U nastavku su navedeni podrazumevani pragovi.
+
+\subsection{LEAK - rast sa zadržavanjem memorije}
+Računa se Spirmanova korelacija između položaja u izvršavanju i zauzeća hipa.
+Ona poredi rangove vrednosti, pa ne zahteva da rast bude linearan, takodje jednake
+vrednosti dobijaju prosečan rang. Nalaz se daje kada istovremeno važi:
+\[
+  \rho(t,H)>0{,}90, \qquad
+  \frac{H_{n-1}-H_0}{P}>0{,}20, \qquad
+  \frac{H_{n-1}}{P}>0{,}80.
+\]
+Tako se traži izražen rast, dovoljno velika ukupna promena i visok nivo
+zadržavanja na kraju. Sam uzlazni trend ne bi bio dovoljan jer bi mogao da predstavlja
+malo povećanje ili memoriju koja je kasnije oslobođena. Nalaz je upozorenje na
+moguće curenje, uz napomenu da zadržavanje može biti namerno.
+
+Preporučuje se provera da li se memorija oslobađa kada više nije potrebna,
+uz dodatnu proveru curenja pomoću Memcheck-a.
+
+\subsection{ATEXIT - memorija u poslednjem snimku}
+Ako poslednji snimak sadrži više od $10\%$ maksimalnog hipa, daje se informativni
+nalaz. Ovo pravilo ne zahteva prethodni rast. Poslednji snimak se posmatra kao
+poslednji dostupan podatak, a ne kao dokaz da je memorija ostala posle svih
+završnih operacija programa.
+
+Preporučuje se provera da li memorija mora da ostane zauzeta do kraja programa,
+kao i dodatna provera curenja pomoću Memcheck-a.
+
+\subsection{SPIKE - nagli skok}
+Za dva susedna snimka traži se porast koji prelazi oba praga:
+\[
+  H_i-H_{i-1}>\max(0{,}50H_{i-1},\;0{,}10P).
+\]
+Relativni prag izdvaja naglu promenu, a prag u odnosu na maksimum sprečava da se
+mali porast sa skoro praznog hipa proglasi značajnim. Uzastopni skokovi spajaju
+se u jedan događaj. Zatim se traži najmanje zauzeće u kasnijim snimcima unutar
+prozora dužine $20\%$ celog profila, merenog od kraja skoka.
+Ako hip padne na početni nivo uvećan za najviše $25\%$ ukupnog skoka, događaj
+se označava kao prolazan i daje se informativni nalaz. U suprotnom se daje
+upozorenje o zadržanom povećanju u tom prozoru. Ako nema kasnijih snimaka unutar
+prozora, ishod ostaje nepoznat i nalaz je informativan.
+
+Ako prolazni skok dovodi do prevelike potrošnje, preporučuje se obrada
+podataka u manjim delovima. Kod zadržanog povećanja treba proveriti da li je
+dodatna memorija i dalje potrebna i razmotriti ograničavanje njenog zauzeća.
+Za nepoznat ishod preporučuje se prikupljanje dodatnih snimaka nakon skoka.
+
+\subsection{FRAG - visok trošak alokatora}
+Za snimke sa nenultim hipom računa se odnos $E_i/H_i$. Upozorenje se daje kada
+je medijana tih odnosa veća od $0{,}30$. Medijana smanjuje uticaj pojedinačnih
+ekstremnih odnosa, naročito pri malom zauzeću hipa. Ovaj nalaz može da ukaže na
+veliki broj sitnih alokacija. Uprkos nazivu pravila, on nije direktno merenje
+fragmentacije (koristi Massif-ovu procenu troška po bloku i poravnanja).
+
+Preporučuje se provera velikog broja sitnih alokacija i, kada je moguće,
+njihovo grupisanje u veće blokove.
+
+\subsection{Povezivanje nalaza sa izvornim kodom}
+
+Mesta alokacije uzimaju se iz neposrednih potomaka korena stabla. Ponovljene
+oznake se sabiraju, a zbirne stavke oblika \texttt{in N places} preskaču, jer ne
+predstavljaju jedno poznato mesto. Zato njihov zbir ne mora biti jednak ukupnom
+hipu.
+
+Za LEAK se mesto navodi samo ako prvi dostupan snimak sa stablom pripada prvoj,
+a poslednji poslednjoj četvrtini profila. Bira se najveći zabeleženi porast koji
+objašnjava najmanje $10\%$ ukupnog rasta. ATEXIT koristi isključivo stablo
+poslednjeg snimka i izdvaja najveće mesto koje zauzima više od $10\%$ završnog
+hipa. SPIKE zahteva stabla neposredno pre i na kraju događaja, uz jedno mesto
+koje objašnjava najmanje polovinu porasta. FRAG ne pripisuje nalaz konkretnoj
+funkciji jer je dodatni trošak dostupan samo za ceo hip. Kada podaci nisu
+dovoljni, nalaz ostaje bez imenovanog mesta alokacije.
+
+Kada je profil generisan iz C fajla kroz aplikaciju i sumnjiva lokacija sadrži
+prepoznatljiv broj reda u tom fajlu, dugme \textit{Show in source} otvara izvorni
+kod i označava odgovarajući red. Pri otvaranju postojećeg profila lokacija se
+može prikazati u nalazu, ali direktan pregled izvornog koda nije omogućen.
+
+Posle primene pravila nalazi se sortiraju po ozbiljnosti. Ako LEAK i ATEXIT
+izdvoje isto mesto, ATEXIT dobija dodatno obrazloženje, bez povećanja ozbiljnosti.
+Rangiranje funkcija prikazuje njihove pojedinačne maksimume, koji mogu poticati
+iz različitih snimaka, pa njihovi udeli zato nisu raspodela jednog zajedničkog
+stanja memorije.
+
+Pragovi su heuristički i mogu se menjati u prozoru za podešavanja. Izmene važe
+tokom tekuće sesije i koriste se pri sledećem učitavanju ili generisanju profila.
+Već prikazani nalazi se ne preračunavaju.
+
+\section{Zaključak}
+
+U ovom radu povezan je grafički pregled profila sa pravilima koja izdvajaju
+sumnjive promene u potrošnji memorije. Korisnik može da pređe sa nalaza na
+relevantni snimak i proveri podatke na kojima se nalaz zasniva.
+Rezultat zavisi i od dostupnih snimaka, pa
+kratka promena između njih može ostati nezabeležena. Zbog toga uz nalaze ostaju
+konkretne vrednosti i ograničenja, kako bi korisnik mogao da proceni da li obrazac
+odgovara očekivanom ponašanju programa.
+
+\end{document}

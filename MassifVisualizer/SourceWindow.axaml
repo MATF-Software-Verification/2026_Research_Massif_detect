@@ -1,0 +1,51 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:ae="clr-namespace:AvaloniaEdit;assembly=AvaloniaEdit"
+        mc:Ignorable="d" d:DesignWidth="900" d:DesignHeight="700"
+        x:Class="MassifVisualizer.SourceWindow"
+        Title="Source"
+        Width="900" Height="700"
+        MinWidth="500" MinHeight="300">
+
+  <DockPanel>
+
+    <Border DockPanel.Dock="Top" Background="WhiteSmoke" Padding="8,4"
+            BorderBrush="Silver" BorderThickness="0,0,0,1">
+      <DockPanel>
+        <StackPanel Name="Legend" DockPanel.Dock="Right" Orientation="Horizontal" Spacing="12"
+                    VerticalAlignment="Center" Margin="16,0,0,0">
+          <StackPanel Name="AllocationLegend" Orientation="Horizontal" Spacing="4" IsVisible="False">
+            <Border Name="AllocationSwatch" Width="12" Height="12"
+                    BorderBrush="Silver" BorderThickness="1" VerticalAlignment="Center"/>
+            <TextBlock Text="allocates" FontSize="11" Foreground="DimGray" VerticalAlignment="Center"/>
+          </StackPanel>
+          <StackPanel Name="CallerLegend" Orientation="Horizontal" Spacing="4" IsVisible="False">
+            <Border Name="CallerSwatch" Width="12" Height="12"
+                    BorderBrush="Silver" BorderThickness="1" VerticalAlignment="Center"/>
+            <TextBlock Text="called from" FontSize="11" Foreground="DimGray" VerticalAlignment="Center"/>
+          </StackPanel>
+        </StackPanel>
+
+        <TextBlock Name="CaptionText" Foreground="Black" FontSize="12"
+                   VerticalAlignment="Center" TextWrapping="Wrap"/>
+      </DockPanel>
+    </Border>
+
+    <!-- Status bar -->
+    <Border DockPanel.Dock="Bottom" Background="WhiteSmoke" Padding="8,3"
+            BorderBrush="Silver" BorderThickness="0,1,0,0">
+      <TextBlock Name="PathText" Foreground="DimGray" FontSize="11"/>
+    </Border>
+
+    <ae:TextEditor Name="Editor"
+                   IsReadOnly="True"
+                   ShowLineNumbers="True"
+                   FontFamily="Cascadia Code,Consolas,monospace"
+                   FontSize="12"
+                   Background="White"
+                   HorizontalScrollBarVisibility="Auto"
+                   VerticalScrollBarVisibility="Auto"/>
+  </DockPanel>
+</Window>
